@@ -19,4 +19,14 @@ public class UIManager : MonoBehaviour
     {
         element.SetActive(false);
     }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public void UnpauseGame()
+    {
+        Time.timeScale = 1f;
+    }
 }
