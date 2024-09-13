@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 43912
+  controlID: 54
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 43913
+  controlID: 55
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 43914
+  controlID: 56
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -347,7 +347,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 1}
-  m_TargetSize: {x: 1080, y: 2640}
+  m_TargetSize: {x: 720, y: 1520}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -361,13 +361,15 @@ MonoBehaviour:
     controlPanelFoldoutValues: 00
     pluginNames:
     - UnityEditor.DeviceSimulation.ApplicationSettingsPlugin
+    - UnityEngine.InputSystem.Editor.InputSystemPlugin
     pluginStates:
     - '{}'
-    scale: 32
-    fitToScreenEnabled: 0
+    - '{}'
+    scale: 36
+    fitToScreenEnabled: 1
     rotationDegree: 0
     highlightSafeAreaEnabled: 0
-    friendlyName: Samsung Galaxy Z Flip3 5G
+    friendlyName: Motorola Moto G7 Power
     screenIndex: 0
     networkReachability: 1
     systemLanguage: 10
@@ -410,7 +412,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 3898feff72abfeff5af4feff342effffdc2effffe82effff0a2fffff066fffff3a6fffff8071ffff2474ffff4477ffff1c7bfffffe7dffff408fffff1a94ffff60a6ffff10a7ffffbca9ffffa8afffffa4b4ffff28d5ffff7ed6ffff9ad6ffffd0ddffff7ef0fffffaf5ffff2efbffffee460000f246000012470000864800008e480000364c0000564c00000e4d0000164d0000244e0000484e00004e4e00000051000008510000e8510000ec51000012520000fc5300000054000026540000b45600005e57000090570000d2580000da580000345900001e5a0000245a0000166a0000a6930000d8930000f4930000
+      m_ExpandedIDs: f0faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -745,7 +747,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 48, y: 48}
+      snapOffset: {x: 48, y: 10}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: UnityEditor.SceneViewCameraOverlay
@@ -764,9 +766,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 470.73914, y: 724.45184, z: -27.504553}
+    m_Target: {x: -0.031488135, y: 4.470413, z: 89.2175}
     speed: 2
-    m_Value: {x: 470.73914, y: 724.45184, z: -27.504553}
+    m_Value: {x: -0.031488135, y: 4.470413, z: 89.2175}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -812,13 +814,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.017999034, y: -0.0000000016404332, z: -1.3830791e-11, w: 0.9998384}
+    m_Target: {x: -0.049481355, y: 0.00059189973, z: -0.000014816126, w: -0.9987821}
     speed: 2
-    m_Value: {x: -0.017999036, y: 0.0000000016404332, z: 1.38307915e-11, w: -0.9998385}
+    m_Value: {x: -0.049481, y: 0.0005918955, z: -0.00001481602, w: -0.99877495}
   m_Size:
-    m_Target: 1258.0391
+    m_Target: 4.012171
     speed: 2
-    m_Value: 1258.0391
+    m_Value: 4.012171
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -883,7 +885,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1080, y: 1920}
+  m_TargetSize: {x: 665, y: 621}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -898,10 +900,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -540
-    m_HBaseRangeMax: 540
-    m_VBaseRangeMin: -960
-    m_VBaseRangeMax: 960
+    m_HBaseRangeMin: -332.5
+    m_HBaseRangeMax: 332.5
+    m_VBaseRangeMin: -310.5
+    m_VBaseRangeMax: 310.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -921,20 +923,20 @@ MonoBehaviour:
       y: 21
       width: 665
       height: 621
-    m_Scale: {x: 0.3234375, y: 0.3234375}
-    m_Translation: {x: 332.5, y: 310.49997}
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 332.5, y: 310.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1028.0193
-      y: -959.9999
-      width: 2056.0386
-      height: 1919.9999
+      x: -332.5
+      y: -310.5
+      width: 665
+      height: 621
     m_MinimalGUI: 1
-  m_defaultScale: 0.3234375
+  m_defaultScale: 1
   m_LastWindowPixelSize: {x: 665, y: 642}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -986,7 +988,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -994,16 +996,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Escola\PUC\2 Periodo\TI\Rungeon-Goblins\Rungeon-Goblins-Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 45}
-    m_SelectedIDs: 4c480000
-    m_LastClickedID: 18508
-    m_ExpandedIDs: 00000000444800005254000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 73}
+    m_SelectedIDs: de4e0000
+    m_LastClickedID: 20190
+    m_ExpandedIDs: 00000000d24e0000d44e0000de4e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1031,7 +1033,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000444800005254000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000d24e0000d44e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1157,7 +1159,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -11268
+  m_LastSelectedObjectID: 25534
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
