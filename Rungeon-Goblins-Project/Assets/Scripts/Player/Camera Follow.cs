@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField]private Transform playerTransform;
-    [SerializeField]private float offSet, originalX, originalY;
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private float smoothness;
+    private float offSet;
+    private Vector3 currentVelocity = Vector3.zero;
+    private float originalX, originalY;
 
     private void Awake()
     {
@@ -15,6 +18,6 @@ public class CameraFollow : MonoBehaviour
     private void LateUpdate()
     {
         Vector3 playerPosition = new Vector3(originalX, originalY, playerTransform.position.z + offSet);
-        transform.position = playerPosition;
+        transform.position = Vector3.SmoothDamp(transform.position, playerPosition, ref currentVelocity, smoothness);
     }
 }

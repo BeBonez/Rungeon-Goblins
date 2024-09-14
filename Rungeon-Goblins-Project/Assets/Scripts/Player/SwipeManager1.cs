@@ -38,21 +38,27 @@ public class SwipeManager : MonoBehaviour
     //Ao soltar. Pega posição final
     private void TouchEnded(InputAction.CallbackContext context)
     {
-        Debug.Log("Soltou");
         finalPosition = touchPosition.ReadValue<Vector2>();
         GetDirection();
     }
 
     private void GetDirection()
     {
-        Debug.Log("Soltou Legal");
         Vector2 direction = finalPosition - initialPosition;
 
-        Debug.Log("Direcao: " + direction.magnitude + " |||||| " + magnitude + " |||||||||| " + direction);
         if (direction.magnitude > magnitude)
         {
-            Debug.Log("Soltou Mesmo");
-            playerMovement.Move(direction, magnitude);
+            if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+            {
+                direction.y = 0;
+            }
+            else
+            {
+                direction.x = 0;
+            }
+
+            direction = direction.normalized;
+            playerMovement.Move(direction);
         }
     }
 }

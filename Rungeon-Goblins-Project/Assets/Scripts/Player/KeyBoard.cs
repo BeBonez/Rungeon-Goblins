@@ -31,6 +31,6 @@ public class KeyBoard : MonoBehaviour
     }
     private void Move(InputAction.CallbackContext context)
     {
-        playerMovement.Move(direction, 0);
+        playerMovement.Move(direction);
     }
 }

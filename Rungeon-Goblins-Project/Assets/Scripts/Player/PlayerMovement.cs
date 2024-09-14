@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     {
         UpdatePosition();
     }
-    public void Move(Vector2 direction, int magnitude)
+    public void Move(Vector2 direction)
     {
 
         if (direction.y >= 1)
