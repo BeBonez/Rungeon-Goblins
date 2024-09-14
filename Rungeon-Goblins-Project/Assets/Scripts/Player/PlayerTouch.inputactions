@@ -1,0 +1,54 @@
+{
+    "name": "PlayerTouch",
+    "maps": [
+        {
+            "name": "Touch",
+            "id": "570099b7-2095-4622-8ade-95a249e912e8",
+            "actions": [
+                {
+                    "name": "TouchPress",
+                    "type": "PassThrough",
+                    "id": "e8823c65-ca57-452e-ab2f-99e556ce5953",
+                    "expectedControlType": "Touch",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TouchPosition",
+                    "type": "Value",
+                    "id": "a8fcc2a9-e701-47df-b413-c6eb67df5f45",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1314f78f-16cd-436d-9940-614804839b37",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2f3f9637-92e6-4d85-877e-6ad65fc7af59",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
