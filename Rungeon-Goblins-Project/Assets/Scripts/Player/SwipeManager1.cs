@@ -8,7 +8,6 @@ public class SwipeManager : MonoBehaviour
     private InputAction touchPosition;
     private Vector2 initialPosition;
     private Vector2 finalPosition;
-    private bool isSwiping;
     [SerializeField]private int magnitude = 5;
 
     private void Awake()
@@ -34,7 +33,6 @@ public class SwipeManager : MonoBehaviour
     private void TouchStarted(InputAction.CallbackContext context)
     {
         initialPosition = touchPosition.ReadValue<Vector2>();
-        isSwiping = true;
     }
 
     //Ao soltar. Pega posição final
@@ -42,7 +40,6 @@ public class SwipeManager : MonoBehaviour
     {
         Debug.Log("Soltou");
         finalPosition = touchPosition.ReadValue<Vector2>();
-        isSwiping = false;
         GetDirection();
     }
 

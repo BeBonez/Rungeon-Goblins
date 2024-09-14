@@ -77,12 +77,12 @@ public partial class @PlayerTouch: IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""KeyRead"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Value"",
                     ""id"": ""14dcfe0f-2b98-4570-b7b5-09e5fda9061e"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [

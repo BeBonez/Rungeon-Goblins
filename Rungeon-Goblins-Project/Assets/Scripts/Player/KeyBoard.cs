@@ -5,11 +5,7 @@ public class KeyBoard : MonoBehaviour
     public PlayerMovement playerMovement;
     private PlayerInput playerInput;
     private InputAction touchAction;
-    private InputAction touchPosition;
     private Vector2 direction;
-    private Vector2 finalPosition;
-    private bool isSwiping;
-    [SerializeField] private int magnitude = 5;
 
     private void Awake()
     {
@@ -17,13 +13,23 @@ public class KeyBoard : MonoBehaviour
         touchAction = playerInput.actions["KeyRead"];
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        direction = touchAction.ReadValue<Vector2>();
-        Debug.Log(direction);
+        touchAction.started += GetDirection;
+        touchAction.canceled += Move;
     }
 
-    private void FixedUpdate()
+    private void OnDisable()
+    {
+        touchAction.started -= GetDirection;
+        touchAction.canceled -= Move;
+    }
+
+    private void GetDirection(InputAction.CallbackContext context)
+    {
+        direction = touchAction.ReadValue<Vector2>();
+    }
+    private void Move(InputAction.CallbackContext context)
     {
         playerMovement.Move(direction, 0);
     }
