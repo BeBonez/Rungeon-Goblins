@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private float posX, posY, posZ;
-    [SerializeField]private float distance;
+    [SerializeField] private float distance;
     [SerializeField] private float horizontalDistance; //Pode ser apagado assim que tiver um mapa com tilings certos
     private void Start()
     {
@@ -14,43 +14,45 @@ public class PlayerMovement : MonoBehaviour
     }
     public void Move(Vector2 direction)
     {
+        if (Time.timeScale > 0)
+        {
+            if (direction.y >= 1)
+            {
+                Debug.Log("UP");
+                transform.position = new Vector3(posX, posY, posZ + distance);
+            }
+            else if (direction.y <= -1)
+            {
+                Debug.Log("DOWN");
+                transform.position = new Vector3(posX, posY, posZ - distance);
+            }
+            else if (direction.x >= 1)
+            {
+                Debug.Log("RIGHT");
+                if (transform.position.x >= horizontalDistance)
+                {
+                    transform.position = new Vector3(posX - horizontalDistance * 2, posY, posZ + distance);
+                }
+                else
+                {
+                    transform.position = new Vector3(posX + horizontalDistance, posY, posZ + distance);
+                }
 
-        if (direction.y >= 1)
-        {
-            Debug.Log("UP");
-            transform.position = new Vector3(posX, posY, posZ + distance); 
-        }
-        else if (direction.y <= -1)
-        {
-            Debug.Log("DOWN");
-            transform.position = new Vector3(posX, posY, posZ - distance);
-        }
-        else if (direction.x >= 1)
-        {
-            Debug.Log("RIGHT");
-            if (transform.position.x >= horizontalDistance)
-            {
-                transform.position = new Vector3(posX - horizontalDistance * 2, posY, posZ + distance);
             }
-            else
+            else if (direction.x <= -1)
             {
-                transform.position = new Vector3(posX + horizontalDistance, posY, posZ + distance);
+                Debug.Log("LEFT");
+                if (transform.position.x <= -horizontalDistance)
+                {
+                    transform.position = new Vector3(posX + horizontalDistance * 2, posY, posZ + distance);
+                }
+                else
+                {
+                    transform.position = new Vector3(posX - horizontalDistance, posY, posZ + distance);
+                }
             }
-            
+            UpdatePosition();
         }
-        else if (direction.x <= -1)
-        {
-            Debug.Log("LEFT");
-            if (transform.position.x <= -horizontalDistance)
-            {
-                transform.position = new Vector3(posX + horizontalDistance * 2, posY, posZ + distance);
-            }
-            else
-            {
-                transform.position = new Vector3(posX - horizontalDistance, posY, posZ + distance);
-            }
-        }
-        UpdatePosition();
     }
 
     public void UpdatePosition()
