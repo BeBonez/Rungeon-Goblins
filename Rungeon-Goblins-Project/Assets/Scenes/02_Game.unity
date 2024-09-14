@@ -3096,8 +3096,8 @@ GameObject:
   - component: {fileID: 1605205132}
   - component: {fileID: 1605205131}
   - component: {fileID: 1605205135}
-  - component: {fileID: 1605205137}
   - component: {fileID: 1605205136}
+  - component: {fileID: 1605205137}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3220,7 +3220,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Touch
+  m_DefaultActionMap: Keyboard
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &1605205136
@@ -3236,6 +3236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 1605205137}
+  magnitude: 0
 --- !u!114 &1605205137
 MonoBehaviour:
   m_ObjectHideFlags: 0

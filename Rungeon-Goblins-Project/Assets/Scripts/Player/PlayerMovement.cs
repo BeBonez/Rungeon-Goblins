@@ -7,21 +7,21 @@ public class PlayerMovement : MonoBehaviour
 {
     public void Move(Vector2 direction, int magnitude)
     {
-        if (Vector2.Dot(Vector2.up, direction) > magnitude)
+        if (direction.y >= 1)
         {
-            Console.WriteLine("UP");
+            Debug.Log("UP");
         }
-        else if (Vector2.Dot(Vector2.down, direction) > magnitude)
+        else if (direction.y <= -1)
         {
-            Console.WriteLine("DOWN");
+            Debug.Log("DOWN");
         }
-        else if (Vector2.Dot(Vector2.right, direction) > magnitude)
+        else if (direction.x >= 1)
         {
-            Console.WriteLine("RIGHT");
+            Debug.Log("RIGHT");
         }
-        else if (Vector2.Dot(Vector2.left, direction) > magnitude)
+        else if (direction.x <= -1)
         {
-            Console.WriteLine("LEFT");
+            Debug.Log("LEFT");
         }
     }
 }

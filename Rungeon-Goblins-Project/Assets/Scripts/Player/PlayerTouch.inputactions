@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "TouchPress",
-                    "type": "PassThrough",
+                    "type": "Button",
                     "id": "e8823c65-ca57-452e-ab2f-99e556ce5953",
-                    "expectedControlType": "Touch",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -28,7 +28,7 @@
                 {
                     "name": "",
                     "id": "1314f78f-16cd-436d-9940-614804839b37",
-                    "path": "<Touchscreen>/Press",
+                    "path": "<Touchscreen>/primaryTouch/press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -46,6 +46,78 @@
                     "action": "TouchPosition",
                     "isComposite": false,
                     "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Keyboard",
+            "id": "75c32b8d-a550-45df-8748-579c01a16ef3",
+            "actions": [
+                {
+                    "name": "KeyRead",
+                    "type": "PassThrough",
+                    "id": "14dcfe0f-2b98-4570-b7b5-09e5fda9061e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "2D Vector",
+                    "id": "c781ac2f-7fff-4154-997a-45c32c9ec8de",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyRead",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "46dd9251-1424-43d3-9cee-b5beefba13f9",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyRead",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "6272b72e-9aa1-41b1-8b42-ee1d1217d79c",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyRead",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "41e9eb19-0a6a-4082-926d-76369dc9df29",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyRead",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "eb2ea2b0-656f-4011-af2a-0ce517ca0a20",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KeyRead",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
