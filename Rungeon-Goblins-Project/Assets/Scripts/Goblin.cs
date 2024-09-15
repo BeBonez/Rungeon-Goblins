@@ -2,37 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeTrap : MonoBehaviour
+public class Goblin : MonoBehaviour
 {
     [SerializeField] GameObject player;
+    [SerializeField] GameObject LeftAttack;
+    [SerializeField] GameObject RightAttack;
     [SerializeField] private int downTime, upTime;
     private bool onOff;
 
-    private void Start()
+    void Start()
     {
         player = GameObject.FindWithTag("Player");
     }
 
-    IEnumerator Movement()
+    IEnumerator Attack()
     {
-        transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+        // Deixar avisos ativos
+        LeftAttack.SetActive(true);
+        RightAttack.SetActive(true);
         yield return new WaitForSeconds(upTime);
-        transform.position = new Vector3(transform.position.x, -5, transform.position.z);
+        // Deixar avisos inativos
+        LeftAttack.SetActive(false);
+        RightAttack.SetActive(false);
         yield return new WaitForSeconds(downTime);
         onOff = false;
     }
 
     private void FixedUpdate()
     {
-        if (onOff == false) 
-        { 
+        if (onOff == false)
+        {
             onOff = true;
-            StartCoroutine("Movement");
+            StartCoroutine("Attack");
         }
 
         if (transform.position.z < player.transform.position.z - 15)
         {
-            StopCoroutine("Movement");
+            StopCoroutine("Attack");
             Destroy(gameObject);
         }
     }
