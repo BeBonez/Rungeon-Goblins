@@ -6,37 +6,32 @@ public class PlayerCombat : MonoBehaviour
 {
     [SerializeField] GameManager gameManager;
     [SerializeField] Timer timer;
-    [SerializeField] Animator timeAnimator;
-    Animator cameraAnimator;
+    [SerializeField] Animator animatior;
+    
 
-    private void Start()
-    {
-        cameraAnimator = Camera.main.GetComponent<Animator>();
-    }
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)
         {
             case "Goblin":
-                EnemyDefeat();
+                GetComponent<Animation>().Play("DefeatEnemy");
                 Destroy(other.gameObject);
                 timer.AddTime(3);
                 break;
             case "Trap":
-                TookDamage();
+                GetComponent<Animation>().Play("TookDamage");
                 timer.AddTime(-3);
                 break;
             case "Hole":
-                // chamar após animação de cair no buraco
+                // chamar apï¿½s animaï¿½ï¿½o de cair no buraco
                 timer.AddTime(-timer.GetMaxTime()); 
                 break;
             case "Hourglass":
-                timeAnimator.SetTrigger("AddTime");
                 Destroy(other.gameObject);
                 timer.AddTime(timer.GetMaxTime());
                 break;
             case "GoblinAttack":
-                TookDamage();
+                GetComponent<Animation>().Play("TookDamage");
                 timer.AddTime(-3);
                 break;
             case "Coin":
@@ -44,17 +39,5 @@ public class PlayerCombat : MonoBehaviour
                 gameManager.AddCoin(1);
                 break;
         }
-    }
-
-    private void TookDamage()
-    {
-        timeAnimator.SetTrigger("TookDamage");
-        cameraAnimator.SetTrigger("TookDamage");
-    }
-
-    private void EnemyDefeat()
-    {
-        cameraAnimator.SetTrigger("EnemyDefeat");
-        timeAnimator.SetTrigger("AddTime");
     }
 }
