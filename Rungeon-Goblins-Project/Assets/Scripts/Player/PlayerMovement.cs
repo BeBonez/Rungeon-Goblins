@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 {
     private float posX, posY, posZ;
     [SerializeField] private float distance;
-    [SerializeField] private float horizontalDistance; //Pode ser apagado assim que tiver um mapa com tilings certos
     [SerializeField] private GameManager gameManager;
     private void Start()
     {
@@ -32,13 +31,13 @@ public class PlayerMovement : MonoBehaviour
             else if (direction.x >= 1)
             {
                 Debug.Log("RIGHT");
-                if (transform.position.x >= horizontalDistance)
+                if (transform.position.x >= distance)
                 {
-                    transform.position = new Vector3(posX - horizontalDistance * 2, posY, posZ + distance);
+                    transform.position = new Vector3(posX - distance * 2, posY, posZ + distance);
                 }
                 else
                 {
-                    transform.position = new Vector3(posX + horizontalDistance, posY, posZ + distance);
+                    transform.position = new Vector3(posX + distance, posY, posZ + distance);
                 }
                 gameManager.AddDistance(1);
 
@@ -46,13 +45,13 @@ public class PlayerMovement : MonoBehaviour
             else if (direction.x <= -1)
             {
                 Debug.Log("LEFT");
-                if (transform.position.x <= -horizontalDistance)
+                if (transform.position.x <= -distance)
                 {
-                    transform.position = new Vector3(posX + horizontalDistance * 2, posY, posZ + distance);
+                    transform.position = new Vector3(posX + distance * 2, posY, posZ + distance);
                 }
                 else
                 {
-                    transform.position = new Vector3(posX - horizontalDistance, posY, posZ + distance);
+                    transform.position = new Vector3(posX - distance, posY, posZ + distance);
                 }
                 gameManager.AddDistance(1);
             }
