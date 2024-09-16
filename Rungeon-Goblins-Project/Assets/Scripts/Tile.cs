@@ -9,7 +9,7 @@ public class Tile : MonoBehaviour
 
     private void Start()
     {
-        GameObject.Find("GameManager");
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     public void SetDespawnGoal(int whenToDespawn)
@@ -20,9 +20,9 @@ public class Tile : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (0 > despawnGoal) 
+        if (gameManager.GetDistance() >= despawnGoal) 
         { 
-        
+            Destroy(gameObject);
         }
     }
 }
