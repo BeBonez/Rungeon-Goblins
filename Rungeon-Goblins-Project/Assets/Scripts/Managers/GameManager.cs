@@ -55,5 +55,8 @@ public class GameManager : MonoBehaviour
             distanceHUD[i].text = distance.ToString() + "m";
         }
     }
-        
+    public int GetDistance()
+    {
+        return distance;
+    }
 }

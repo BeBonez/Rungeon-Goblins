@@ -1078,6 +1078,7 @@ GameObject:
   - component: {fileID: 481782505}
   - component: {fileID: 481782507}
   - component: {fileID: 481782508}
+  - component: {fileID: 481782509}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1139,6 +1140,20 @@ MonoBehaviour:
   maxTimer: 8
   gameManager: {fileID: 481782507}
   timeHUD: {fileID: 379530309}
+--- !u!114 &481782509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481782504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aeaa6abe1b5c294a82eb9e63ef78f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilePrefab: {fileID: 0}
+  gameManager: {fileID: 481782507}
 --- !u!1 &573745665
 GameObject:
   m_ObjectHideFlags: 0
