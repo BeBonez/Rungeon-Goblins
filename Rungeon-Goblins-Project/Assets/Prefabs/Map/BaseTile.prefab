@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6970066960930338140}
   m_Layer: 0
-  m_Name: Tier7
+  m_Name: Tier3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,7 +359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5081751636230065794}
   m_Layer: 0
-  m_Name: Tier7
+  m_Name: Tier3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -455,7 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5263512647766004959}
   m_Layer: 0
-  m_Name: Tier7
+  m_Name: Tier3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

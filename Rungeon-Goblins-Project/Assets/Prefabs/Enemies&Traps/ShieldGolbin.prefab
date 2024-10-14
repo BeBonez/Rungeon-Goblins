@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3892195132098457787}
   - component: {fileID: 8945930307161608518}
   m_Layer: 0
-  m_Name: attackRight (1)
+  m_Name: attackUpperHalf
   m_TagString: GoblinAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 184763837026006871}
   - component: {fileID: 2356777482478392572}
   m_Layer: 0
-  m_Name: attackRight (1)
+  m_Name: attackUpperHalf
   m_TagString: GoblinAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 8465430551332440245}
   - component: {fileID: 6556328119687730398}
   m_Layer: 0
-  m_Name: attackLeft
+  m_Name: attack_1
   m_TagString: GoblinAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 3899501214910789149}
   - component: {fileID: 5690135516696341390}
   m_Layer: 0
-  m_Name: Goblin
+  m_Name: ShieldGolbin
   m_TagString: Goblin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -630,8 +630,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  LeftAttack: {fileID: 9042628950811608040}
-  RightAttack: {fileID: 5390512014067237859}
+  attacks:
+  - {fileID: 9042628950811608040}
+  - {fileID: 5390512014067237859}
   downTime: 3
   upTime: 1
 --- !u!1 &9042628950811608040
@@ -648,7 +649,7 @@ GameObject:
   - component: {fileID: 6995968190681092210}
   - component: {fileID: 5604829504523932676}
   m_Layer: 0
-  m_Name: attackRight
+  m_Name: attack_0
   m_TagString: GoblinAttack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

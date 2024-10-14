@@ -5,8 +5,7 @@ using UnityEngine;
 public class Goblin : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    [SerializeField] GameObject LeftAttack;
-    [SerializeField] GameObject RightAttack;
+    [SerializeField] GameObject[] attacks;
     [SerializeField] private int downTime, upTime;
     private bool onOff;
 
@@ -18,12 +17,15 @@ public class Goblin : MonoBehaviour
     IEnumerator Attack()
     {
         // Deixar avisos ativos
-        LeftAttack.SetActive(true);
-        RightAttack.SetActive(true);
+        for (int i = 0; i < attacks.Length; i++) {
+            attacks[i].SetActive(true);
+        }
         yield return new WaitForSeconds(upTime);
         // Deixar avisos inativos
-        LeftAttack.SetActive(false);
-        RightAttack.SetActive(false);
+        for (int i = 0; i < attacks.Length; i++)
+        {
+            attacks[i].SetActive(false);
+        }
         yield return new WaitForSeconds(downTime);
         onOff = false;
     }

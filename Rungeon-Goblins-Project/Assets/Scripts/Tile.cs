@@ -18,7 +18,7 @@ public class Tile : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         currentDistance = gameManager.GetDistance();
 
-        if (currentDistance > TierGoal + 70)
+        if (currentDistance > TierGoal + 120)
         {
             for (int i = 0; i < SecondTier.Length; i++)
             {
@@ -27,7 +27,7 @@ public class Tile : MonoBehaviour
             
         }
 
-        if (currentDistance > TierGoal + 360)
+        if (currentDistance > TierGoal + 740)
         {
             for (int i = 0; i < SecondTier.Length; i++)
             {
