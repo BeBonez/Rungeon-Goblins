@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class TileGenerator200 : MonoBehaviour
 {
-    [SerializeField] private GameObject tilePrefab;
     [SerializeField] private GameManager gameManager;
+
+    [Header("Tiles")]
+    [SerializeField] private GameObject[] tilePrefabs;
+    private GameObject tilePrefab;
+
     private Vector3 originalPosition;
-    private int current;
+    private int currentDistance;
     private int spawnPosition;
     private int spawnGoal;
     private int despawnGoal;
-    private bool secondSpawn;
+    private bool secondSpawn; 
 
     private void Awake()
     {
+        tilePrefab = tilePrefabs[Random.Range(0, 5)];
         originalPosition = tilePrefab.transform.position;
         spawnPosition = 0;
         despawnGoal = 30;
@@ -23,11 +28,11 @@ public class TileGenerator200 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        current = gameManager.GetDistance();
+        currentDistance = gameManager.GetDistance();
 
         if (secondSpawn == false)
         {
-            if (current >= 10)
+            if (currentDistance >= 10)
             {
                 spawnGoal = 10;
                 GenerateNewTile();
@@ -35,7 +40,7 @@ public class TileGenerator200 : MonoBehaviour
             }
         }
 
-        if (current >= spawnGoal)
+        if (currentDistance >= spawnGoal)
         {
             GenerateNewTile();
         }
@@ -43,6 +48,22 @@ public class TileGenerator200 : MonoBehaviour
     }
     public void GenerateNewTile()
     {
+        int random;
+
+        if (currentDistance > 360)
+        {
+            random = Random.Range(0, 15);
+        } else if (currentDistance > 240)
+        {
+            random = Random.Range(10, 15);
+        } else if (currentDistance > 100) {
+            random = Random.Range(5, 10);
+        } else
+        {
+            random = Random.Range(0, 5);
+        }
+
+        tilePrefab = tilePrefabs[random];
         Vector3 nextPostion = new Vector3(originalPosition.x, originalPosition.y, spawnPosition);
         GameObject newTile = Instantiate(tilePrefab, nextPostion, tilePrefab.transform.rotation);
         newTile.GetComponent<Tile>().SetDespawnGoal(despawnGoal);

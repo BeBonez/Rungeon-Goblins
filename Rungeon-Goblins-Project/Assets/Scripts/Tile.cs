@@ -6,10 +6,36 @@ public class Tile : MonoBehaviour
 {
     private GameManager gameManager;
     private int despawnGoal;
+    private int currentDistance;
+
+    [Header("Tiers")]
+    [SerializeField] private int TierGoal; // 0 for area 1, 125 for area 2, 250 for area 3...
+    [SerializeField] private GameObject[] SecondTier;
+    [SerializeField] private GameObject[] ThirdTier;
 
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        currentDistance = gameManager.GetDistance();
+
+        if (currentDistance > TierGoal + 70)
+        {
+            for (int i = 0; i < SecondTier.Length; i++)
+            {
+                SecondTier[i].SetActive(true);
+            }
+            
+        }
+
+        if (currentDistance > TierGoal + 360)
+        {
+            for (int i = 0; i < SecondTier.Length; i++)
+            {
+                ThirdTier[i].SetActive(true);
+            }
+
+        }
+
     }
 
     public void SetDespawnGoal(int whenToDespawn)

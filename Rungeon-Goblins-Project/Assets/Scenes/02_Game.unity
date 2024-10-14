@@ -1209,8 +1209,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aeaa6abe1b5c294a82eb9e63ef78f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 5235507734857844917, guid: 0502d476ecd519143ac545c146f66485, type: 3}
   gameManager: {fileID: 481782507}
+  tilePrefabs:
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
+  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
 --- !u!1 &573745665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1675,7 +1690,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 197124837057481982, guid: 7c4a573fe8804f045bea40e21fc8ae5b, type: 3}
       propertyPath: m_Name
-      value: GridTile (5)
+      value: GridTileStart
       objectReference: {fileID: 0}
     - target: {fileID: 718187054529746500, guid: 7c4a573fe8804f045bea40e21fc8ae5b, type: 3}
       propertyPath: m_LocalPosition.x
