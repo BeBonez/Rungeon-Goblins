@@ -9,7 +9,7 @@ public class Tile : MonoBehaviour
     private int currentDistance;
 
     [Header("Tiers")]
-    [SerializeField] private int TierGoal; // 0 for area 1, 125 for area 2, 250 for area 3...
+    [SerializeField] private int TierGoal; // 0 for area 1, 240 for area 2, 490 for area 3...
     [SerializeField] private GameObject[] SecondTier;
     [SerializeField] private GameObject[] ThirdTier;
 
