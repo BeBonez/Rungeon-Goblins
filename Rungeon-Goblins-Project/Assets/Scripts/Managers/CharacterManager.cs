@@ -13,6 +13,7 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private GameObject[] characters;
     [SerializeField] private GameObject[] charactersUI;
     [SerializeField] private Vector3 spawnPoint;
+    [SerializeField] private GameObject[] uiCharactersPanel;
 
     private void Awake() {
         selectedChar = characters[CharacterSelection.Instance.character];
@@ -20,6 +21,7 @@ public class CharacterManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex != 0) {
         Debug.Log(selectedChar.name);
         Instantiate(selectedChar, spawnPoint, Quaternion.identity);
+            uiCharactersPanel[CharacterSelection.Instance.character].SetActive(true);
         }
 
     }

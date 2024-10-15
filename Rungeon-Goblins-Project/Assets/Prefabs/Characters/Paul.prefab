@@ -119,9 +119,9 @@ GameObject:
   - component: {fileID: -650034898966913587}
   - component: {fileID: 9125162099297978122}
   - component: {fileID: -5230489799314499482}
-  - component: {fileID: -7338097277808647611}
   - component: {fileID: 5880155349569237434}
   - component: {fileID: 7338649173901031501}
+  - component: {fileID: 8659963258666940830}
   m_Layer: 0
   m_Name: Paul
   m_TagString: Player
@@ -289,19 +289,6 @@ MonoBehaviour:
   m_DefaultActionMap: Touch
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &-7338097277808647611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7878812945020904432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f324cf247e3814d459b130333ee1ee07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDistance: 10
 --- !u!114 &5880155349569237434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880e7af024a23e542896b8844a57e427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: -7338097277808647611}
+  playerMovement: {fileID: 8659963258666940830}
   magnitude: 50
 --- !u!114 &7338649173901031501
 MonoBehaviour:
@@ -328,6 +315,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cabc78523bfc3fc47adb8fb7876e7ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBase: {fileID: 8659963258666940830}
+--- !u!114 &8659963258666940830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7878812945020904432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e4ff33555aee71478a3cf21f0a08060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posX: 0
+  posY: 0
+  posZ: 0
+  moveDistance: 10
+  gameManager: {fileID: 0}
+  canTakeDamge: 1
+  maxCharges: 3
+  actualCharges: 1
+  dashCoolDown: 8
+  isDashCoolingDown: 0
+  timeActive: 4
+  shieldCoolDown: 8
+  uiMaxCharges: {fileID: 0}
+  uiActualCharges: {fileID: 0}
+  uiShield: {fileID: 0}
 --- !u!1 &8928820727980486557
 GameObject:
   m_ObjectHideFlags: 0

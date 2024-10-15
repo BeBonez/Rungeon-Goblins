@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject gameOver;
     [SerializeField] TMP_Text[] coinHUD; // Todos os textos de Coins
     [SerializeField] TMP_Text[] distanceHUD; // Todos os textos de Distancia
-    public Slider timeHud; 
+    public Slider timeHud;
 
     [Header("Variables: ")]
     [SerializeField] GameObject player;
@@ -23,13 +23,19 @@ public class GameManager : MonoBehaviour
         coins = 0;
     }
 
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<PlayerMovement>().gameManager = this;
+    }
+
     public void GameOver ()
     {
         StopAllCoroutines();
         UpdateData();
+        player.transform.Rotate(0, 0, 90);
         Time.timeScale = 0.0f;
         gameOver.SetActive(true);
-        player.transform.Rotate(0, 0, 90);
     }
 
     public void AddCoin(int amount)
@@ -60,4 +66,8 @@ public class GameManager : MonoBehaviour
     {
         return distance;
     }
+
+    #region getsSets
+
+    #endregion
 }

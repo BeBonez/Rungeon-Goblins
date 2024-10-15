@@ -15,7 +15,7 @@ public class CameraFollow : MonoBehaviour
         originalX = transform.position.x;
         originalY = transform.position.y;
     }
-    private void LateUpdate()
+    private void FixedUpdate()
     {
         Vector3 playerPosition = new Vector3(originalX, originalY, playerTransform.position.z + offSet);
         transform.position = Vector3.SmoothDamp(transform.position, playerPosition, ref currentVelocity, smoothness);

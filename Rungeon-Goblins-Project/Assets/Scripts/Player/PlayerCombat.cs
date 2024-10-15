@@ -7,6 +7,7 @@ public class PlayerCombat : MonoBehaviour
     private GameManager gameManager;
     private Timer timer;
     private Animator timeAnimator;
+    [SerializeField] private PlayerMovement playerBase;
     Animator cameraAnimator;
 
     private void Start()
@@ -15,23 +16,25 @@ public class PlayerCombat : MonoBehaviour
         timer = GameObject.Find("GameManager").GetComponent<Timer>();
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         timeAnimator = GameObject.Find("Time").GetComponent<Animator>();
+        playerBase = GetComponent<PlayerMovement>();
     }
     private void OnTriggerEnter(Collider other)
     {
+
         switch (other.tag)
         {
+
             case "Goblin":
                 EnemyDefeat();
                 Destroy(other.gameObject);
                 timer.AddTime(3);
                 break;
             case "Trap":
-                TookDamage();
-                timer.AddTime(-3);
+                TookDamage(3);
                 break;
             case "Hole":
                 // chamar após animação de cair no buraco
-                timer.AddTime(-timer.GetMaxTime()); 
+                timer.AddTime(-timer.GetMaxTime());
                 break;
             case "Hourglass":
                 timeAnimator.SetTrigger("AddTime");
@@ -39,20 +42,24 @@ public class PlayerCombat : MonoBehaviour
                 timer.AddTime(timer.GetMaxTime());
                 break;
             case "GoblinAttack":
-                TookDamage();
-                timer.AddTime(-3);
+                TookDamage(3);
                 break;
             case "Coin":
                 Destroy(other.gameObject);
                 gameManager.AddCoin(1);
                 break;
         }
+
     }
 
-    private void TookDamage()
+    private void TookDamage(float value)
     {
-        timeAnimator.SetTrigger("TookDamage");
-        cameraAnimator.SetTrigger("TookDamage");
+        if (playerBase.CanTakeDamage())
+        {
+            timeAnimator.SetTrigger("TookDamage");
+            cameraAnimator.SetTrigger("TookDamage");
+            timer.AddTime(-value);
+        }
     }
 
     private void EnemyDefeat()

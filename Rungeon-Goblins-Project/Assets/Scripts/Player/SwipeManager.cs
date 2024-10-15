@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 public class SwipeManager : MonoBehaviour
 {
     public PlayerMovement playerMovement;
+    private ScriptableObject oi;
     private PlayerInput playerInput;
     private InputAction touchAction;
     private InputAction touchPosition;
