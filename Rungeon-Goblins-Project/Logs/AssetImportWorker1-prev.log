@@ -15,7 +15,7 @@ C:/Repositories/Rungeon-Goblins/Rungeon-Goblins-Project
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-65249
+53411
 Successfully changed project path to: C:/Repositories/Rungeon-Goblins/Rungeon-Goblins-Project
 C:/Repositories/Rungeon-Goblins/Rungeon-Goblins-Project
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,16 +49,16 @@ C:/Repositories/Rungeon-Goblins/Rungeon-Goblins-Project
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [17400]  Target information:
+Player connection [18664]  Target information:
 
-Player connection [17400]  * "[IP] 192.168.3.44 [Port] 0 [Flags] 2 [Guid] 2542545839 [EditorId] 2542545839 [Version] 1048832 [Id] WindowsEditor(7,BernardoBones) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [18664]  * "[IP] 192.168.3.44 [Port] 0 [Flags] 2 [Guid] 1561884165 [EditorId] 1561884165 [Version] 1048832 [Id] WindowsEditor(7,BernardoBones) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [17400]  * "[IP] 26.141.113.52 [Port] 0 [Flags] 2 [Guid] 2542545839 [EditorId] 2542545839 [Version] 1048832 [Id] WindowsEditor(7,BernardoBones) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [18664]  * "[IP] 26.141.113.52 [Port] 0 [Flags] 2 [Guid] 1561884165 [EditorId] 1561884165 [Version] 1048832 [Id] WindowsEditor(7,BernardoBones) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [17400] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [17400] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [18664] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [18664] Host joined alternative multi-casting on [225.0.0.222:34997]...
 [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
-Refreshing native plugins compatible for Editor in 13.28 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 11.95 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.45f1 (a13dfa44d684)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity Hub/2022.3.45f1/Editor/Data/Resources/UnitySubsystems
@@ -74,47 +74,47 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity Hub/2022.3.45f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity Hub/2022.3.45f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity Hub/2022.3.45f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56844
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56788
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity Hub/2022.3.45f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity Hub/2022.3.45f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.020738 seconds.
-- Loaded All Assemblies, in  0.685 seconds
+Registered in 0.024806 seconds.
+- Loaded All Assemblies, in  0.652 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 554 ms
+Android Extension - Scanning For ADB Devices 536 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.052 seconds
-Domain Reload Profiling: 1733ms
-	BeginReloadAssembly (205ms)
+- Finished resetting the current domain, in  1.107 seconds
+Domain Reload Profiling: 1755ms
+	BeginReloadAssembly (201ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (64ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (116ms)
-	LoadAllAssembliesAndSetupDomain (278ms)
-		LoadAssemblies (201ms)
+	RebuildCommonClasses (63ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (114ms)
+	LoadAllAssembliesAndSetupDomain (251ms)
+		LoadAssemblies (197ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (273ms)
-			TypeCache.Refresh (270ms)
-				TypeCache.ScanAssembly (248ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
+		AnalyzeDomain (246ms)
+			TypeCache.Refresh (244ms)
+				TypeCache.ScanAssembly (226ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1053ms)
+	FinalizeReload (1108ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (976ms)
+		SetupLoadedEditorAssemblies (1024ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (701ms)
-			SetLoadedEditorAssemblies (6ms)
+			InitializePlatformSupportModulesInManaged (696ms)
+			SetLoadedEditorAssemblies (9ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (4ms)
-			ProcessInitializeOnLoadAttributes (191ms)
-			ProcessInitializeOnLoadMethodAttributes (75ms)
+			ProcessInitializeOnLoadAttributes (226ms)
+			ProcessInitializeOnLoadMethodAttributes (88ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -123,178 +123,52 @@ Domain Reload Profiling: 1733ms
 Worker process is ready to serve import requests
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.796 seconds
+- Loaded All Assemblies, in  0.845 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.793 seconds
-Domain Reload Profiling: 1582ms
-	BeginReloadAssembly (268ms)
+- Finished resetting the current domain, in  0.891 seconds
+Domain Reload Profiling: 1727ms
+	BeginReloadAssembly (284ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (11ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (36ms)
-	RebuildCommonClasses (62ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (83ms)
-	LoadAllAssembliesAndSetupDomain (355ms)
-		LoadAssemblies (401ms)
+	RebuildCommonClasses (71ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (88ms)
+	LoadAllAssembliesAndSetupDomain (372ms)
+		LoadAssemblies (425ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (110ms)
-			TypeCache.Refresh (95ms)
-				TypeCache.ScanAssembly (78ms)
-			ScanForSourceGeneratedMonoScriptInfo (9ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (794ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (571ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (35ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (99ms)
-			ProcessInitializeOnLoadAttributes (373ms)
-			ProcessInitializeOnLoadMethodAttributes (41ms)
-			AfterProcessingInitializeOnLoad (18ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 5.58 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1104 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 17 unused Assets / (53.1 KB). Loaded Objects now: 1579.
-Memory consumption went from 150.6 MB to 150.6 MB.
-Total: 4.124500 ms (FindLiveObjects: 0.179500 ms CreateObjectMapping: 0.044300 ms MarkObjects: 3.784700 ms  DeleteObjects: 0.114500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.806 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.843 seconds
-Domain Reload Profiling: 1644ms
-	BeginReloadAssembly (326ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (55ms)
-	RebuildCommonClasses (64ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (65ms)
-	LoadAllAssembliesAndSetupDomain (329ms)
-		LoadAssemblies (513ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (27ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (844ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (513ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (31ms)
-			SetLoadedEditorAssemblies (5ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (107ms)
-			ProcessInitializeOnLoadAttributes (318ms)
-			ProcessInitializeOnLoadMethodAttributes (33ms)
-			AfterProcessingInitializeOnLoad (19ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (12ms)
-Refreshing native plugins compatible for Editor in 3.74 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1582.
-Memory consumption went from 146.7 MB to 146.7 MB.
-Total: 2.848000 ms (FindLiveObjects: 0.137600 ms CreateObjectMapping: 0.027900 ms MarkObjects: 2.637200 ms  DeleteObjects: 0.044200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.658 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.902 seconds
-Domain Reload Profiling: 1554ms
-	BeginReloadAssembly (281ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (32ms)
-	RebuildCommonClasses (56ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (242ms)
-		LoadAssemblies (396ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (23ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (1ms)
+		AnalyzeDomain (120ms)
+			TypeCache.Refresh (104ms)
+				TypeCache.ScanAssembly (85ms)
 			ScanForSourceGeneratedMonoScriptInfo (11ms)
 			ResolveRequiredComponents (4ms)
-	FinalizeReload (902ms)
+	FinalizeReload (892ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (566ms)
+		SetupLoadedEditorAssemblies (625ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (35ms)
-			SetLoadedEditorAssemblies (5ms)
+			InitializePlatformSupportModulesInManaged (41ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (95ms)
-			ProcessInitializeOnLoadAttributes (379ms)
-			ProcessInitializeOnLoadMethodAttributes (32ms)
+			BeforeProcessingInitializeOnLoad (107ms)
+			ProcessInitializeOnLoadAttributes (408ms)
+			ProcessInitializeOnLoadMethodAttributes (43ms)
 			AfterProcessingInitializeOnLoad (19ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Refreshing native plugins compatible for Editor in 4.35 ms, found 0 plugins.
+		AwakeInstancesAfterBackupRestoration (10ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 5.74 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1585.
-Memory consumption went from 146.7 MB to 146.7 MB.
-Total: 2.683600 ms (FindLiveObjects: 0.135900 ms CreateObjectMapping: 0.027100 ms MarkObjects: 2.478700 ms  DeleteObjects: 0.040900 ms)
+Unloading 1104 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 17 unused Assets / (53.2 KB). Loaded Objects now: 1579.
+Memory consumption went from 150.6 MB to 150.6 MB.
+Total: 4.505800 ms (FindLiveObjects: 0.159800 ms CreateObjectMapping: 0.034900 ms MarkObjects: 4.178000 ms  DeleteObjects: 0.131800 ms)
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -308,6 +182,36 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Import Request.
+  Time since last request: 277356.537890 seconds.
+  path: Assets/Prefabs/Enemies&Traps/ArcherGoblin.prefab
+  artifactKey: Guid(1574960dccaae2b4486b9e5665e0afd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/ArcherGoblin.prefab using Guid(1574960dccaae2b4486b9e5665e0afd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '03d8b9cbf7aea843cd4eff13f010487f') in 0.210090 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 62
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Prefabs/Enemies&Traps/DaggerGoblin.prefab
+  artifactKey: Guid(685be6cfec73c2543b2624c05d9c5261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/DaggerGoblin.prefab using Guid(685be6cfec73c2543b2624c05d9c5261) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '30c1143afd12f5add9d9ce7a410d8eaa') in 0.031165 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 62
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
+  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: 'a15efd970e2f4f2f24b96598e1f1f895') in 0.021657 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 51
 ========================================================================
 Received Prepare
 Caller must complete domain reload
@@ -316,1396 +220,46 @@ Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.851 seconds
-Domain Reload Profiling: 1527ms
-	BeginReloadAssembly (281ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (42ms)
-	RebuildCommonClasses (62ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (56ms)
-	LoadAllAssembliesAndSetupDomain (256ms)
-		LoadAssemblies (402ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (24ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (11ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (852ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (514ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (36ms)
-			SetLoadedEditorAssemblies (6ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (89ms)
-			ProcessInitializeOnLoadAttributes (327ms)
-			ProcessInitializeOnLoadMethodAttributes (38ms)
-			AfterProcessingInitializeOnLoad (18ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Refreshing native plugins compatible for Editor in 4.73 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 11 unused Assets / (27.1 KB). Loaded Objects now: 1588.
-Memory consumption went from 146.7 MB to 146.7 MB.
-Total: 3.665800 ms (FindLiveObjects: 0.175200 ms CreateObjectMapping: 0.039900 ms MarkObjects: 3.403800 ms  DeleteObjects: 0.045700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.709 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.889 seconds
-Domain Reload Profiling: 1591ms
-	BeginReloadAssembly (290ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (35ms)
-	RebuildCommonClasses (60ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (65ms)
-	LoadAllAssembliesAndSetupDomain (270ms)
-		LoadAssemblies (434ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (27ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (12ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (889ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (521ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (40ms)
-			SetLoadedEditorAssemblies (6ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (97ms)
-			ProcessInitializeOnLoadAttributes (328ms)
-			ProcessInitializeOnLoadMethodAttributes (30ms)
-			AfterProcessingInitializeOnLoad (20ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Refreshing native plugins compatible for Editor in 3.92 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1591.
-Memory consumption went from 146.7 MB to 146.7 MB.
-Total: 3.094200 ms (FindLiveObjects: 0.143200 ms CreateObjectMapping: 0.026900 ms MarkObjects: 2.878900 ms  DeleteObjects: 0.043900 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/Goblin.cs: 75cf34f56b198a781f61b2757d93f260 -> bfda3a5ab7b8fb10f038f58998758644
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/SpikeTrap.cs: 567d0ad982f33d4f744af94f3a25cf1f -> 635a7c61248dbcedaba1b668faa4dc87
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 5ed27d4d1d6d4c271401389a096d4b40 -> aff6f9dc2b71a49c469a2d556d2e8230
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-========================================================================
-Received Import Request.
-  Time since last request: 275597.207923 seconds.
-  path: Assets/Prefabs/Enemies/SpikeTrap.prefab
-  artifactKey: Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies/SpikeTrap.prefab using Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264f67f23238b86d6adf9d46193b9b2c') in 0.010857 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 12.853439 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab
-  artifactKey: Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab using Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264f67f23238b86d6adf9d46193b9b2c') in 0.001102 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.112 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.245 seconds
-Domain Reload Profiling: 2345ms
-	BeginReloadAssembly (473ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (83ms)
-	RebuildCommonClasses (101ms)
-	RebuildNativeTypeToScriptingClass (32ms)
-	initialDomainReloadingComplete (99ms)
-	LoadAllAssembliesAndSetupDomain (394ms)
-		LoadAssemblies (634ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (29ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (1246ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (756ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (99ms)
-			SetLoadedEditorAssemblies (18ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (222ms)
-			ProcessInitializeOnLoadAttributes (362ms)
-			ProcessInitializeOnLoadMethodAttributes (34ms)
-			AfterProcessingInitializeOnLoad (20ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 5.11 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1084 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1594.
-Memory consumption went from 146.4 MB to 146.4 MB.
-Total: 3.193000 ms (FindLiveObjects: 0.154000 ms CreateObjectMapping: 0.033100 ms MarkObjects: 2.956500 ms  DeleteObjects: 0.048100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/Goblin.cs: 75cf34f56b198a781f61b2757d93f260 -> bfda3a5ab7b8fb10f038f58998758644
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/SpikeTrap.cs: 567d0ad982f33d4f744af94f3a25cf1f -> 635a7c61248dbcedaba1b668faa4dc87
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 9251d5697d4788bfc7dac146d4344c31 -> aff6f9dc2b71a49c469a2d556d2e8230
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-========================================================================
-Received Import Request.
-  Time since last request: 184.103671 seconds.
-  path: Assets/Prefabs/Enemies&Traps/Goblin.prefab
-  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/Goblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'f7f2d6c0df11afcf1fb0e14d12711ff6') in 0.003697 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 107.477133 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab
-  artifactKey: Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab using Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264f67f23238b86d6adf9d46193b9b2c') in 0.001156 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.317020 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab
-  artifactKey: Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab using Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264f67f23238b86d6adf9d46193b9b2c') in 0.001269 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.869307 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab
-  artifactKey: Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab using Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264f67f23238b86d6adf9d46193b9b2c') in 0.001030 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 26.724982 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab
-  artifactKey: Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab using Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264f67f23238b86d6adf9d46193b9b2c') in 0.001069 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 15.746461 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab
-  artifactKey: Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab using Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264f67f23238b86d6adf9d46193b9b2c') in 0.001454 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 9.860347 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '1c53d28681a38ac6c981b9d30e1e94ed') in 0.001134 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000128 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab
-  artifactKey: Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab using Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264f67f23238b86d6adf9d46193b9b2c') in 0.000951 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 7.533025 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '1dbc0870afa57c9561030090c65ed7ac') in 0.001114 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.437179 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ed3aae21147eaa00bd1626ec0dca0d65') in 0.001157 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 19.823662 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ed3aae21147eaa00bd1626ec0dca0d65') in 0.001274 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 18.004206 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ed3aae21147eaa00bd1626ec0dca0d65') in 0.001159 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 12.727565 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ed3aae21147eaa00bd1626ec0dca0d65') in 0.001070 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 8.163787 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ed3aae21147eaa00bd1626ec0dca0d65') in 0.001202 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.853678 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ed3aae21147eaa00bd1626ec0dca0d65') in 0.001565 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 13.335274 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ed3aae21147eaa00bd1626ec0dca0d65') in 0.001204 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 8.878992 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ed3aae21147eaa00bd1626ec0dca0d65') in 0.002306 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.229495 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ed3aae21147eaa00bd1626ec0dca0d65') in 0.001217 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.677092 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(c19a49e9a1c79514db21ce480d9f4208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ed3aae21147eaa00bd1626ec0dca0d65') in 0.000939 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 10.318097 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab
-  artifactKey: Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab using Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264f67f23238b86d6adf9d46193b9b2c') in 0.001736 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.740104 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab
-  artifactKey: Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab using Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264f67f23238b86d6adf9d46193b9b2c') in 0.001042 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 11.059957 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6a3ec49c2cc32f1e0c12ec1deacfb13d') in 0.001478 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.404795 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '4c84cba8abb677e9e9cad521e37b6c10') in 0.001149 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.806794 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '3a541d46069275ae3c86c40fdd4aa956') in 0.001182 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 18.176136 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'fb670f99a7b6cfee12967772e7882b57') in 0.001185 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 6.621118 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'e61be6c15cad5da0e6a22eb7b68a1896') in 0.001287 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 2.401045 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264482e7ed96a4ebf168d9d2399a81cb') in 0.001261 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.015373 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '01f1f6a15ab70a8031451df3de064714') in 0.001097 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.086165 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'a474054836ef60103e54a60d5e01f89e') in 0.001292 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.680189 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'd80b16fe3c4b17ecee6b14e367f4ce52') in 0.001053 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 7.947962 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'd80b16fe3c4b17ecee6b14e367f4ce52') in 0.001215 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.014465 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'd80b16fe3c4b17ecee6b14e367f4ce52') in 0.001070 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 14.376103 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'dc949a08f61e3dea9ce82cdd62649dd5') in 0.001088 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 11.256226 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'd80b16fe3c4b17ecee6b14e367f4ce52') in 0.001159 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.087001 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '0cc29f983fbfc2bcfe840f374e0f4f5c') in 0.001068 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 2.020298 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6e66c396e6e1df3ebcaa2dcaf3665e2a') in 0.001181 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.056679 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin 1.prefab
-  artifactKey: Guid(d97521d75e116b5499da22d24936eb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin 1.prefab using Guid(d97521d75e116b5499da22d24936eb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '325e8808f77e64ce85f9776f99d7588e') in 0.001319 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 12.322656 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGoblin.prefab
-  artifactKey: Guid(d97521d75e116b5499da22d24936eb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGoblin.prefab using Guid(d97521d75e116b5499da22d24936eb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'c7484978225be598e2f97dbebb8da703') in 0.001243 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000087 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6e66c396e6e1df3ebcaa2dcaf3665e2a') in 0.001041 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 8.140633 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGoblin.prefab
-  artifactKey: Guid(d97521d75e116b5499da22d24936eb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGoblin.prefab using Guid(d97521d75e116b5499da22d24936eb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '9a3a3427e6e2892f816036f53547c60a') in 0.001252 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000067 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6e66c396e6e1df3ebcaa2dcaf3665e2a') in 0.000997 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.193203 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGoblin.prefab
-  artifactKey: Guid(d97521d75e116b5499da22d24936eb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGoblin.prefab using Guid(d97521d75e116b5499da22d24936eb18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'c7484978225be598e2f97dbebb8da703') in 0.001367 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000414 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6e66c396e6e1df3ebcaa2dcaf3665e2a') in 0.001545 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 4.231779 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6e66c396e6e1df3ebcaa2dcaf3665e2a') in 0.001491 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.936493 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6e66c396e6e1df3ebcaa2dcaf3665e2a') in 0.001455 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 9.589625 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001180 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.001157 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6e66c396e6e1df3ebcaa2dcaf3665e2a') in 0.000975 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 40.611594 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.002308 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000142 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6e66c396e6e1df3ebcaa2dcaf3665e2a') in 0.000741 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 29.960070 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.000996 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000102 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'ed85d77f80b61d7d71bcfbf03e1183b4') in 0.001095 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 33.274975 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001255 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000086 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '466f0cb7805f4e6726c59abc4de31b22') in 0.000943 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.639064 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001161 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000297 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '7964da3bb90962407a55d4cd1ed7458d') in 0.000979 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000096 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6e66c396e6e1df3ebcaa2dcaf3665e2a') in 0.000976 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 7.918150 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001571 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '090e08d4fae90c121aae75bc02393295') in 0.001714 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.471213 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.000901 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000067 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'a90262a2552c52af2a33ce2862717eba') in 0.000897 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 1.822087 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001979 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000076 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '726581e8a7dfba7c57cde9705be0df85') in 0.001121 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.418697 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001391 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000075 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'fef2bf6fc7ae7506e5ec98b515dce9bf') in 0.000861 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.427099 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001043 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000080 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '4848a26b3e823f4526628a076fab05c5') in 0.000959 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 2.255733 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001307 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000117 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '427d1093444fce4165972e8be77ca9c3') in 0.000762 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 8.731761 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001549 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'c2bfebdf3589812ba60bfdf97308cecc') in 0.000806 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.261761 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001298 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000291 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin 1.prefab
-  artifactKey: Guid(1574960dccaae2b4486b9e5665e0afd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin 1.prefab using Guid(1574960dccaae2b4486b9e5665e0afd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '96237105a6917b820f506d13297a5777') in 0.001159 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 14.375123 seconds.
-  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
-  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '0c1a0808dd4b81e600020a393477cc8f') in 0.002046 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'c2bfebdf3589812ba60bfdf97308cecc') in 0.001016 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000096 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001330 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 14.851547 seconds.
-  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
-  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '0c1a0808dd4b81e600020a393477cc8f') in 0.001081 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000111 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'c2bfebdf3589812ba60bfdf97308cecc') in 0.001019 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001168 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 2.006659 seconds.
-  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
-  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '0c1a0808dd4b81e600020a393477cc8f') in 0.000690 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000100 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab
-  artifactKey: Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpikeTrap.prefab using Guid(d61268ea03e27104cb152a9726c52bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '264f67f23238b86d6adf9d46193b9b2c') in 0.000836 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000389 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6e66c396e6e1df3ebcaa2dcaf3665e2a') in 0.000910 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 2.635976 seconds.
-  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
-  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '0c1a0808dd4b81e600020a393477cc8f') in 0.001139 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000389 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'c2bfebdf3589812ba60bfdf97308cecc') in 0.001337 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000152 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.000801 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.446596 seconds.
-  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
-  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '0c1a0808dd4b81e600020a393477cc8f') in 0.001023 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000090 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'c2bfebdf3589812ba60bfdf97308cecc') in 0.000797 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000106 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.000777 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 3.461728 seconds.
-  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
-  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '0c1a0808dd4b81e600020a393477cc8f') in 0.001247 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000081 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'c2bfebdf3589812ba60bfdf97308cecc') in 0.000764 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000099 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.000810 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 195.325538 seconds.
-  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
-  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '0c1a0808dd4b81e600020a393477cc8f') in 0.001325 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000085 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin 1.prefab
-  artifactKey: Guid(685be6cfec73c2543b2624c05d9c5261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin 1.prefab using Guid(685be6cfec73c2543b2624c05d9c5261) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '15f1cf87e0a958c73aab7362f4796f1f') in 0.001305 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000115 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.001009 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 7.701476 seconds.
-  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
-  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '0c1a0808dd4b81e600020a393477cc8f') in 0.001363 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab
-  artifactKey: Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SwordGoblin.prefab using Guid(8de244f8de671ef44831af5c3c8cc3d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'c2bfebdf3589812ba60bfdf97308cecc') in 0.001002 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab
-  artifactKey: Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/SpearGoblin.prefab using Guid(d341bfe001d105144a18e4e1ef9aff8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: '6e66c396e6e1df3ebcaa2dcaf3665e2a') in 0.001056 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.000176 seconds.
-  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
-  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
- -> (artifact id: 'aeda84fa5c1dce5b685ed3ca280e0db4') in 0.000802 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.754 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.890 seconds
-Domain Reload Profiling: 1638ms
-	BeginReloadAssembly (302ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (35ms)
-	RebuildCommonClasses (62ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (307ms)
-		LoadAssemblies (472ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (34ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (16ms)
-			ResolveRequiredComponents (8ms)
-	FinalizeReload (890ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (553ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (64ms)
-			SetLoadedEditorAssemblies (9ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (100ms)
-			ProcessInitializeOnLoadAttributes (324ms)
-			ProcessInitializeOnLoadMethodAttributes (34ms)
-			AfterProcessingInitializeOnLoad (22ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Refreshing native plugins compatible for Editor in 4.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1084 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1597.
-Memory consumption went from 146.5 MB to 146.4 MB.
-Total: 3.218800 ms (FindLiveObjects: 0.140200 ms CreateObjectMapping: 0.029900 ms MarkObjects: 3.005800 ms  DeleteObjects: 0.041100 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/Goblin.cs: 75cf34f56b198a781f61b2757d93f260 -> bfda3a5ab7b8fb10f038f58998758644
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/SpikeTrap.cs: 567d0ad982f33d4f744af94f3a25cf1f -> 635a7c61248dbcedaba1b668faa4dc87
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 9251d5697d4788bfc7dac146d4344c31 -> aff6f9dc2b71a49c469a2d556d2e8230
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.639 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.835 seconds
-Domain Reload Profiling: 1469ms
-	BeginReloadAssembly (247ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (33ms)
-	RebuildCommonClasses (55ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (53ms)
-	LoadAllAssembliesAndSetupDomain (257ms)
-		LoadAssemblies (384ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (28ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (14ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (836ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (499ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (37ms)
-			SetLoadedEditorAssemblies (5ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (88ms)
-			ProcessInitializeOnLoadAttributes (311ms)
-			ProcessInitializeOnLoadMethodAttributes (37ms)
-			AfterProcessingInitializeOnLoad (20ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Refreshing native plugins compatible for Editor in 4.27 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 11 unused Assets / (27.1 KB). Loaded Objects now: 1600.
-Memory consumption went from 146.7 MB to 146.7 MB.
-Total: 2.710200 ms (FindLiveObjects: 0.131800 ms CreateObjectMapping: 0.027600 ms MarkObjects: 2.503600 ms  DeleteObjects: 0.045600 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/Goblin.cs: 75cf34f56b198a781f61b2757d93f260 -> bfda3a5ab7b8fb10f038f58998758644
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/SpikeTrap.cs: 567d0ad982f33d4f744af94f3a25cf1f -> 635a7c61248dbcedaba1b668faa4dc87
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 9251d5697d4788bfc7dac146d4344c31 -> aff6f9dc2b71a49c469a2d556d2e8230
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.798 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.021 seconds
-Domain Reload Profiling: 1812ms
-	BeginReloadAssembly (352ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (11ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (29ms)
-	RebuildCommonClasses (59ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (66ms)
-	LoadAllAssembliesAndSetupDomain (294ms)
-		LoadAssemblies (526ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (30ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (15ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (1022ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (646ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (35ms)
-			SetLoadedEditorAssemblies (5ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (95ms)
-			ProcessInitializeOnLoadAttributes (451ms)
-			ProcessInitializeOnLoadMethodAttributes (34ms)
-			AfterProcessingInitializeOnLoad (26ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 4.49 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1603.
-Memory consumption went from 146.7 MB to 146.7 MB.
-Total: 2.893900 ms (FindLiveObjects: 0.150400 ms CreateObjectMapping: 0.033000 ms MarkObjects: 2.663400 ms  DeleteObjects: 0.045700 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/Goblin.cs: 75cf34f56b198a781f61b2757d93f260 -> bfda3a5ab7b8fb10f038f58998758644
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/SpikeTrap.cs: 567d0ad982f33d4f744af94f3a25cf1f -> 635a7c61248dbcedaba1b668faa4dc87
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 9251d5697d4788bfc7dac146d4344c31 -> aff6f9dc2b71a49c469a2d556d2e8230
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.880 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.055 seconds
-Domain Reload Profiling: 1928ms
-	BeginReloadAssembly (400ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (11ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (44ms)
-	RebuildCommonClasses (76ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (72ms)
-	LoadAllAssembliesAndSetupDomain (303ms)
-		LoadAssemblies (534ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (28ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (1ms)
-			ScanForSourceGeneratedMonoScriptInfo (13ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (1056ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (610ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (39ms)
-			SetLoadedEditorAssemblies (6ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (110ms)
-			ProcessInitializeOnLoadAttributes (398ms)
-			ProcessInitializeOnLoadMethodAttributes (38ms)
-			AfterProcessingInitializeOnLoad (19ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-Refreshing native plugins compatible for Editor in 4.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1606.
-Memory consumption went from 146.7 MB to 146.7 MB.
-Total: 3.328300 ms (FindLiveObjects: 0.143500 ms CreateObjectMapping: 0.027800 ms MarkObjects: 3.086400 ms  DeleteObjects: 0.069200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/Goblin.cs: 75cf34f56b198a781f61b2757d93f260 -> bfda3a5ab7b8fb10f038f58998758644
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/SpikeTrap.cs: 567d0ad982f33d4f744af94f3a25cf1f -> 635a7c61248dbcedaba1b668faa4dc87
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 9251d5697d4788bfc7dac146d4344c31 -> aff6f9dc2b71a49c469a2d556d2e8230
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-========================================================================
-Received Prepare
-Caller must complete domain reload
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.680 seconds
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.988 seconds
-Domain Reload Profiling: 1662ms
-	BeginReloadAssembly (250ms)
+- Finished resetting the current domain, in  0.876 seconds
+Domain Reload Profiling: 1551ms
+	BeginReloadAssembly (291ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (34ms)
-	RebuildCommonClasses (65ms)
-	RebuildNativeTypeToScriptingClass (23ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (276ms)
-		LoadAssemblies (420ms)
+		CreateAndSetChildDomain (39ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (22ms)
+	initialDomainReloadingComplete (52ms)
+	LoadAllAssembliesAndSetupDomain (256ms)
+		LoadAssemblies (415ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (14ms)
-			TypeCache.Refresh (6ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (989ms)
+		AnalyzeDomain (25ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (13ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (877ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (587ms)
+		SetupLoadedEditorAssemblies (519ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (37ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (32ms)
+			SetLoadedEditorAssemblies (5ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (100ms)
-			ProcessInitializeOnLoadAttributes (384ms)
-			ProcessInitializeOnLoadMethodAttributes (38ms)
+			BeforeProcessingInitializeOnLoad (89ms)
+			ProcessInitializeOnLoadAttributes (331ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
 			AfterProcessingInitializeOnLoad (20ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (11ms)
-Refreshing native plugins compatible for Editor in 12.53 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 3.79 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1609.
-Memory consumption went from 146.7 MB to 146.7 MB.
-Total: 3.510800 ms (FindLiveObjects: 0.279900 ms CreateObjectMapping: 0.065200 ms MarkObjects: 3.122400 ms  DeleteObjects: 0.041700 ms)
+Unloading 1084 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1591.
+Memory consumption went from 150.6 MB to 150.6 MB.
+Total: 3.026200 ms (FindLiveObjects: 0.224800 ms CreateObjectMapping: 0.032800 ms MarkObjects: 2.717900 ms  DeleteObjects: 0.048800 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -1717,61 +271,58 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/Goblin.cs: 75cf34f56b198a781f61b2757d93f260 -> bfda3a5ab7b8fb10f038f58998758644
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/SpikeTrap.cs: 567d0ad982f33d4f744af94f3a25cf1f -> 635a7c61248dbcedaba1b668faa4dc87
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 9251d5697d4788bfc7dac146d4344c31 -> aff6f9dc2b71a49c469a2d556d2e8230
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
 Received Prepare
 Caller must complete domain reload
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.821 seconds
+- Loaded All Assemblies, in  0.762 seconds
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.295 seconds
-Domain Reload Profiling: 2107ms
-	BeginReloadAssembly (327ms)
+- Finished resetting the current domain, in  0.946 seconds
+Domain Reload Profiling: 1699ms
+	BeginReloadAssembly (344ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
+		DisableScriptedObjects (16ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (49ms)
-	RebuildCommonClasses (70ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (86ms)
-	LoadAllAssembliesAndSetupDomain (308ms)
-		LoadAssemblies (496ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (58ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (61ms)
+	LoadAllAssembliesAndSetupDomain (271ms)
+		LoadAssemblies (459ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
 		AnalyzeDomain (11ms)
 			TypeCache.Refresh (5ms)
 				TypeCache.ScanAssembly (0ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (5ms)
-	FinalizeReload (1296ms)
+	FinalizeReload (947ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (643ms)
+		SetupLoadedEditorAssemblies (522ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (38ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (36ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (106ms)
-			ProcessInitializeOnLoadAttributes (432ms)
-			ProcessInitializeOnLoadMethodAttributes (38ms)
-			AfterProcessingInitializeOnLoad (22ms)
+			BeforeProcessingInitializeOnLoad (96ms)
+			ProcessInitializeOnLoadAttributes (336ms)
+			ProcessInitializeOnLoadMethodAttributes (32ms)
+			AfterProcessingInitializeOnLoad (16ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Refreshing native plugins compatible for Editor in 3.92 ms, found 0 plugins.
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 3.45 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1085 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1612.
-Memory consumption went from 146.7 MB to 146.7 MB.
-Total: 2.772300 ms (FindLiveObjects: 0.145600 ms CreateObjectMapping: 0.028500 ms MarkObjects: 2.556000 ms  DeleteObjects: 0.040700 ms)
+Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1594.
+Memory consumption went from 150.8 MB to 150.8 MB.
+Total: 2.712800 ms (FindLiveObjects: 0.149000 ms CreateObjectMapping: 0.028900 ms MarkObjects: 2.486000 ms  DeleteObjects: 0.047400 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
@@ -1783,10 +334,223 @@ AssetImportParameters requested are different than current active one (requested
   custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
   custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:scripting/monoscript/fileName/Goblin.cs: 75cf34f56b198a781f61b2757d93f260 -> bfda3a5ab7b8fb10f038f58998758644
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:scripting/monoscript/fileName/SpikeTrap.cs: 567d0ad982f33d4f744af94f3a25cf1f -> 635a7c61248dbcedaba1b668faa4dc87
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp: 9251d5697d4788bfc7dac146d4344c31 -> aff6f9dc2b71a49c469a2d556d2e8230
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.661 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.877 seconds
+Domain Reload Profiling: 1530ms
+	BeginReloadAssembly (255ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (33ms)
+	RebuildCommonClasses (58ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (66ms)
+	LoadAllAssembliesAndSetupDomain (256ms)
+		LoadAssemblies (404ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (12ms)
+			TypeCache.Refresh (5ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (878ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (499ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (43ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (86ms)
+			ProcessInitializeOnLoadAttributes (312ms)
+			ProcessInitializeOnLoadMethodAttributes (31ms)
+			AfterProcessingInitializeOnLoad (20ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (9ms)
+Refreshing native plugins compatible for Editor in 4.77 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1085 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1597.
+Memory consumption went from 150.8 MB to 150.8 MB.
+Total: 4.856500 ms (FindLiveObjects: 0.368100 ms CreateObjectMapping: 0.097700 ms MarkObjects: 4.311300 ms  DeleteObjects: 0.076900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+========================================================================
+Received Import Request.
+  Time since last request: 803.672017 seconds.
+  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
+  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3f4e27196ea9576c6545864de9364a62') in 0.005974 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 17.761483 seconds.
+  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
+  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3f4e27196ea9576c6545864de9364a62') in 0.001493 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 14.100674 seconds.
+  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
+  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3f4e27196ea9576c6545864de9364a62') in 0.000978 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 12.370342 seconds.
+  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
+  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3f4e27196ea9576c6545864de9364a62') in 0.001185 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
+  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '8aebc75607c9e5726643ecfdd5cfb84f') in 0.001089 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 6.841265 seconds.
+  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
+  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3f4e27196ea9576c6545864de9364a62') in 0.001445 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
+  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '8aebc75607c9e5726643ecfdd5cfb84f') in 0.001264 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 11.515686 seconds.
+  path: Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab
+  artifactKey: Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/BasicGoblin.prefab using Guid(c69fe5a928961f74797b3fe801a48a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '3f4e27196ea9576c6545864de9364a62') in 0.001271 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Prefabs/Enemies&Traps/DaggerGoblin.prefab
+  artifactKey: Guid(685be6cfec73c2543b2624c05d9c5261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/DaggerGoblin.prefab using Guid(685be6cfec73c2543b2624c05d9c5261) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '234cf8237aa04157467de58d970bb343') in 0.000764 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab
+  artifactKey: Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Enemies&Traps/ShieldGolbin.prefab using Guid(aa76951c03e92dd4ba3ef49ca78db7c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 8 workers.
+ -> (artifact id: '8aebc75607c9e5726643ecfdd5cfb84f') in 0.000973 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Caller must complete domain reload
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.659 seconds
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.875 seconds
+Domain Reload Profiling: 1528ms
+	BeginReloadAssembly (259ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (31ms)
+	RebuildCommonClasses (67ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (248ms)
+		LoadAssemblies (412ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (10ms)
+			TypeCache.Refresh (4ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (4ms)
+	FinalizeReload (876ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (537ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (45ms)
+			SetLoadedEditorAssemblies (8ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (103ms)
+			ProcessInitializeOnLoadAttributes (326ms)
+			ProcessInitializeOnLoadMethodAttributes (38ms)
+			AfterProcessingInitializeOnLoad (16ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (7ms)
+Refreshing native plugins compatible for Editor in 3.86 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1084 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 11 unused Assets / (27.0 KB). Loaded Objects now: 1600.
+Memory consumption went from 150.6 MB to 150.6 MB.
+Total: 2.836500 ms (FindLiveObjects: 0.151500 ms CreateObjectMapping: 0.028600 ms MarkObjects: 2.611000 ms  DeleteObjects: 0.044100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 

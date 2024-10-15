@@ -67,7 +67,6 @@ public class TileGenerator200 : MonoBehaviour
         Vector3 nextPostion = new Vector3(originalPosition.x, originalPosition.y, spawnPosition);
         GameObject newTile = Instantiate(tilePrefab, nextPostion, tilePrefab.transform.rotation);
         newTile.GetComponent<Tile>().SetDespawnGoal(despawnGoal);
-        Debug.Log("Criou");
         spawnGoal += 25;
         spawnPosition += 250;
         despawnGoal += 25;

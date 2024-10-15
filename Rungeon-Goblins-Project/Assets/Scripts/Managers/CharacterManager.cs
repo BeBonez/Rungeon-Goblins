@@ -12,13 +12,14 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject[] characters;
     [SerializeField] private GameObject[] charactersUI;
+    [SerializeField] private Vector3 spawnPoint;
 
-    private void Start() {
+    private void Awake() {
         selectedChar = characters[CharacterSelection.Instance.character];
 
         if (SceneManager.GetActiveScene().buildIndex != 0) {
         Debug.Log(selectedChar.name);
-        player.GetComponent<MeshFilter>().mesh = selectedChar.GetComponent<MeshFilter>().sharedMesh;
+        Instantiate(selectedChar, spawnPoint, Quaternion.identity);
         }
 
     }

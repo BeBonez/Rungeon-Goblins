@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    [SerializeField] GameManager gameManager;
-    [SerializeField] Timer timer;
-    [SerializeField] Animator timeAnimator;
+    private GameManager gameManager;
+    private Timer timer;
+    private Animator timeAnimator;
     Animator cameraAnimator;
 
     private void Start()
     {
         cameraAnimator = Camera.main.GetComponent<Animator>();
+        timer = GameObject.Find("GameManager").GetComponent<Timer>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        timeAnimator = GameObject.Find("Time").GetComponent<Animator>();
     }
     private void OnTriggerEnter(Collider other)
     {

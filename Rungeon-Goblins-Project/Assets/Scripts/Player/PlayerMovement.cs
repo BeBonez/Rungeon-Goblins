@@ -8,10 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private float posX, posY, posZ;
     private bool canMoveBackwards = true;
     [SerializeField] private float moveDistance;
-    [SerializeField] private GameManager gameManager;
+    private GameManager gameManager;
     private void Start()
     {
         UpdatePosition();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     public void Move(Vector2 direction)
     {
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (direction.y >= 1)
             {
-                Debug.Log("UP");
+                //Debug.Log("UP");
                 transform.position = new Vector3(posX, posY, posZ + moveDistance);
                 canMoveBackwards = true; // PH
                 gameManager.AddDistance(1);
@@ -32,11 +33,11 @@ public class PlayerMovement : MonoBehaviour
                     canMoveBackwards = false;
                     gameManager.AddDistance(-1);
                 }
-                Debug.Log("DOWN");
+                //Debug.Log("DOWN");
             }
             else if (direction.x >= 1)
             {
-                Debug.Log("RIGHT");
+                //Debug.Log("RIGHT");
                 if (transform.position.x >= moveDistance)
                 {
                     transform.position = new Vector3(posX - moveDistance * 2, posY, posZ + moveDistance);
@@ -51,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (direction.x <= -1)
             {
-                Debug.Log("LEFT");
+                //Debug.Log("LEFT");
                 if (transform.position.x <= -moveDistance)
                 {
                     transform.position = new Vector3(posX + moveDistance * 2, posY, posZ + moveDistance);

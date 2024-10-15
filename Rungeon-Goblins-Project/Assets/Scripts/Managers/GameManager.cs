@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject gameOver;
     [SerializeField] TMP_Text[] coinHUD; // Todos os textos de Coins
     [SerializeField] TMP_Text[] distanceHUD; // Todos os textos de Distancia
+    public Slider timeHud; 
 
     [Header("Variables: ")]
     [SerializeField] GameObject player;

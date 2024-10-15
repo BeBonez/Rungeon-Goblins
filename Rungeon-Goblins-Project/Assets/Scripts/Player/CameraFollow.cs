@@ -8,13 +8,13 @@ public class CameraFollow : MonoBehaviour
     private Vector3 currentVelocity = Vector3.zero;
     private float originalX, originalY;
 
-    private void Awake()
+    private void Start()
     {
+        playerTransform = GameObject.FindWithTag("Player").transform;
         offSet = transform.position.z - playerTransform.position.z;
         originalX = transform.position.x;
         originalY = transform.position.y;
     }
-
     private void LateUpdate()
     {
         Vector3 playerPosition = new Vector3(originalX, originalY, playerTransform.position.z + offSet);

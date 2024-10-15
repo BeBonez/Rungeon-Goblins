@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         timer = maxTimer;
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     void FixedUpdate()
