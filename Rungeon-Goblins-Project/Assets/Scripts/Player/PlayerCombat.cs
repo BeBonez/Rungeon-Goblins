@@ -57,6 +57,7 @@ public class PlayerCombat : MonoBehaviour
         if (playerBase.CanTakeDamage())
         {
             timeAnimator.SetTrigger("TookDamage");
+            cameraAnimator.SetTrigger("Default");
             cameraAnimator.SetTrigger("TookDamage");
             timer.AddTime(-value);
         }
@@ -64,6 +65,8 @@ public class PlayerCombat : MonoBehaviour
 
     private void EnemyDefeat()
     {
+        cameraAnimator.StopPlayback();
+        cameraAnimator.SetTrigger("Default");
         cameraAnimator.SetTrigger("EnemyDefeat");
         timeAnimator.SetTrigger("AddTime");
     }

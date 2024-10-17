@@ -9,6 +9,8 @@ public abstract class PlayerMovement : MonoBehaviour
     [SerializeField] protected float moveDistance;
     [SerializeField] public GameManager gameManager;
     [SerializeField] protected bool canTakeDamge = true;
+    protected Vector3 lastPosition;
+    protected bool canMove = true;
 
     public abstract void Move(Vector2 direction);
     //{
@@ -64,7 +66,7 @@ public abstract class PlayerMovement : MonoBehaviour
     //    }
     //}
 
-    protected void UpdatePosition()
+    public void UpdatePosition()
     {
         posX = transform.position.x;
         posY = transform.position.y;
@@ -74,5 +76,15 @@ public abstract class PlayerMovement : MonoBehaviour
     public bool CanTakeDamage()
     {
         return canTakeDamge;
+    }
+
+    public Vector3 GetLastPosition()
+    {
+        return lastPosition;
+    }
+
+    public void SwitchCanMove()
+    {
+        canMove = !canMove;
     }
 }

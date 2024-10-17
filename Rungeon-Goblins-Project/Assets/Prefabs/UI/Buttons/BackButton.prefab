@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &946002466264130571
+--- !u!1 &6225346127952747067
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4920070498816231097}
-  - component: {fileID: 430408502068843400}
-  - component: {fileID: 7705769138903863325}
-  - component: {fileID: 4057263820595760160}
+  - component: {fileID: 1814190489558579109}
+  - component: {fileID: 2941419571988864691}
+  - component: {fileID: 9063269653840211629}
+  - component: {fileID: 1856821275228574149}
   m_Layer: 5
-  m_Name: HelpButton
+  m_Name: BackButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4920070498816231097
+--- !u!224 &1814190489558579109
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946002466264130571}
+  m_GameObject: {fileID: 6225346127952747067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,26 +33,26 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 850, y: 1597.52}
-  m_SizeDelta: {x: 329, y: 326.9795}
-  m_Pivot: {x: 1, y: 1}
---- !u!222 &430408502068843400
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 60, y: -60}
+  m_SizeDelta: {x: 228.445, y: 204.21704}
+  m_Pivot: {x: 0, y: 1}
+--- !u!222 &2941419571988864691
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946002466264130571}
+  m_GameObject: {fileID: 6225346127952747067}
   m_CullTransparentMesh: 1
---- !u!114 &7705769138903863325
+--- !u!114 &9063269653840211629
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946002466264130571}
+  m_GameObject: {fileID: 6225346127952747067}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -909844241, guid: f68df02efda7f4a4ea249de171e841f4, type: 3}
+  m_Sprite: {fileID: -215994860, guid: f68df02efda7f4a4ea249de171e841f4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -76,13 +76,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4057263820595760160
+--- !u!114 &1856821275228574149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946002466264130571}
+  m_GameObject: {fileID: 6225346127952747067}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -106,7 +106,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 485525193, guid: 2981b4953d9974740a2757ff1ded5f93, type: 3}
+    m_PressedSprite: {fileID: 1004197448, guid: 2981b4953d9974740a2757ff1ded5f93, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -116,13 +116,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 7705769138903863325}
+  m_TargetGraphic: {fileID: 9063269653840211629}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 504687910118346750, guid: d9f9e1a9e635f974a9f578b612b30bb9, type: 3}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: ActivateElement
+        m_MethodName: DeactivateElement
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

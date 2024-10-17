@@ -34,50 +34,54 @@ public class PaulScript : PlayerMovement
 
     public override void Move(Vector2 direction)
     {
-        
-        if (direction.y >= 1)
+        if (canMove)
         {
-            
-            if (actualCharges > 0)
+            lastPosition = transform.position;
+            if (direction.y >= 1)
             {
-                Debug.Log("Cima");
-                transform.position = new Vector3(posX, posY, posZ + moveDistance);
-                actualCharges--;
-                gameManager.AddDistance(1);
+
+                if (actualCharges > 0)
+                {
+                    Debug.Log("Cima");
+                    transform.position = new Vector3(posX, posY, posZ + moveDistance);
+                    actualCharges--;
+                    gameManager.AddDistance(1);
+                }
+
+            }
+            else if (direction.y <= -1)
+            {
+                Debug.Log("baixo");
+                if (isShieldCoolingDown == false && isActive == false)
+                {
+                    StartCoroutine(RaiseShield());
+                }
             }
 
-        }
-        else if (direction.y <= -1)
-        {
-            Debug.Log("baixo");
-            if (isShieldCoolingDown == false && isActive == false)
+            else if (direction.x >= 1)
             {
-                StartCoroutine(RaiseShield());
+                Debug.Log("direita");
+                if (!(transform.position.x == 10)) // Se não for ultrapassar o limite da direita, ele pode mover
+                {
+                    transform.position = new Vector3(posX + moveDistance, posY, posZ + moveDistance);
+                    gameManager.AddDistance(1);
+                }
+
+
+            }
+
+            else if (direction.x <= -1)
+            {
+                Debug.Log("esquerad");
+                if (!(transform.position.x == -10)) // Se não for ultrapassar o limite da esquerda, ele pode mover
+                {
+                    transform.position = new Vector3(posX - moveDistance, posY, posZ + moveDistance);
+                    gameManager.AddDistance(1);
+                }
+
             }
         }
 
-        else if (direction.x >= 1)
-        {
-            Debug.Log("direita");
-            if (!(transform.position.x == 10)) // Se não for ultrapassar o limite da direita, ele pode mover
-            {
-                transform.position = new Vector3(posX + moveDistance, posY, posZ + moveDistance);
-                gameManager.AddDistance(1);
-            }
-            
-
-        }
-
-        else if (direction.x <= -1)
-        {
-            Debug.Log("esquerad");
-            if (!(transform.position.x == -10)) // Se não for ultrapassar o limite da esquerda, ele pode mover
-            {
-                transform.position = new Vector3(posX - moveDistance, posY, posZ + moveDistance);
-                gameManager.AddDistance(1);
-            }
-            
-        }
         UpdatePosition();
     }
 

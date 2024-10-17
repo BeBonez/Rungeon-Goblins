@@ -335,7 +335,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   canTakeDamge: 1
   maxCharges: 3
-  actualCharges: 1
+  actualCharges: 3
   dashCoolDown: 8
   isDashCoolingDown: 0
   timeActive: 4

@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     [SerializeField] private int reduceTimeDistance = 0;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private Slider timeHUD;
+    private IEnumerator reviveCoroutine;
+    private bool isDead = false;
 
     private int currentDistance;
     
@@ -24,8 +26,11 @@ public class Timer : MonoBehaviour
 
     void FixedUpdate()
     {
-        timer -= Time.deltaTime;
-        timeHUD.value = timer / maxTimer;
+        if( timer > 0 )
+        {
+            timer -= Time.deltaTime;
+            timeHUD.value = timer / maxTimer;
+        }
 
         if (timer > LeastMaxTimer)
         {
@@ -39,10 +44,29 @@ public class Timer : MonoBehaviour
         }
 
         // se tempo acabar chama método e perde
-        if (timer <= 0)
+        if (timer <= 0 && isDead == false)
         {
-            gameManager.GameOver();
+            isDead = true;
+            reviveCoroutine = gameManager.ReviveQuickTime();
+            StartCoroutine(reviveCoroutine);
         }
+    }
+
+    public void Revive()
+    {
+        if (gameManager.CanRevive())
+        {
+            StopCoroutine(reviveCoroutine);
+            gameManager.SetRevived(true);
+            gameManager.Revive();
+            gameManager.SetRevived(false);
+            isDead = false;
+        }
+        else
+        {
+            // Faz um beem e pisca vermelho as moedas
+        }
+
     }
 
     public void AddTime(float amount)
@@ -51,6 +75,10 @@ public class Timer : MonoBehaviour
         if (timer > maxTimer)
         {
             timer = maxTimer;
+        }
+        else if (timer < 0)
+        {
+            timer = 0;
         }
     }
 
