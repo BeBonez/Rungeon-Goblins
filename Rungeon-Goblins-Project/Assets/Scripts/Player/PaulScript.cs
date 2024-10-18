@@ -18,17 +18,21 @@ public class PaulScript : PlayerMovement
     float actualShieldTimeCooldown;
     bool isShieldCoolingDown;
     bool isActive;
+    IEnumerator powerCoroutine;
+    IEnumerator rechargeCoroutine;
 
     [Header("UI Components")]
-    [SerializeField] TMP_Text uiMaxCharges;
-    [SerializeField] TMP_Text uiActualCharges;
-    [SerializeField] Image uiShield;
+    [SerializeField] protected TMP_Text uiMaxCharges;
+    [SerializeField] protected TMP_Text uiActualCharges;
+    [SerializeField] protected Image uiShield;
+
 
     private void Start()
     {
         uiMaxCharges = GameObject.Find("MaxCharges").GetComponent<TMP_Text>();
         uiActualCharges = GameObject.Find("ActualCharges").GetComponent<TMP_Text>();
         uiShield = GameObject.Find("ShieldImage").GetComponent<Image>();
+
         UpdatePosition();
     }
 
@@ -42,7 +46,6 @@ public class PaulScript : PlayerMovement
 
                 if (actualCharges > 0)
                 {
-                    Debug.Log("Cima");
                     transform.position = new Vector3(posX, posY, posZ + moveDistance);
                     actualCharges--;
                     gameManager.AddDistance(1);
@@ -51,16 +54,15 @@ public class PaulScript : PlayerMovement
             }
             else if (direction.y <= -1)
             {
-                Debug.Log("baixo");
                 if (isShieldCoolingDown == false && isActive == false)
                 {
-                    StartCoroutine(RaiseShield());
+                    powerCoroutine = RaiseShield();
+                    StartCoroutine(powerCoroutine);
                 }
             }
 
             else if (direction.x >= 1)
             {
-                Debug.Log("direita");
                 if (!(transform.position.x == 10)) // Se não for ultrapassar o limite da direita, ele pode mover
                 {
                     transform.position = new Vector3(posX + moveDistance, posY, posZ + moveDistance);
@@ -72,7 +74,6 @@ public class PaulScript : PlayerMovement
 
             else if (direction.x <= -1)
             {
-                Debug.Log("esquerad");
                 if (!(transform.position.x == -10)) // Se não for ultrapassar o limite da esquerda, ele pode mover
                 {
                     transform.position = new Vector3(posX - moveDistance, posY, posZ + moveDistance);
@@ -89,7 +90,8 @@ public class PaulScript : PlayerMovement
     {
         if (actualCharges < maxCharges && isDashCoolingDown == false)
         {
-            StartCoroutine(Recharge());
+            rechargeCoroutine = Recharge();
+            StartCoroutine(rechargeCoroutine);
         }
         UpdateUIInfo();
     }
@@ -100,7 +102,7 @@ public class PaulScript : PlayerMovement
         yield return new WaitForSeconds(dashCoolDown);
         actualCharges++;
         isDashCoolingDown = false;
-        StopCoroutine("Recharge");
+        StopCoroutine(rechargeCoroutine);
     }
 
     private IEnumerator RaiseShield()
@@ -108,15 +110,17 @@ public class PaulScript : PlayerMovement
         isActive = true;
         uiShield.color = Color.blue;
         canTakeDamge = false;
+
         yield return new WaitForSeconds(timeActive);
         isActive = false;
         canTakeDamge = true;
         isShieldCoolingDown = true;
         uiShield.color = Color.red;
+
         yield return new WaitForSeconds(shieldCoolDown);
         isShieldCoolingDown = false;
         uiShield.color = Color.white;
-        StopCoroutine("RaiseShield");
+        StopCoroutine(powerCoroutine);
     }
 
     private void UpdateUIInfo()

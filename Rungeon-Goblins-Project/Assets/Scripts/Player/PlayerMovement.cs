@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] protected float posX, posY, posZ;
+    protected float posX, posY, posZ;
     [SerializeField] protected float moveDistance;
     [SerializeField] public GameManager gameManager;
     [SerializeField] protected bool canTakeDamge = true;
@@ -87,4 +89,5 @@ public abstract class PlayerMovement : MonoBehaviour
     {
         canMove = !canMove;
     }
+
 }

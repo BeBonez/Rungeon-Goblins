@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,18 +31,16 @@ public class CharacterManager : MonoBehaviour
     {
         selectedChar = characters[CharacterSelection.Instance.character]; // Pega o numero do personagem selecionado e armazena
         charactersButton[CharacterSelection.Instance.character].Select(); // Deixa o botão selecionado
+
+        for (int i = 0; i < charactersUI.Length; i++)
+        {
+            charactersUI[i].GetComponent<Animator>().SetTrigger("Spin");
+        }
     }
 
     public void SelectCharacter(int index) {
         CharacterSelection.Instance.character = index;
         selectedChar = characters[CharacterSelection.Instance.character];
-        // if (index == 0) {
-        //     charactersUI[0].GetComponent<Animator>().SetTrigger("Idle");
-        //     charactersUI[1].GetComponent<Animator>().SetTrigger("Spin");
-        // }
-        // else {
-        //     charactersUI[1].GetComponent<Animator>().SetTrigger("Idle");
-        //     charactersUI[0].GetComponent<Animator>().SetTrigger("Spin");
-        // }
+
     }
 }

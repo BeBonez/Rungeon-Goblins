@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [Header("UI components")]
     [SerializeField] GameObject losePanel;
     [SerializeField] GameObject revivePanel;
+    [SerializeField] Image reviveBackground;
     [SerializeField] TMP_Text reviveCostText;
     [SerializeField] TMP_Text reviveTimer;
     [SerializeField] TMP_Text[] coinHUD; // Todos os textos de Coins
@@ -61,6 +62,7 @@ public class GameManager : MonoBehaviour
         {
             reviveTimer.text = actualQuickReviveTime.ToString();
             actualQuickReviveTime--;
+            reviveBackground.color = new Color(reviveBackground.color.r, reviveBackground.color.g, reviveBackground.color.b, 0.15f * i);
             yield return new WaitForSecondsRealtime(1);
         }
 
