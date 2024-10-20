@@ -588,10 +588,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 7066151862549872423}
   m_HandleRect: {fileID: 3817990580400665680}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1095,10 +1095,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 992139268151081156}
   m_HandleRect: {fileID: 9086086783736187447}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1547,6 +1547,10 @@ PrefabInstance:
       objectReference: {fileID: 1004197448, guid: 2981b4953d9974740a2757ff1ded5f93, type: 3}
     - target: {fileID: 1856821275228574149, guid: 91715b16a6a9e1f48b217dcee69d42c5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1762426960763293438}
+    - target: {fileID: 1856821275228574149, guid: 91715b16a6a9e1f48b217dcee69d42c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1762426960763293438}
     - target: {fileID: 6225346127952747067, guid: 91715b16a6a9e1f48b217dcee69d42c5, type: 3}

@@ -678,6 +678,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1760361167908483906}
+    - target: {fileID: 1856821275228574149, guid: 91715b16a6a9e1f48b217dcee69d42c5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1760361167908483906}
     - target: {fileID: 6225346127952747067, guid: 91715b16a6a9e1f48b217dcee69d42c5, type: 3}
       propertyPath: m_Name
       value: BackButton

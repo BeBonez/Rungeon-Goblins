@@ -25,8 +25,7 @@ public class PlayerCombat : MonoBehaviour
         {
 
             case "Goblin":
-                EnemyDefeat();
-                Destroy(other.gameObject);
+                EnemyDefeat(other);
                 timer.AddTime(3);
                 break;
             case "Trap":
@@ -39,6 +38,7 @@ public class PlayerCombat : MonoBehaviour
             case "Hourglass":
                 timeAnimator.SetTrigger("AddTime");
                 Destroy(other.gameObject);
+                AudioManager.Instance.PlaySFX(3);
                 timer.AddTime(timer.GetMaxTime());
                 break;
             case "GoblinAttack":
@@ -46,6 +46,7 @@ public class PlayerCombat : MonoBehaviour
                 break;
             case "Coin":
                 Destroy(other.gameObject);
+                AudioManager.Instance.PlaySFX(2);
                 gameManager.AddCoin(1);
                 break;
         }
@@ -63,9 +64,10 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    private void EnemyDefeat()
+    private void EnemyDefeat(Collider other)
     {
-        cameraAnimator.StopPlayback();
+        Destroy(other.gameObject);
+        AudioManager.Instance.PlaySFX(1);
         cameraAnimator.SetTrigger("Default");
         cameraAnimator.SetTrigger("EnemyDefeat");
         timeAnimator.SetTrigger("AddTime");

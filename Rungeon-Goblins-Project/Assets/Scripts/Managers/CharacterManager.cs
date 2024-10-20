@@ -17,20 +17,20 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private GameObject[] uiCharactersPanel;
 
     private void Awake() {
-        selectedChar = characters[CharacterSelection.Instance.character];
+        selectedChar = characters[PlayerPrefs.GetInt("SelectedChar", 0)];
 
         if (SceneManager.GetActiveScene().buildIndex != 0) {
         Debug.Log(selectedChar.name);
         Instantiate(selectedChar, spawnPoint, Quaternion.identity);
-            uiCharactersPanel[CharacterSelection.Instance.character].SetActive(true);
+            uiCharactersPanel[PlayerPrefs.GetInt("SelectedChar", 0)].SetActive(true);
         }
 
     }
 
     public void OnEnterMenu()
     {
-        selectedChar = characters[CharacterSelection.Instance.character]; // Pega o numero do personagem selecionado e armazena
-        charactersButton[CharacterSelection.Instance.character].Select(); // Deixa o botão selecionado
+        selectedChar = characters[PlayerPrefs.GetInt("SelectedChar", 0)]; // Pega o numero do personagem selecionado e armazena
+        charactersButton[PlayerPrefs.GetInt("SelectedChar", 0)].Select(); // Deixa o botão selecionado
 
         for (int i = 0; i < charactersUI.Length; i++)
         {
@@ -39,8 +39,8 @@ public class CharacterManager : MonoBehaviour
     }
 
     public void SelectCharacter(int index) {
-        CharacterSelection.Instance.character = index;
-        selectedChar = characters[CharacterSelection.Instance.character];
+        PlayerPrefs.SetInt("SelectedChar", index);
+        selectedChar = characters[PlayerPrefs.GetInt("SelectedChar", 0)];
 
     }
 }

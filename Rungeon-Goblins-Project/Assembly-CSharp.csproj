@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Player\SwipeManager.cs" />
     <Compile Include="Assets\Scripts\Managers\Timer.cs" />
     <Compile Include="Assets\Scripts\Managers\CharacterManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Unused\Cooldown.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\Enemies&amp;Traps\Goblin.cs" />
@@ -77,7 +78,6 @@
     <Compile Include="Assets\Scripts\Player\GarryScript.cs" />
     <Compile Include="Assets\Scripts\Enemies&amp;Traps\SpikeTrap.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCombat.cs" />
-    <Compile Include="Assets\Scripts\Managers\CharacterSelection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
