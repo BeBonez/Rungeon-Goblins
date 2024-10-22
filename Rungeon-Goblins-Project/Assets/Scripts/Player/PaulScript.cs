@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,10 +30,11 @@ public class PaulScript : PlayerMovement
 
     private void Start()
     {
+        charName = "Paul";
         uiMaxCharges = GameObject.Find("MaxCharges").GetComponent<TMP_Text>();
         uiActualCharges = GameObject.Find("ActualCharges").GetComponent<TMP_Text>();
         uiShield = GameObject.Find("ShieldImage").GetComponent<Image>();
-
+        animator = GetComponent<Animator>();
         UpdatePosition();
     }
 

@@ -3,48 +3,48 @@
   "WorkspaceRootPath": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\managers\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|d:\\escola\\puc\\2 periodo\\ti\\rungeon-goblins\\rungeon-goblins-project\\assets\\scripts\\managers\\charactermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\charactermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\player\\playercombat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercombat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\player\\swipemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\swipemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\managers\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\managers\\tilegenerator200.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\tilegenerator200.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\player\\garryscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\garryscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\player\\paulscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\paulscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\managers\\charactermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\charactermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\player\\garryscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\garryscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\managers\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\managers\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\player\\swipemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\swipemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\managers\\tilegenerator200.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\tilegenerator200.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\player\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,33 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UIManager.cs",
-              "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\UIManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\UIManager.cs",
-              "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\UIManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\UIManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T15:54:15.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AudioManager.cs",
-              "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\AudioManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\AudioManager.cs",
-              "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\AudioManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\AudioManager.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAQwCAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T15:03:29.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "TileGenerator200.cs",
               "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\TileGenerator200.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\TileGenerator200.cs",
@@ -124,55 +98,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Timer.cs",
               "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\Timer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\Timer.cs",
               "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\Timer.cs",
               "RelativeToolTip": "Assets\\Scripts\\Managers\\Timer.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAxwDwAAAAhAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAowIMAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T15:19:21.056Z"
+              "WhenOpened": "2024-10-17T15:19:21.056Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "GarryScript.cs",
               "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Player\\GarryScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\GarryScript.cs",
               "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Player\\GarryScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\GarryScript.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAowJEAAAAAAAAA",
+              "ViewState": "AQIAAI0AAAAAAAAAAAAwwBMAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T20:30:20.185Z"
+              "WhenOpened": "2024-10-15T20:30:20.185Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "PaulScript.cs",
               "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Player\\PaulScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PaulScript.cs",
               "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Player\\PaulScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PaulScript.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFwAAAArAAAA",
+              "ViewState": "AQIAAGQAAAAAAAAAAAArwHEAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-15T15:46:26.098Z"
+              "WhenOpened": "2024-10-15T15:46:26.098Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Player\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMovement.cs",
               "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Player\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMovement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGUAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T23:12:11.761Z"
+              "WhenOpened": "2024-10-14T23:12:11.761Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "SwipeManager.cs",
               "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Player\\SwipeManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\SwipeManager.cs",
@@ -190,34 +168,60 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\CharacterManager.cs",
               "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\CharacterManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Managers\\CharacterManager.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCoAAABJAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwCAAAABmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-14T23:15:32.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "PlayerCombat.cs",
               "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Player\\PlayerCombat.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerCombat.cs",
               "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Player\\PlayerCombat.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerCombat.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCgAAAAxAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAD4v0AAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T23:05:08.878Z"
+              "WhenOpened": "2024-10-14T23:05:08.878Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\GameManager.cs",
               "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Managers\\GameManager.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAABRwEYAAAAXAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAQwFsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T23:02:58.538Z"
+              "WhenOpened": "2024-10-14T23:02:58.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\UIManager.cs",
+              "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\UIManager.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwC0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T15:54:15.926Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\AudioManager.cs",
+              "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Managers\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\AudioManager.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T15:03:29.068Z"
             },
             {
               "$type": "Document",

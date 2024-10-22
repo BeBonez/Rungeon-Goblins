@@ -25,15 +25,28 @@ public class PlayerCombat : MonoBehaviour
         {
 
             case "Goblin":
+                if (playerBase.IsFliyng() == false)
+                {
+                    if (playerBase.CanTakeDamage() == true)
+                    {
+                        playerBase.GetAnimator().Play("Attack");
+                    }
+                }
                 EnemyDefeat(other);
                 timer.AddTime(3);
                 break;
             case "Trap":
-                TookDamage(3);
+                if (playerBase.IsFliyng() == false)
+                {
+                    TookDamage(3);
+                }
                 break;
             case "Hole":
-                // chamar após animação de cair no buraco
-                timer.AddTime(-timer.GetMaxTime());
+                if (playerBase.IsFliyng() == false)
+                {
+                    timer.DeadByRole();
+                    timer.AddTime(-timer.GetMaxTime());
+                }
                 break;
             case "Hourglass":
                 timeAnimator.SetTrigger("AddTime");
@@ -42,7 +55,15 @@ public class PlayerCombat : MonoBehaviour
                 timer.AddTime(timer.GetMaxTime());
                 break;
             case "GoblinAttack":
-                TookDamage(3);
+
+                if (playerBase.CanTakeDamage())
+                {
+                    TookDamage(3);
+                }
+                else if (playerBase.GetName() == "Paul" && playerBase.CanTakeDamage() == false)
+                {
+                    playerBase.GetAnimator().Play("Shield");
+                }
                 break;
             case "Coin":
                 Destroy(other.gameObject);
@@ -55,20 +76,17 @@ public class PlayerCombat : MonoBehaviour
 
     private void TookDamage(float value)
     {
-        if (playerBase.CanTakeDamage())
-        {
-            timeAnimator.SetTrigger("TookDamage");
-            cameraAnimator.SetTrigger("Default");
-            cameraAnimator.SetTrigger("TookDamage");
-            timer.AddTime(-value);
-        }
+        timeAnimator.SetTrigger("TookDamage");
+        //cameraAnimator.SetTrigger("Default");
+        cameraAnimator.SetTrigger("TookDamage");
+        timer.AddTime(-value);
     }
 
     private void EnemyDefeat(Collider other)
     {
         Destroy(other.gameObject);
         AudioManager.Instance.PlaySFX(1);
-        cameraAnimator.SetTrigger("Default");
+        //cameraAnimator.SetTrigger("Default");
         cameraAnimator.SetTrigger("EnemyDefeat");
         timeAnimator.SetTrigger("AddTime");
     }

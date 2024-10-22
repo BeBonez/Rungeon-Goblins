@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEditor.Build;
 
 public class GameManager : MonoBehaviour
 {
@@ -38,6 +39,20 @@ public class GameManager : MonoBehaviour
         playerScript = player.GetComponent<PlayerMovement>();
         playerScript.gameManager = this;
         timer = GetComponent<Timer>();
+        coinHUD[0].text = "$" + PlayerPrefs.GetInt("Money", 0);
+        coins = PlayerPrefs.GetInt("Money", 0);
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        playerScript.SwitchCanMove(false);
+    }
+
+    public void UnPause()
+    {
+        Time.timeScale = 1f;
+        playerScript.SwitchCanMove(true);
     }
 
     public void GameOver ()
@@ -45,17 +60,15 @@ public class GameManager : MonoBehaviour
         revivePanel.SetActive(false);
         StopAllCoroutines();
         UpdateData();
-        player.transform.Rotate(0, 0, 90);
-        Time.timeScale = 0.0f;
+        Pause();
         losePanel.SetActive(true);
     }
 
     public IEnumerator ReviveQuickTime()
     {
-        Time.timeScale = 0f;
+        Pause();
         actualQuickReviveTime = quickReviveTime;
         reviveCostText.text = "REVIVE $" + reviveCost;
-        playerScript.SwitchCanMove();
         revivePanel.SetActive(true);
 
         for (int i = actualQuickReviveTime; i > 0;i--)
@@ -95,19 +108,32 @@ public class GameManager : MonoBehaviour
         {
             distanceHUD[i].text = distance.ToString() + "m";
         }
+        int bestDistance = PlayerPrefs.GetInt("PersonalBest");
+
+        if (distance > bestDistance)
+        {
+            PlayerPrefs.SetInt("PersonalBest", distance);
+        }
+        
+        PlayerPrefs.SetInt("Money", coins);
     }
 
     public void Revive()
     {
         revivePanel.SetActive(false);
+        timer.GetUIComponents().SetActive(true);
+
         coins -= reviveCost;
         reviveCost += 50;
+
         UpdateData();
+
         player.transform.position = playerScript.GetLastPosition();
         playerScript.UpdatePosition();
-        playerScript.SwitchCanMove();
+        player.GetComponent<Animator>().Play("Idle");
+
         timer.AddTime(timer.GetMaxTime());
-        Time.timeScale = 1f;
+        UnPause();
     }
 
     public bool CanRevive()
@@ -133,5 +159,14 @@ public class GameManager : MonoBehaviour
         hasRevived = state;
     }
 
+    public GameObject GetPlayer()
+    {
+        return player;
+    }
+
+    public PlayerMovement GetPlayerScript()
+    {
+        return playerScript;
+    }
     #endregion
 }

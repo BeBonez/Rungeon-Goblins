@@ -31,11 +31,6 @@ public class CharacterManager : MonoBehaviour
     {
         selectedChar = characters[PlayerPrefs.GetInt("SelectedChar", 0)]; // Pega o numero do personagem selecionado e armazena
         charactersButton[PlayerPrefs.GetInt("SelectedChar", 0)].Select(); // Deixa o botão selecionado
-
-        for (int i = 0; i < charactersUI.Length; i++)
-        {
-            charactersUI[i].GetComponent<Animator>().SetTrigger("Spin");
-        }
     }
 
     public void SelectCharacter(int index) {

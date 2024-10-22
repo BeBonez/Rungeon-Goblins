@@ -1,18 +1,17 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public abstract class PlayerMovement : MonoBehaviour
 {
     protected float posX, posY, posZ;
+    protected string charName;
     [SerializeField] protected float moveDistance;
     [SerializeField] public GameManager gameManager;
     [SerializeField] protected bool canTakeDamge = true;
+    [SerializeField] protected bool isFliyng = false;
     protected Vector3 lastPosition;
     protected bool canMove = true;
+    protected Animator animator;
 
     public abstract void Move(Vector2 direction);
     //{
@@ -85,9 +84,23 @@ public abstract class PlayerMovement : MonoBehaviour
         return lastPosition;
     }
 
-    public void SwitchCanMove()
+    public void SwitchCanMove(bool condition)
     {
-        canMove = !canMove;
+        canMove = condition;
     }
 
+    public bool IsFliyng()
+    {
+        return isFliyng;
+    }
+
+    public Animator GetAnimator()
+    {
+        return animator;
+    }
+
+    public string GetName()
+    {
+        return charName;
+    }
 }

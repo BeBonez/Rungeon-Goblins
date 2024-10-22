@@ -17,7 +17,9 @@ public class GarryScript : PlayerMovement
 
     private void Start()
     {
+        charName = "Garry";
         uiPower = GameObject.Find("MagicImage").GetComponent<Image>();
+        animator = gameObject.GetComponent<Animator>();
         UpdatePosition();
     }
 
@@ -45,6 +47,7 @@ public class GarryScript : PlayerMovement
 
                         magicCoroutine = TeleportMagic();
                         StartCoroutine(magicCoroutine);
+                        animator.Play("Flying");
                     }
                 }
 
@@ -85,8 +88,8 @@ public class GarryScript : PlayerMovement
             {
                 if (direction.y >= 1)
                 {
-                    transform.position = new Vector3(posX, posY, posZ + moveDistance * 2);
-                    gameManager.AddDistance(2);
+                    transform.position = new Vector3(posX, posY, posZ + moveDistance);
+                    gameManager.AddDistance(1);
 
                 }
                 else if (direction.y <= -1)
@@ -98,13 +101,14 @@ public class GarryScript : PlayerMovement
                 {
                     if (transform.position.x == 10)
                     {
-                        transform.position = new Vector3(posX - moveDistance * 2, posY, posZ);
+                        transform.position = new Vector3(posX - moveDistance * 2, posY, posZ + moveDistance);
 
                     }
                     else
                     {
-                        transform.position = new Vector3(posX + moveDistance, posY, posZ);
+                        transform.position = new Vector3(posX + moveDistance, posY, posZ + moveDistance);
                     }
+                    gameManager.AddDistance(1);
 
                 }
 
@@ -112,13 +116,15 @@ public class GarryScript : PlayerMovement
                 {
                     if (transform.position.x == -10)
                     {
-                        transform.position = new Vector3(posX + moveDistance * 2, posY, posZ);
+                        transform.position = new Vector3(posX + moveDistance * 2, posY, posZ + moveDistance);
 
                     }
                     else
                     {
-                        transform.position = new Vector3(posX - moveDistance, posY, posZ);
+                        transform.position = new Vector3(posX - moveDistance, posY, posZ + moveDistance);
                     }
+
+                    gameManager.AddDistance(1);
                 }
             }
 
@@ -132,15 +138,27 @@ public class GarryScript : PlayerMovement
     {
         isMagicActive = true;
 
+        isFliyng = true;
+
         uiPower.color = Color.blue;
+
+        posY += 3; //PH
+        transform.position = new Vector3(posX, posY, posZ); //PH
 
         yield return new WaitForSeconds(activeTime);
 
         isMagicActive = false;
 
+        isFliyng = false;
+
         uiPower.color = Color.red;
 
         isMagicCoolingDown = true;
+
+        animator.Play("Idle");
+
+        posY -= 3; //PH
+        transform.position = new Vector3(posX, posY, posZ); //PH
 
         yield return new WaitForSeconds(magicCooldown);
 
@@ -150,4 +168,7 @@ public class GarryScript : PlayerMovement
 
         StopCoroutine(magicCoroutine);
     }
+
+    public bool IsMagicActive() { return isMagicActive; }
+
 }
