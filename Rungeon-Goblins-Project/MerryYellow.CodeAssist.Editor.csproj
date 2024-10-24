@@ -62,8 +62,8 @@
   <ItemGroup>
     <Compile Include="Packages\com.merry-yellow.code-assist\Editor\LazyInitializer.cs" />
     <Compile Include="Packages\com.merry-yellow.code-assist\Editor\Logger\CommonTools.cs" />
-    <Compile Include="Packages\com.merry-yellow.code-assist\Editor\Input\Text2Yaml.cs" />
     <Compile Include="Packages\com.merry-yellow.code-assist\Editor\EditorCoroutines\EditorWaitForSeconds.cs" />
+    <Compile Include="Packages\com.merry-yellow.code-assist\Editor\Input\Text2Yaml.cs" />
     <Compile Include="Packages\com.merry-yellow.code-assist\Editor\Input\Binary2TextExec.cs" />
     <Compile Include="Packages\com.merry-yellow.code-assist\Editor\ScriptFinder.cs" />
     <Compile Include="Packages\com.merry-yellow.code-assist\Editor\NetMQInitializer.cs" />

@@ -44,8 +44,10 @@ public class PlayerCombat : MonoBehaviour
             case "Hole":
                 if (playerBase.IsFliyng() == false)
                 {
-                    timer.DeadByRole();
+                    playerBase.DashOFF(true);
+                    timer.DeadByRole(other.gameObject);
                     timer.AddTime(-timer.GetMaxTime());
+                    //playerBase.DashOFF(false);
                 }
                 break;
             case "Hourglass":

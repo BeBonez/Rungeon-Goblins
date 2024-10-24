@@ -61,11 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\SwipeManager.cs" />
+    <Compile Include="Assets\Scripts\SceneScripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Managers\Timer.cs" />
     <Compile Include="Assets\Scripts\Managers\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\Managers\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Unused\Cooldown.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
+    <Compile Include="Assets\Scripts\SceneScripts\Scene1.cs" />
     <Compile Include="Assets\Scripts\Enemies&amp;Traps\Goblin.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerTouch.cs" />

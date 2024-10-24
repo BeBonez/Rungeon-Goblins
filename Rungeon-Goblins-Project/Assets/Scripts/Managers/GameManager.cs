@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEditor.Build;
 
 public class GameManager : MonoBehaviour
 {
@@ -27,6 +26,7 @@ public class GameManager : MonoBehaviour
     private int reviveCost = 50;
     private Timer timer;
     private bool hasRevived = false;
+    private Vector3 deathPosition;
 
     private void Awake()
     {
@@ -128,7 +128,13 @@ public class GameManager : MonoBehaviour
 
         UpdateData();
 
-        player.transform.position = playerScript.GetLastPosition();
+        Vector3 newPos = new Vector3(deathPosition.x, deathPosition.y, deathPosition.z - 20);
+
+        playerScript.SetNextPosition(newPos);
+        player.transform.position = newPos;
+
+        AddDistance(-2);
+
         playerScript.UpdatePosition();
         player.GetComponent<Animator>().Play("Idle");
 
@@ -167,6 +173,11 @@ public class GameManager : MonoBehaviour
     public PlayerMovement GetPlayerScript()
     {
         return playerScript;
+    }
+
+    public void SetDeathPos(Vector3 pos)
+    {
+        deathPosition = pos;
     }
     #endregion
 }

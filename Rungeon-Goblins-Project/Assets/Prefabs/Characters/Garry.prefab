@@ -224,6 +224,7 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   canTakeDamge: 1
   isFliyng: 0
+  speed: 60
   activeTime: 6
   magicCooldown: 10
   isMagicActive: 0

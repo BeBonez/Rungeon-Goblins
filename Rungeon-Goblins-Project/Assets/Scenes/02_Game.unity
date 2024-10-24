@@ -6831,6 +6831,50 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c69fe5a928961f74797b3fe801a48a87, type: 3}
+--- !u!1 &1609454527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1609454528}
+  - component: {fileID: 1609454529}
+  m_Layer: 0
+  m_Name: Scene1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1609454528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609454527}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 387.7959, y: 814.6247, z: -10.288571}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1609454529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609454527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5538b2d475372944f89067571d5b2644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1613333771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9477,11 +9521,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c69fe5a928961f74797b3fe801a48a87, type: 3}
---- !u!1 &2107015728 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5290594600976703174, guid: dcf47d39afca822449becbbb99ef27dc, type: 3}
-  m_PrefabInstance: {fileID: 396894440}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2135842767
 GameObject:
   m_ObjectHideFlags: 0
@@ -9810,7 +9849,7 @@ MonoBehaviour:
   - {fileID: 7320049108850689644, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
   - {fileID: 7876429574166700115, guid: 658bcd1c78212994ead6c2f855e416ad, type: 3}
   charactersUI:
-  - {fileID: 2107015728}
+  - {fileID: 0}
   - {fileID: 1512824490}
   spawnPoint: {x: 0, y: 0, z: -5}
   uiCharactersPanel:
@@ -10036,6 +10075,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1272846735}
+  - {fileID: 1609454528}
   - {fileID: 1194380069}
   - {fileID: 15452469}
   - {fileID: 2103509128171840019}

@@ -360,8 +360,9 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   canTakeDamge: 1
   isFliyng: 0
+  speed: 60
   maxCharges: 3
-  actualCharges: 3
+  actualCharges: 100
   dashCoolDown: 1.5
   isDashCoolingDown: 0
   timeActive: 6
@@ -388,5 +389,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.4099597, z: 0.7350377}
-  m_Center: {x: 0, y: 0.690235, z: 0.07736782}
+  m_Size: {x: 0.26, y: 1.4099597, z: 0.43}
+  m_Center: {x: -0.12, y: 0.690235, z: 0.07736782}

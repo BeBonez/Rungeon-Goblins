@@ -1,3 +1,5 @@
+using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,9 +11,17 @@ public abstract class PlayerMovement : MonoBehaviour
     [SerializeField] public GameManager gameManager;
     [SerializeField] protected bool canTakeDamge = true;
     [SerializeField] protected bool isFliyng = false;
-    protected Vector3 lastPosition;
+    [SerializeField] protected float speed;
+    protected IEnumerator dash;
     protected bool canMove = true;
     protected Animator animator;
+
+
+    [Header("Dash")]
+    protected Vector3 lastPosition;
+    protected Vector3 nextposition;
+    protected bool hasReached;
+    protected bool canceled = false;
 
     public abstract void Move(Vector2 direction);
     //{
@@ -74,6 +84,23 @@ public abstract class PlayerMovement : MonoBehaviour
         posZ = transform.position.z;
     }
 
+    protected abstract void Dash(Vector3 direction);
+
+    protected void MoveToDestiny()
+    {
+        if (Vector3.Distance(transform.position, nextposition) < 0.001f)
+        {
+            hasReached = true;
+            Debug.Log("Chegou");
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, nextposition, speed * Time.deltaTime);
+            hasReached = false;
+        }
+    }
+
+    #region GetSets
     public bool CanTakeDamage()
     {
         return canTakeDamge;
@@ -103,4 +130,25 @@ public abstract class PlayerMovement : MonoBehaviour
     {
         return charName;
     }
+
+    public void SetNextPosition(Vector3 position)
+    {
+        nextposition = position;
+    }
+
+    public Vector3 GetNextPosition()
+    {
+        return nextposition;
+    }
+
+    public void DashOFF(bool condition)
+    {
+        canceled = condition;
+    }
+
+    public float GetMoveDistance()
+    {
+        return moveDistance;
+    }
+    #endregion
 }

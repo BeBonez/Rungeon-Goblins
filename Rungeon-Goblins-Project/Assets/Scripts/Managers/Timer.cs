@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private int reduceTimeDistance = 0;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private Slider timeHUD;
+    private Transform holePosition;
     private GameObject uiComponents;
     private IEnumerator reviveCoroutine;
     private bool isDead = false;
@@ -53,8 +54,8 @@ public class Timer : MonoBehaviour
             reviveCoroutine = gameManager.ReviveQuickTime();
             if (isDeadByHole == true)
             {
-                StartCoroutine(Death("Hole"));
                 isDeadByHole = false;
+                StartCoroutine(Death("Hole"));
             }
             else
             {
@@ -103,31 +104,37 @@ public class Timer : MonoBehaviour
         return uiComponents;
     }
 
-    public void DeadByRole()
+    public void DeadByRole(GameObject hole)
     {
         isDeadByHole = true;
+        holePosition = hole.transform;
     }
 
     private IEnumerator Death(string _case)
     {
+
         uiComponents.SetActive(false);
 
         Animator playerAnim = gameManager.GetPlayer().GetComponent<Animator>();
 
         gameManager.GetPlayerScript().SwitchCanMove(false);
 
+        float waitSeconds = 0;
+
         if (_case == "Normal")
         {
+            gameManager.SetDeathPos(gameManager.GetPlayerScript().GetNextPosition());
             playerAnim.Play("Death");
+            waitSeconds = 2.5f;
         }
         else if (_case == "Hole")
         {
+            gameManager.SetDeathPos(holePosition.position);
             playerAnim.Play("Falling");
+            waitSeconds = 1f;
         }
 
-        AnimatorClipInfo[] clipInfo = playerAnim.GetCurrentAnimatorClipInfo(0);
-
-        yield return new WaitForSecondsRealtime(clipInfo[0].clip.length);
+        yield return new WaitForSecondsRealtime(waitSeconds);
 
         StartCoroutine(reviveCoroutine);
     }

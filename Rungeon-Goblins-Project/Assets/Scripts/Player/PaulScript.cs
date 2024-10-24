@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,28 +25,43 @@ public class PaulScript : PlayerMovement
     [SerializeField] protected TMP_Text uiActualCharges;
     [SerializeField] protected Image uiShield;
 
-
     private void Start()
     {
         charName = "Paul";
+        nextposition = transform.position;
         uiMaxCharges = GameObject.Find("MaxCharges").GetComponent<TMP_Text>();
         uiActualCharges = GameObject.Find("ActualCharges").GetComponent<TMP_Text>();
         uiShield = GameObject.Find("ShieldImage").GetComponent<Image>();
         animator = GetComponent<Animator>();
+
         UpdatePosition();
+    }
+
+    private void FixedUpdate()
+    {
+        MoveToDestiny();
+
+        if (actualCharges < maxCharges && isDashCoolingDown == false)
+        {
+            rechargeCoroutine = Recharge();
+            StartCoroutine(rechargeCoroutine);
+        }
+
+        UpdateUIInfo();
     }
 
     public override void Move(Vector2 direction)
     {
         if (canMove)
         {
-            lastPosition = transform.position;
+
             if (direction.y >= 1)
             {
 
                 if (actualCharges > 0)
                 {
-                    transform.position = new Vector3(posX, posY, posZ + moveDistance);
+                    Dash(new Vector3(0, 0, moveDistance));
+
                     actualCharges--;
                     gameManager.AddDistance(1);
                 }
@@ -65,20 +78,19 @@ public class PaulScript : PlayerMovement
 
             else if (direction.x >= 1)
             {
-                if (!(transform.position.x == 10)) // Se não for ultrapassar o limite da direita, ele pode mover
+                if (!(transform.position.x >= 10) && (moveDistance + nextposition.x <= 10)) // Se não for ultrapassar o limite da direita, ele pode mover
                 {
-                    transform.position = new Vector3(posX + moveDistance, posY, posZ + moveDistance);
+                    Dash(new Vector3(moveDistance, 0, moveDistance));
                     gameManager.AddDistance(1);
                 }
-
 
             }
 
             else if (direction.x <= -1)
             {
-                if (!(transform.position.x == -10)) // Se não for ultrapassar o limite da esquerda, ele pode mover
+                if (!(transform.position.x <= -10) && (nextposition.x - moveDistance >= -10)) // Se não for ultrapassar o limite da esquerda, ele pode mover
                 {
-                    transform.position = new Vector3(posX - moveDistance, posY, posZ + moveDistance);
+                    Dash(new Vector3(-moveDistance, 0, moveDistance));
                     gameManager.AddDistance(1);
                 }
 
@@ -86,16 +98,6 @@ public class PaulScript : PlayerMovement
         }
 
         UpdatePosition();
-    }
-
-    private void FixedUpdate()
-    {
-        if (actualCharges < maxCharges && isDashCoolingDown == false)
-        {
-            rechargeCoroutine = Recharge();
-            StartCoroutine(rechargeCoroutine);
-        }
-        UpdateUIInfo();
     }
 
     private IEnumerator Recharge()
@@ -129,5 +131,27 @@ public class PaulScript : PlayerMovement
     {
         uiActualCharges.text = actualCharges.ToString();
         uiMaxCharges.text = maxCharges.ToString();
+    }
+
+    protected override void Dash(Vector3 direction)
+    {
+
+        if (hasReached == false)
+        {
+            transform.position = nextposition;
+
+            lastPosition = nextposition;
+
+            direction += transform.position;
+
+            nextposition = direction;
+
+        }
+        else
+        {
+            direction += transform.position;
+            lastPosition = transform.position;
+            nextposition = direction;
+        }
     }
 }

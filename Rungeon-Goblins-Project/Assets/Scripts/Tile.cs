@@ -46,8 +46,9 @@ public class Tile : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (gameManager.GetDistance() >= despawnGoal) 
-        { 
+        if (transform.position.z <= gameManager.GetPlayer().transform.position.z - 300) 
+        {
+            Debug.Log("Blau");
             Destroy(gameObject);
         }
     }
