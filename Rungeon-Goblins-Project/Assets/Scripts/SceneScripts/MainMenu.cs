@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    private void Start()
-    {
-        AudioManager.Instance.PlayBGLoop(1);
-    }
-    private void OnEnable()
+    private void Awake()
     {
         AudioManager.Instance.PlayBGLoop(0);
     }

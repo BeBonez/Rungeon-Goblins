@@ -12,6 +12,7 @@ public abstract class PlayerMovement : MonoBehaviour
     [SerializeField] protected bool canTakeDamge = true;
     [SerializeField] protected bool isFliyng = false;
     [SerializeField] protected float speed;
+    [SerializeField] protected int hitSound;
     protected IEnumerator dash;
     protected bool canMove = true;
     protected Animator animator;
@@ -91,13 +92,17 @@ public abstract class PlayerMovement : MonoBehaviour
         if (Vector3.Distance(transform.position, nextposition) < 0.001f)
         {
             hasReached = true;
-            Debug.Log("Chegou");
         }
         else
         {
             transform.position = Vector3.MoveTowards(transform.position, nextposition, speed * Time.deltaTime);
             hasReached = false;
         }
+    }
+
+    public void PlayHitSFX()
+    {
+        AudioManager.Instance.PlaySFX(hitSound);
     }
 
     #region GetSets
@@ -150,5 +155,7 @@ public abstract class PlayerMovement : MonoBehaviour
     {
         return moveDistance;
     }
+
+    public virtual void AddCharge(int amount, string type) { }
     #endregion
 }

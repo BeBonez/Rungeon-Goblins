@@ -361,8 +361,9 @@ MonoBehaviour:
   canTakeDamge: 1
   isFliyng: 0
   speed: 60
+  hitSound: 1
   maxCharges: 3
-  actualCharges: 100
+  actualCharges: 3
   dashCoolDown: 1.5
   isDashCoolingDown: 0
   timeActive: 6

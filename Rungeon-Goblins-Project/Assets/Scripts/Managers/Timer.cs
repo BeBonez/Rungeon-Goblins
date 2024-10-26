@@ -12,12 +12,12 @@ public class Timer : MonoBehaviour
     [SerializeField] private int reduceTimeDistance = 0;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private Slider timeHUD;
+    [SerializeField] private Animator animator;
     private Transform holePosition;
     private GameObject uiComponents;
     private IEnumerator reviveCoroutine;
     private bool isDead = false;
     private bool isDeadByHole = false;
-
     private int currentDistance;
 
 
@@ -45,6 +45,17 @@ public class Timer : MonoBehaviour
                 maxTimer--;
                 reduceTimeDistance += 25;
             }
+        }
+
+        if (timer <= maxTimer * 0.3f) // Se for menor doq 30%
+        {
+            animator.SetTrigger("TimeEnding");
+        }
+        else
+        {
+            animator.ResetTrigger("TimeEnding");
+            animator.ResetTrigger("Default");
+            animator.SetTrigger("Default");
         }
 
         // se tempo acabar chama método e perde

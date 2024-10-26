@@ -101,8 +101,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.8000717, y: 7.366097, z: 1}
-  m_Center: {x: -0.03950405, y: 3.674245, z: 0}
+  m_Size: {x: 1.42, y: 3.6588256, z: 1}
+  m_Center: {x: -0.03950405, y: 1.8206095, z: 0}
 --- !u!54 &3327554638410644951
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -225,6 +225,7 @@ MonoBehaviour:
   canTakeDamge: 1
   isFliyng: 0
   speed: 60
+  hitSound: 13
   activeTime: 6
   magicCooldown: 10
   isMagicActive: 0

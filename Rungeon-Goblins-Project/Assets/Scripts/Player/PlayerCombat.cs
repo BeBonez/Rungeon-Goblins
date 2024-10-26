@@ -30,6 +30,8 @@ public class PlayerCombat : MonoBehaviour
                     if (playerBase.CanTakeDamage() == true)
                     {
                         playerBase.GetAnimator().Play("Attack");
+
+                        playerBase.AddCharge(1, "Kill");
                     }
                 }
                 EnemyDefeat(other);
@@ -78,6 +80,8 @@ public class PlayerCombat : MonoBehaviour
 
     private void TookDamage(float value)
     {
+        int damageSound = Random.Range(4, 6);
+        AudioManager.Instance.PlaySFX(damageSound);
         timeAnimator.SetTrigger("TookDamage");
         //cameraAnimator.SetTrigger("Default");
         cameraAnimator.SetTrigger("TookDamage");
@@ -87,7 +91,7 @@ public class PlayerCombat : MonoBehaviour
     private void EnemyDefeat(Collider other)
     {
         Destroy(other.gameObject);
-        AudioManager.Instance.PlaySFX(1);
+        playerBase.PlayHitSFX();
         //cameraAnimator.SetTrigger("Default");
         cameraAnimator.SetTrigger("EnemyDefeat");
         timeAnimator.SetTrigger("AddTime");

@@ -20,18 +20,32 @@ public class UIManager : MonoBehaviour
     public void ChangeScene(int id)
     {
         SceneManager.LoadScene(id);
+        if (id == 0)
+        {
+            AudioManager.Instance.PlayBGLoop(0);
+        }
+        else if (id == 1)
+        {
+            int randomMusic = Random.Range(1, 4);
+            AudioManager.Instance.PlayBGLoop(randomMusic);
+        }
         Time.timeScale = 1f;
     }
 
     public void ActivateElement(GameObject element)
     {
-        AudioManager.Instance.PlaySFX(0);
+        PlaySound(0);
         element.SetActive(true);
     }
 
     public void DeactivateElement(GameObject element)
     {
-        AudioManager.Instance.PlaySFX(0);
+        PlaySound(0);
         element.SetActive(false);
+    }
+    
+    public void PlaySound(int index)
+    {
+        AudioManager.Instance.PlaySFX(index);
     }
 }

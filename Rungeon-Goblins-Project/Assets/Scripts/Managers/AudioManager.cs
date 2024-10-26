@@ -51,7 +51,12 @@ public class AudioManager : MonoBehaviour
     {
         AudioClip clip = sfxClips[index];
         sfxSource.clip = clip;
-        sfxSource.Play();
+        sfxSource.PlayOneShot(clip);
+    }
+
+    public void StopSFX(int index)
+    {
+        sfxSource.Stop();
     }
 
     public void PlayBG(int index)
@@ -59,7 +64,6 @@ public class AudioManager : MonoBehaviour
         bgSource.Stop();
         bgSource.clip = bgClips[index];
         bgSource.loop = false;
-        StartCoroutine(Fade(bgSource, 2));
         bgSource.Play();
     }
 
@@ -68,7 +72,6 @@ public class AudioManager : MonoBehaviour
         bgSource.Stop();
         bgSource.clip = bgClips[index];
         bgSource.loop = true;
-        StartCoroutine(Fade(bgSource, 2));
         bgSource.Play();
 
     }

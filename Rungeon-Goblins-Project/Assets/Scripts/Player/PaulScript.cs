@@ -1,5 +1,6 @@
 using System.Collections;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -74,6 +75,10 @@ public class PaulScript : PlayerMovement
                     powerCoroutine = RaiseShield();
                     StartCoroutine(powerCoroutine);
                 }
+                else
+                {
+                    AudioManager.Instance.PlaySFX(11);
+                }
             }
 
             else if (direction.x >= 1)
@@ -106,6 +111,7 @@ public class PaulScript : PlayerMovement
         yield return new WaitForSeconds(dashCoolDown);
         actualCharges++;
         isDashCoolingDown = false;
+        AudioManager.Instance.PlaySFX(7);
         StopCoroutine(rechargeCoroutine);
     }
 
@@ -145,13 +151,38 @@ public class PaulScript : PlayerMovement
             direction += transform.position;
 
             nextposition = direction;
-
         }
         else
         {
             direction += transform.position;
+
             lastPosition = transform.position;
+
             nextposition = direction;
+
+            
         }
+
+        AudioManager.Instance.PlaySFX(9);
+
+        animator.Rebind();
+        animator.Play("Jump");
+    }
+
+    public override void AddCharge(int amount, string type)
+    {
+        if (type == "Cheat")
+        {
+            actualCharges = amount;
+        }
+        if (type == "Kill")
+        {
+            if (actualCharges + amount < 3)
+            {
+                actualCharges += amount;
+            }
+        }
+        
+        AudioManager.Instance.PlaySFX(12);
     }
 }

@@ -32,12 +32,14 @@ public class GarryScript : PlayerMovement
         {
             nextposition = new Vector3(-10, 0, nextposition.z);
             transform.position = nextposition;
+            AudioManager.Instance.PlaySFX(8);
         }
 
         if (transform.position.x <= -12)
         {
             nextposition = new Vector3(10, 0, nextposition.z);
             transform.position = nextposition;
+            AudioManager.Instance.PlaySFX(8);
         }
     }
 
@@ -67,6 +69,10 @@ public class GarryScript : PlayerMovement
                         magicCoroutine = TeleportMagic();
                         StartCoroutine(magicCoroutine);
                         animator.Play("Flying");
+                    }
+                    else
+                    {
+                        AudioManager.Instance.PlaySFX(11);
                     }
                 }
 
@@ -100,7 +106,7 @@ public class GarryScript : PlayerMovement
                 }
                 else if (direction.y <= -1)
                 {
-                    //Beem
+                    AudioManager.Instance.PlaySFX(11);
                 }
 
                 else if (direction.x >= 1)
@@ -127,6 +133,8 @@ public class GarryScript : PlayerMovement
 
     private IEnumerator TeleportMagic()
     {
+        AudioManager.Instance.PlaySFX(6);
+
         isMagicActive = true;
 
         isFliyng = true;
@@ -138,6 +146,8 @@ public class GarryScript : PlayerMovement
         transform.position = new Vector3(posX, posY, posZ); //PH
 
         yield return new WaitForSeconds(activeTime);
+
+        AudioManager.Instance.StopSFX(6);
 
         isMagicActive = false;
 
@@ -151,6 +161,9 @@ public class GarryScript : PlayerMovement
 
         posY -= 3; //PH
 
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+        gameObject.GetComponent<BoxCollider>().enabled = true;
+
         UpdatePosition();
 
         transform.position = new Vector3(posX, posY, posZ); //PH
@@ -158,6 +171,8 @@ public class GarryScript : PlayerMovement
         yield return new WaitForSeconds(magicCooldown);
 
         uiPower.color = Color.white;
+
+        AudioManager.Instance.PlaySFX(7);
 
         isMagicCoolingDown = false;
 
@@ -188,6 +203,13 @@ public class GarryScript : PlayerMovement
 
             nextposition = direction;
 
+        }
+
+        if (isFliyng == false)
+        {
+            AudioManager.Instance.PlaySFX(9);
+            animator.Rebind();
+            animator.Play("Jump");
         }
     }
 }

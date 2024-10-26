@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
         revivePanel.SetActive(false);
         StopAllCoroutines();
         UpdateData();
+        AudioManager.Instance.PlayBGLoop(4);
         Pause();
         losePanel.SetActive(true);
     }

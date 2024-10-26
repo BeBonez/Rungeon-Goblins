@@ -15,6 +15,7 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private GameObject[] charactersUI;
     [SerializeField] private Vector3 spawnPoint;
     [SerializeField] private GameObject[] uiCharactersPanel;
+    [SerializeField] private GameObject[] selectionCirclesSprites;
 
     private void Awake() {
         selectedChar = characters[PlayerPrefs.GetInt("SelectedChar", 0)];
@@ -30,12 +31,27 @@ public class CharacterManager : MonoBehaviour
     public void OnEnterMenu()
     {
         selectedChar = characters[PlayerPrefs.GetInt("SelectedChar", 0)]; // Pega o numero do personagem selecionado e armazena
-        charactersButton[PlayerPrefs.GetInt("SelectedChar", 0)].Select(); // Deixa o botão selecionado
+        selectionCirclesSprites[PlayerPrefs.GetInt("SelectedChar", 0)].SetActive(true); // Deixa o botão selecionado
     }
 
     public void SelectCharacter(int index) {
         PlayerPrefs.SetInt("SelectedChar", index);
-        selectedChar = characters[PlayerPrefs.GetInt("SelectedChar", 0)];
+
+        int selectedCharNumber = PlayerPrefs.GetInt("SelectedChar", 0);
+
+        selectedChar = characters[selectedCharNumber];
+
+        if (selectedCharNumber == 0)
+        {
+            selectionCirclesSprites[1].SetActive(false);
+            selectionCirclesSprites[0].SetActive(true);
+        }
+        else
+        {
+            selectionCirclesSprites[0].SetActive(false);
+            selectionCirclesSprites[1].SetActive(true);  
+        }
+        
 
     }
 }
