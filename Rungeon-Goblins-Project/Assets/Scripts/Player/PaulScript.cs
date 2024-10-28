@@ -1,16 +1,11 @@
 using System.Collections;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PaulScript : PlayerMovement
 {
     [Header("Dash")]
-    [SerializeField] int maxCharges;
-    [SerializeField] int actualCharges;
-    [SerializeField] float dashCoolDown;
-    [SerializeField] bool isDashCoolingDown;
 
     [Header("Shield")]
     [SerializeField] float timeActive;
@@ -20,18 +15,18 @@ public class PaulScript : PlayerMovement
     bool isActive;
     IEnumerator powerCoroutine;
     IEnumerator rechargeCoroutine;
+    [SerializeField] float timeBetweenDashes;
+    [SerializeField] float actualTime;
 
     [Header("UI Components")]
-    [SerializeField] protected TMP_Text uiMaxCharges;
-    [SerializeField] protected TMP_Text uiActualCharges;
     [SerializeField] protected Image uiShield;
 
     private void Start()
     {
         charName = "Paul";
         nextposition = transform.position;
-        uiMaxCharges = GameObject.Find("MaxCharges").GetComponent<TMP_Text>();
-        uiActualCharges = GameObject.Find("ActualCharges").GetComponent<TMP_Text>();
+        uiMaxCharges = GameObject.Find("PaulMaxCharges").GetComponent<TMP_Text>();
+        uiActualCharges = GameObject.Find("PaulActualCharges").GetComponent<TMP_Text>();
         uiShield = GameObject.Find("ShieldImage").GetComponent<Image>();
         animator = GetComponent<Animator>();
 
@@ -42,11 +37,23 @@ public class PaulScript : PlayerMovement
     {
         MoveToDestiny();
 
-        if (actualCharges < maxCharges && isDashCoolingDown == false)
+        if (isActive)
         {
-            rechargeCoroutine = Recharge();
-            StartCoroutine(rechargeCoroutine);
+            if (Time.time > timeBetweenDashes + actualTime)
+            {
+                Dash(new Vector3(0, 0, moveDistance));
+                gameManager.AddDistance(1);
+                actualTime = Time.time;
+
+            }
         }
+
+
+        //if (actualCharges < maxCharges && isDashCoolingDown == false)
+        //{
+        //    rechargeCoroutine = Recharge();
+        //    StartCoroutine(rechargeCoroutine);
+        //}
 
         UpdateUIInfo();
     }
@@ -109,9 +116,12 @@ public class PaulScript : PlayerMovement
     {
         isDashCoolingDown = true;
         yield return new WaitForSeconds(dashCoolDown);
-        actualCharges++;
-        isDashCoolingDown = false;
-        AudioManager.Instance.PlaySFX(7);
+        if (actualCharges < maxCharges)
+        {
+            actualCharges++;
+            isDashCoolingDown = false;
+            AudioManager.Instance.PlaySFX(7);
+        }
         StopCoroutine(rechargeCoroutine);
     }
 
@@ -131,12 +141,6 @@ public class PaulScript : PlayerMovement
         isShieldCoolingDown = false;
         uiShield.color = Color.white;
         StopCoroutine(powerCoroutine);
-    }
-
-    private void UpdateUIInfo()
-    {
-        uiActualCharges.text = actualCharges.ToString();
-        uiMaxCharges.text = maxCharges.ToString();
     }
 
     protected override void Dash(Vector3 direction)
@@ -169,20 +173,8 @@ public class PaulScript : PlayerMovement
         animator.Play("Jump");
     }
 
-    public override void AddCharge(int amount, string type)
+    public override void DeactivatePower()
     {
-        if (type == "Cheat")
-        {
-            actualCharges = amount;
-        }
-        if (type == "Kill")
-        {
-            if (actualCharges + amount < 3)
-            {
-                actualCharges += amount;
-            }
-        }
-        
-        AudioManager.Instance.PlaySFX(12);
+        isActive = false;
     }
 }

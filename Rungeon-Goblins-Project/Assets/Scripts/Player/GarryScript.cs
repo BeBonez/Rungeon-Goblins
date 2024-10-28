@@ -9,6 +9,8 @@ public class GarryScript : PlayerMovement
     [SerializeField] float activeTime;
     [SerializeField] float magicCooldown;
     [SerializeField] bool isMagicActive = false;
+    [SerializeField] float timeBetweenDashes;
+    [SerializeField] float actualTime;
     bool isMagicCoolingDown;
     IEnumerator magicCoroutine;
 
@@ -20,6 +22,8 @@ public class GarryScript : PlayerMovement
         charName = "Garry";
         nextposition = transform.position;
         uiPower = GameObject.Find("MagicImage").GetComponent<Image>();
+        uiMaxCharges = GameObject.Find("GarryMaxCharges").GetComponent<TMP_Text>();
+        uiActualCharges = GameObject.Find("GarryActualCharges").GetComponent<TMP_Text>();
         animator = gameObject.GetComponent<Animator>();
         UpdatePosition();
     }
@@ -28,9 +32,23 @@ public class GarryScript : PlayerMovement
     {
         MoveToDestiny();
 
+        UpdateUIInfo();
+
+        if (isFliyng == true)
+        {
+            if (Time.time > timeBetweenDashes + actualTime)
+            {
+                Dash(new Vector3(0, 0, moveDistance));
+                gameManager.AddDistance(1);
+                actualTime = Time.time;
+
+            }
+        }
+
         if (transform.position.x >= 12)
         {
             nextposition = new Vector3(-10, 0, nextposition.z);
+
             transform.position = nextposition;
             AudioManager.Instance.PlaySFX(8);
         }
@@ -38,6 +56,7 @@ public class GarryScript : PlayerMovement
         if (transform.position.x <= -12)
         {
             nextposition = new Vector3(10, 0, nextposition.z);
+
             transform.position = nextposition;
             AudioManager.Instance.PlaySFX(8);
         }
@@ -54,7 +73,14 @@ public class GarryScript : PlayerMovement
             {
                 if (direction.y >= 1)
                 {
-                    // BEEm
+
+                    if (actualCharges > 0)
+                    {
+                        Dash(new Vector3(0, 0, moveDistance));
+
+                        actualCharges--;
+                        gameManager.AddDistance(1);
+                    }
 
                 }
                 else if (direction.y <= -1 && posZ != -5)
@@ -100,8 +126,8 @@ public class GarryScript : PlayerMovement
             {
                 if (direction.y >= 1)
                 {
-                    Dash(new Vector3(0, 0, moveDistance));
-                    gameManager.AddDistance(1);
+                    //Dash(new Vector3(0, 0, moveDistance));
+                    //gameManager.AddDistance(1);
 
                 }
                 else if (direction.y <= -1)
@@ -111,17 +137,14 @@ public class GarryScript : PlayerMovement
 
                 else if (direction.x >= 1)
                 {
-                    Dash(new Vector3(moveDistance, 0, moveDistance));
-
-                    gameManager.AddDistance(1);
+                    Dash(new Vector3(moveDistance, 0, 0));
 
                 }
 
                 else if (direction.x <= -1)
                 {
-                    Dash(new Vector3(-moveDistance, 0, moveDistance));
+                    Dash(new Vector3(-moveDistance, 0, 0));
 
-                    gameManager.AddDistance(1);
                 }
             }
 
@@ -143,6 +166,8 @@ public class GarryScript : PlayerMovement
 
         posY += 3; //PH
 
+        canTakeDamge = false;
+
         transform.position = new Vector3(posX, posY, posZ); //PH
 
         yield return new WaitForSeconds(activeTime);
@@ -152,6 +177,8 @@ public class GarryScript : PlayerMovement
         isMagicActive = false;
 
         isFliyng = false;
+
+        canTakeDamge = true;
 
         uiPower.color = Color.red;
 
@@ -205,11 +232,19 @@ public class GarryScript : PlayerMovement
 
         }
 
+        UpdatePosition();
+
         if (isFliyng == false)
         {
             AudioManager.Instance.PlaySFX(9);
             animator.Rebind();
             animator.Play("Jump");
         }
+    }
+
+    public override void DeactivatePower()
+    {
+        isFliyng = false;
+        isMagicActive = false;
     }
 }

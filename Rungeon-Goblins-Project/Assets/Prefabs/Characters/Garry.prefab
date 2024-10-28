@@ -226,9 +226,17 @@ MonoBehaviour:
   isFliyng: 0
   speed: 60
   hitSound: 13
+  maxCharges: 1
+  actualCharges: 1
+  dashCoolDown: 0
+  isDashCoolingDown: 0
+  uiMaxCharges: {fileID: 0}
+  uiActualCharges: {fileID: 0}
   activeTime: 6
   magicCooldown: 10
   isMagicActive: 0
+  timeBetweenDashes: 0.15
+  actualTime: 0
   uiPower: {fileID: 0}
 --- !u!1001 &4299801882138924969
 PrefabInstance:

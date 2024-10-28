@@ -366,10 +366,12 @@ MonoBehaviour:
   actualCharges: 3
   dashCoolDown: 1.5
   isDashCoolingDown: 0
-  timeActive: 6
-  shieldCoolDown: 10
   uiMaxCharges: {fileID: 0}
   uiActualCharges: {fileID: 0}
+  timeActive: 6
+  shieldCoolDown: 10
+  timeBetweenDashes: 0.25
+  actualTime: 0
   uiShield: {fileID: 0}
 --- !u!65 &5750031787139907807
 BoxCollider:

@@ -130,6 +130,8 @@ public class Timer : MonoBehaviour
 
         gameManager.GetPlayerScript().SwitchCanMove(false);
 
+        gameManager.GetPlayerScript().DeactivatePower();
+
         float waitSeconds = 0;
 
         if (_case == "Normal")

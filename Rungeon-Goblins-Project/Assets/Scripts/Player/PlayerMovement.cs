@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,14 @@ public abstract class PlayerMovement : MonoBehaviour
     protected bool canMove = true;
     protected Animator animator;
 
+    [Header("FrontDash")]
+    [SerializeField] protected int maxCharges;
+    [SerializeField] protected int actualCharges;
+    [SerializeField] protected float dashCoolDown;
+    [SerializeField] protected bool isDashCoolingDown;
+
+    [SerializeField] protected TMP_Text uiMaxCharges;
+    [SerializeField] protected TMP_Text uiActualCharges;
 
     [Header("Dash")]
     protected Vector3 lastPosition;
@@ -156,6 +165,30 @@ public abstract class PlayerMovement : MonoBehaviour
         return moveDistance;
     }
 
-    public virtual void AddCharge(int amount, string type) { }
+    public abstract void DeactivatePower();
+
+    public virtual void AddCharge(int amount, string type)
+    {
+        if (type == "Cheat")
+        {
+            actualCharges = amount;
+        }
+        if (type == "Kill")
+        {
+            if (actualCharges < maxCharges)
+            {
+                actualCharges += amount;
+            }
+        }
+
+        AudioManager.Instance.PlaySFX(12);
+    }
+
+    protected void UpdateUIInfo()
+    {
+        uiActualCharges.text = actualCharges.ToString();
+        uiMaxCharges.text = maxCharges.ToString();
+    }
+
     #endregion
 }
