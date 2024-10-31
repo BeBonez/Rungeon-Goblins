@@ -12,6 +12,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private int TierGoal; // 0 for area 1, 240 for area 2, 490 for area 3...
     [SerializeField] private GameObject[] SecondTier;
     [SerializeField] private GameObject[] ThirdTier;
+    private int buildIndex;
 
     private void Start()
     {

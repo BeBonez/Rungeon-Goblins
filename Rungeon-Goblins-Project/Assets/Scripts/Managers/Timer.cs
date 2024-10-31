@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private Slider timeHUD;
     [SerializeField] private Animator animator;
+    private bool canReduce = true;
     private Transform holePosition;
     private GameObject uiComponents;
     private IEnumerator reviveCoroutine;
@@ -32,7 +33,12 @@ public class Timer : MonoBehaviour
     {
         if (timer > 0)
         {
-            timer -= Time.deltaTime;
+
+            if (canReduce)
+            {
+                timer -= Time.deltaTime;
+            }
+            
             timeHUD.value = timer / maxTimer;
         }
 
@@ -150,5 +156,10 @@ public class Timer : MonoBehaviour
         yield return new WaitForSecondsRealtime(waitSeconds);
 
         StartCoroutine(reviveCoroutine);
+    }
+
+    public void SetReduceTime(bool condition)
+    {
+        canReduce = condition;
     }
 }

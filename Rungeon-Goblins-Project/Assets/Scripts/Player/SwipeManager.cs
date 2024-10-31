@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 public class SwipeManager : MonoBehaviour
 {
     public PlayerMovement playerMovement;
@@ -9,13 +10,21 @@ public class SwipeManager : MonoBehaviour
     private InputAction touchPosition;
     private Vector2 initialPosition;
     private Vector2 finalPosition;
-    [SerializeField]private int magnitude = 5;
+    [SerializeField] int magnitude = 5;
+    [SerializeField] TutorialManager tutorialManager;
+    private int sceneIndex;
+
+    private void Start()
+    {
+        tutorialManager = GameObject.Find("TutorialManager").GetComponent<TutorialManager>();
+    }
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
         touchAction = playerInput.actions["TouchPress"];
         touchPosition = playerInput.actions["TouchPosition"];
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     private void OnEnable()
@@ -59,7 +68,15 @@ public class SwipeManager : MonoBehaviour
             }
 
             direction = direction.normalized;
-            playerMovement.Move(direction);
+
+            if (sceneIndex == 1)
+            {
+                playerMovement.Move(direction);
+            }
+            else if (sceneIndex == 2)
+            {
+                tutorialManager.Direction(direction);
+            }
         }
     }
 }

@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 5817398600457210778}
   magnitude: 50
+  tutorialManager: {fileID: 0}
 --- !u!114 &1178954158705836615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +228,7 @@ MonoBehaviour:
   speed: 60
   hitSound: 13
   maxCharges: 1
-  actualCharges: 1
+  actualCharges: 0
   dashCoolDown: 0
   isDashCoolingDown: 0
   uiMaxCharges: {fileID: 0}
