@@ -79,6 +79,8 @@ public class PaulScript : PlayerMovement
             {
                 if (isShieldCoolingDown == false && isActive == false)
                 {
+                    animator.Play("Run");
+                    animator.SetTrigger("Run");
                     powerCoroutine = RaiseShield();
                     StartCoroutine(powerCoroutine);
                 }
@@ -132,12 +134,16 @@ public class PaulScript : PlayerMovement
         canTakeDamge = false;
 
         yield return new WaitForSeconds(timeActive);
+
         isActive = false;
         canTakeDamge = true;
         isShieldCoolingDown = true;
+        animator.Play("Idle");
+        animator.SetTrigger("Idle");
         uiShield.color = Color.red;
 
         yield return new WaitForSeconds(shieldCoolDown);
+
         isShieldCoolingDown = false;
         uiShield.color = Color.white;
         StopCoroutine(powerCoroutine);
@@ -169,8 +175,11 @@ public class PaulScript : PlayerMovement
 
         AudioManager.Instance.PlaySFX(9);
 
-        animator.Rebind();
-        animator.Play("Jump");
+        if (isActive == false)
+        {
+            animator.Rebind();
+            animator.Play("Jump");
+        }
     }
 
     public override void DeactivatePower()

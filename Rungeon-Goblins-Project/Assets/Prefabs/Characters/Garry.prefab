@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 907436675235216111}
   - component: {fileID: 4672974098351582937}
-  - component: {fileID: 2551180500888175700}
   - component: {fileID: 3327554638410644951}
   - component: {fileID: 9190832544835039887}
   - component: {fileID: -2095885266603175566}
   - component: {fileID: 4907038948339537100}
   - component: {fileID: 1178954158705836615}
   - component: {fileID: 5817398600457210778}
+  - component: {fileID: 6228235774534172419}
   m_Layer: 6
   m_Name: Garry
   m_TagString: Player
@@ -82,27 +82,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2551180500888175700
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7876429574166700115}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.42, y: 3.6588256, z: 1}
-  m_Center: {x: -0.03950405, y: 1.8206095, z: 0}
 --- !u!54 &3327554638410644951
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -239,6 +218,29 @@ MonoBehaviour:
   timeBetweenDashes: 0.15
   actualTime: 0
   uiPower: {fileID: 0}
+--- !u!136 &6228235774534172419
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876429574166700115}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.65
+  m_Height: 8.844027
+  m_Direction: 1
+  m_Center: {x: 0, y: 3.9220133, z: 0}
 --- !u!1001 &4299801882138924969
 PrefabInstance:
   m_ObjectHideFlags: 0
