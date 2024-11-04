@@ -9,7 +9,6 @@ public class PaulScript : PlayerMovement
 
     [Header("Shield")]
     [SerializeField] float timeActive;
-    [SerializeField] float shieldCoolDown;
     float actualShieldTimeCooldown;
     bool isShieldCoolingDown;
     bool isActive;
@@ -24,11 +23,18 @@ public class PaulScript : PlayerMovement
     private void Start()
     {
         charName = "Paul";
+
         nextposition = transform.position;
+
         uiMaxCharges = GameObject.Find("PaulMaxCharges").GetComponent<TMP_Text>();
+
         uiActualCharges = GameObject.Find("PaulActualCharges").GetComponent<TMP_Text>();
+
         uiShield = GameObject.Find("ShieldImage").GetComponent<Image>();
+
         animator = GetComponent<Animator>();
+
+        timer = GameObject.Find("GameManager").GetComponent<Timer>();
 
         UpdatePosition();
     }
@@ -142,7 +148,7 @@ public class PaulScript : PlayerMovement
         animator.SetTrigger("Idle");
         uiShield.color = Color.red;
 
-        yield return new WaitForSeconds(shieldCoolDown);
+        yield return new WaitForSeconds(powerCooldown);
 
         isShieldCoolingDown = false;
         uiShield.color = Color.white;
@@ -170,7 +176,6 @@ public class PaulScript : PlayerMovement
 
             nextposition = direction;
 
-            
         }
 
         AudioManager.Instance.PlaySFX(9);
@@ -180,6 +185,7 @@ public class PaulScript : PlayerMovement
             animator.Rebind();
             animator.Play("Jump");
         }
+
     }
 
     public override void DeactivatePower()

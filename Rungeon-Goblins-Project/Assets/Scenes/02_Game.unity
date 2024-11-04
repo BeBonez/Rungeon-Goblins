@@ -1749,7 +1749,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.475
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -10379,9 +10379,6 @@ MonoBehaviour:
   characters:
   - {fileID: 7320049108850689644, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
   - {fileID: 7876429574166700115, guid: 658bcd1c78212994ead6c2f855e416ad, type: 3}
-  charactersUI:
-  - {fileID: 0}
-  - {fileID: 0}
   spawnPoint: {x: 0, y: 0, z: -5}
   uiCharactersPanel:
   - {fileID: 1551436375}

@@ -12,7 +12,6 @@ public class CharacterManager : MonoBehaviour
     [SerializeField] private GameObject selectedChar;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject[] characters;
-    [SerializeField] private GameObject[] charactersUI;
     [SerializeField] private Vector3 spawnPoint;
     [SerializeField] private GameObject[] uiCharactersPanel;
     [SerializeField] private GameObject[] selectionCirclesSprites;
@@ -25,7 +24,6 @@ public class CharacterManager : MonoBehaviour
         Instantiate(selectedChar, spawnPoint, Quaternion.identity);
             uiCharactersPanel[PlayerPrefs.GetInt("SelectedChar", 0)].SetActive(true);
         }
-
     }
 
     public void OnEnterMenu()
@@ -51,7 +49,5 @@ public class CharacterManager : MonoBehaviour
             selectionCirclesSprites[0].SetActive(false);
             selectionCirclesSprites[1].SetActive(true);  
         }
-        
-
     }
 }

@@ -364,7 +364,7 @@ MonoBehaviour:
   speed: 60
   hitSound: 1
   maxCharges: 3
-  actualCharges: 0
+  actualCharges: 1
   dashCoolDown: 1.5
   isDashCoolingDown: 0
   uiMaxCharges: {fileID: 0}

@@ -3,6 +3,7 @@ using UnityEngine;
 public class Worg : MonoBehaviour
 {
     [SerializeField] float speed;
+    private Animator animator;
     private Transform playerTransform;
 
     private void Start()

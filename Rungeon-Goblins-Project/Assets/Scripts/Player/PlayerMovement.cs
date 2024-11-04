@@ -17,6 +17,8 @@ public abstract class PlayerMovement : MonoBehaviour
     protected IEnumerator dash;
     protected bool canMove = true;
     protected Animator animator;
+    [SerializeField] protected float powerCooldown;
+    protected Timer timer;
 
     [Header("FrontDash")]
     [SerializeField] protected int maxCharges;

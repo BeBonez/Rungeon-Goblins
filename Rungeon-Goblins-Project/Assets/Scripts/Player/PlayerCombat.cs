@@ -20,62 +20,61 @@ public class PlayerCombat : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-
-        switch (other.tag)
+        if (timer.IsDead() == false)
         {
-
-            case "Goblin":
-                if (playerBase.IsFliyng() == false)
-                {
-                    if (playerBase.CanTakeDamage() == true)
+            switch (other.tag)
+            {
+                case "Goblin":
+                    if (playerBase.IsFliyng() == false)
                     {
-                        playerBase.GetAnimator().Play("Attack");
+                        if (playerBase.CanTakeDamage() == true)
+                        {
+                            playerBase.GetAnimator().Play("Attack");
 
-                        playerBase.AddCharge(1, "Kill");
+                            playerBase.AddCharge(1, "Kill");
+                        }
                     }
-                }
-                EnemyDefeat(other);
-                timer.AddTime(3);
-                break;
-            case "Trap":
-                if (playerBase.IsFliyng() == false)
-                {
-                    TookDamage(3);
-                }
-                break;
-            case "Hole":
-                if (playerBase.IsFliyng() == false)
-                {
-                    playerBase.DashOFF(true);
-                    timer.DeadByRole(other.gameObject);
-                    timer.AddTime(-timer.GetMaxTime());
-                    //playerBase.DashOFF(false);
-                }
-                break;
-            case "Hourglass":
-                timeAnimator.SetTrigger("AddTime");
-                Destroy(other.gameObject);
-                AudioManager.Instance.PlaySFX(3);
-                timer.AddTime(timer.GetMaxTime());
-                break;
-            case "GoblinAttack":
+                    EnemyDefeat(other);
+                    timer.AddTime(3);
+                    break;
+                case "Trap":
+                    if (playerBase.IsFliyng() == false)
+                    {
+                        TookDamage(3);
+                    }
+                    break;
+                case "Hole":
+                    if (playerBase.IsFliyng() == false)
+                    {
+                        timer.DeadByHole(other.gameObject);
+                        timer.AddTime(-timer.GetMaxTime());
+                        //playerBase.DashOFF(false);
+                    }
+                    break;
+                case "Hourglass":
+                    timeAnimator.SetTrigger("AddTime");
+                    Destroy(other.gameObject);
+                    AudioManager.Instance.PlaySFX(3);
+                    timer.AddTime(timer.GetMaxTime());
+                    break;
+                case "GoblinAttack":
 
-                if (playerBase.CanTakeDamage())
-                {
-                    TookDamage(3);
-                }
-                else if (playerBase.GetName() == "Paul" && playerBase.CanTakeDamage() == false)
-                {
-                    playerBase.GetAnimator().Play("Shield");
-                }
-                break;
-            case "Coin":
-                Destroy(other.gameObject);
-                AudioManager.Instance.PlaySFX(2);
-                gameManager.AddCoin(1);
-                break;
+                    if (playerBase.CanTakeDamage())
+                    {
+                        TookDamage(3);
+                    }
+                    else if (playerBase.GetName() == "Paul" && playerBase.CanTakeDamage() == false)
+                    {
+                        playerBase.GetAnimator().Play("Shield");
+                    }
+                    break;
+                case "Coin":
+                    Destroy(other.gameObject);
+                    AudioManager.Instance.PlaySFX(2);
+                    gameManager.AddCoin(1);
+                    break;
+            }
         }
-
     }
 
     private void TookDamage(float value)

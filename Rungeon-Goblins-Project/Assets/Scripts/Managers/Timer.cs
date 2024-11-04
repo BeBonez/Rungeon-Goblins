@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        timer = maxTimer;
+        timer = timeHUD.value * maxTimer;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         uiComponents = GameObject.Find("UI");
     }
@@ -121,10 +121,11 @@ public class Timer : MonoBehaviour
         return uiComponents;
     }
 
-    public void DeadByRole(GameObject hole)
+    public void DeadByHole(GameObject hole)
     {
         isDeadByHole = true;
         holePosition = hole.transform;
+        gameManager.GetPlayerScript().SetNextPosition(holePosition.position);
     }
 
     private IEnumerator Death(string _case)
@@ -161,5 +162,20 @@ public class Timer : MonoBehaviour
     public void SetReduceTime(bool condition)
     {
         canReduce = condition;
+    }
+
+    public bool IsDead()
+    {
+        return isDead;
+    }
+
+    public bool IsDeadByHole()
+    {
+        return isDeadByHole;
+    }
+
+    public void SetDead(bool condition)
+    {
+        isDead = condition;
     }
 }

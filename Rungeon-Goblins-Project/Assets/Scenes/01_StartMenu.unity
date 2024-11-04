@@ -728,11 +728,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 76.27, y: -11.1, z: 0}
---- !u!1 &980770150 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 407611379500920751, guid: b8b623aaa5e2aec4199178d26b9b8361, type: 3}
-  m_PrefabInstance: {fileID: 4912853695132394098}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1019119180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1108,9 +1103,6 @@ MonoBehaviour:
   characters:
   - {fileID: 2118642175}
   - {fileID: 7876429574166700115, guid: 658bcd1c78212994ead6c2f855e416ad, type: 3}
-  charactersUI:
-  - {fileID: 2118642175}
-  - {fileID: 980770150}
   spawnPoint: {x: 0, y: 0, z: 0}
   uiCharactersPanel: []
   selectionCirclesSprites:
@@ -2742,10 +2734,6 @@ PrefabInstance:
     - target: {fileID: 1760361167908483906, guid: bdf3cb73fb12a594886b768b47758a01, type: 3}
       propertyPath: m_Name
       value: HELP
-      objectReference: {fileID: 0}
-    - target: {fileID: 1760361167908483906, guid: bdf3cb73fb12a594886b768b47758a01, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2181561472544611621, guid: bdf3cb73fb12a594886b768b47758a01, type: 3}
       propertyPath: m_Pivot.x

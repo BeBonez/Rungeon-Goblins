@@ -1,63 +1,111 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
     [SerializeField] GameObject[] tiles;
     [SerializeField] GameObject[] popUps;
     [SerializeField] PlayerMovement playerMovement;
-    [SerializeField] float waitTime;
+    [SerializeField] Timer timer;
+    [SerializeField] float timeBetweenText;
+    [SerializeField] int popUpIndex;
+    private float waitTime;
+    private bool canMove = true;
+    private bool timeTrigger;
     private Vector2 direction;
-    private int popUpIndex;
 
     void Start()
     {
         playerMovement = GameObject.FindWithTag("Player").GetComponent<PlayerMovement>();
-        GameObject.Find("GameManager").GetComponent<Timer>().SetReduceTime(false);
+        timer = GameObject.Find("GameManager").GetComponent<Timer>();
+        timer.SetReduceTime(false);
+        waitTime = timeBetweenText;
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {        
         for (int i = 0; i < popUps.Length; i++)
         {
-            if (i == popUpIndex)
+            if (popUpIndex < popUps.Length)
             {
-                popUps[popUpIndex].SetActive(true);
+                if (i == popUpIndex)
+                {
+                    if (timeTrigger == false)
+                    {
+                        popUps[i].SetActive(true);
+                        Time.timeScale = 0.3f;
+                        Debug.Log("Ativado: " + i);
+                    }
+                }
+            }
+            //else
+            //{
+            //    popUps[i].SetActive(false);
+            //    Debug.Log("Desativado: " + i);
+            //}
+        }
+
+        if (timeTrigger == true)
+        {
+            Time.timeScale = 1f;
+            popUps[popUpIndex].SetActive(false);
+
+            if (waitTime <= 0)
+            {
+                popUpIndex++;
+                timeTrigger = false;
+                waitTime = timeBetweenText;
+                canMove = true;
             }
             else
             {
-                popUps[popUpIndex].SetActive(false);
+                waitTime -= Time.deltaTime;
             }
         }
 
-        if (popUpIndex == 0 && direction.x >= 1)
+        if (canMove == true)
         {
-            playerMovement.Move(direction);
-            direction.Set(0, 0);
-            popUpIndex++;
-        }
-        else if (popUpIndex == 1 && direction.x <= -1)
-        {
-            playerMovement.Move(direction);
-            direction.Set(0, 0);
-            popUpIndex++;
-        } 
-        else if (popUpIndex == 2 && direction.y >= 1)
-        {
-            playerMovement.Move(direction);
-            direction.Set(0, 0);
-            popUpIndex++;
-        }
-        else if (popUpIndex == 3 && direction.y >= 1)
-        {
-            playerMovement.Move(direction);
-            direction.Set(0, 0);
-            popUpIndex++;
-        }
+            if (popUpIndex == 0 && direction.x >= 1)
+            {
+                DoAction(direction);
+            }
+            else if (popUpIndex == 1 && direction.x <= -1)
+            {
+                DoAction(direction);
+            }
+            else if (popUpIndex == 2 && direction.y >= 1)
+            {
+                DoAction(direction);
+            }
+            else if (popUpIndex == 3 && direction.x >= 1 || popUpIndex == 3 && direction.x <= -1)
+            {
+                DoAction(direction);
+            }
+            else if (popUpIndex == 4 && direction.y >= 1)
+            {
+                DoAction(direction);
+            }
+            else if (popUpIndex == 5 && direction.y <= -1)
+            {
+                DoAction(direction);
+            }
+            else if (popUpIndex == 6 && playerMovement)
+            {
 
+            }
+        }
+    }
 
+    private void DoAction(Vector2 direction)
+    {
+        playerMovement.Move(direction);
+        canMove = false;
+        direction.Set(0, 0);
+        timeTrigger = true;
     }
 
     public void Direction(Vector2 direction)

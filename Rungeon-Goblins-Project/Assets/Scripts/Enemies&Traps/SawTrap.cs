@@ -7,6 +7,7 @@ public class Saw : MonoBehaviour
     [SerializeField] Transform point1, point2;
     Transform nextPoint;
     [SerializeField] float speed, rotateSpeed;
+    private int rotateDirection = 1;
     private float x, y, z;
     private void Start()
     {
@@ -19,15 +20,17 @@ public class Saw : MonoBehaviour
             if (nextPoint.position == point1.position)
             {
                 nextPoint = point2;
+                rotateDirection *= -1;
             }
             else if (nextPoint.position == point2.position)
             {
                 nextPoint = point1;
+                rotateDirection *= -1;
             }
         }
 
         transform.position = Vector3.MoveTowards(transform.position, nextPoint.position, speed * Time.deltaTime);
 
-        transform.Rotate(0, 0, -rotateSpeed * Time.deltaTime);
+        transform.Rotate(0, 0, -rotateSpeed * Time.deltaTime * rotateDirection);
     }
 }

@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class GarryScript : PlayerMovement
 {
     [SerializeField] float activeTime;
-    [SerializeField] float magicCooldown;
     [SerializeField] bool isMagicActive = false;
     [SerializeField] float timeBetweenDashes;
     [SerializeField] float actualTime;
@@ -20,11 +19,19 @@ public class GarryScript : PlayerMovement
     private void Start()
     {
         charName = "Garry";
+
         nextposition = transform.position;
+
         uiPower = GameObject.Find("MagicImage").GetComponent<Image>();
+
         uiMaxCharges = GameObject.Find("GarryMaxCharges").GetComponent<TMP_Text>();
+
         uiActualCharges = GameObject.Find("GarryActualCharges").GetComponent<TMP_Text>();
+
         animator = gameObject.GetComponent<Animator>();
+
+        timer = GameObject.Find("GameManager").GetComponent<Timer>();
+
         UpdatePosition();
     }
 
@@ -195,7 +202,7 @@ public class GarryScript : PlayerMovement
 
         transform.position = new Vector3(posX, posY, posZ); //PH
 
-        yield return new WaitForSeconds(magicCooldown);
+        yield return new WaitForSeconds(powerCooldown);
 
         uiPower.color = Color.white;
 
@@ -210,6 +217,7 @@ public class GarryScript : PlayerMovement
 
     protected override void Dash(Vector3 direction)
     {
+
 
         if (hasReached == false)
         {
@@ -226,19 +234,21 @@ public class GarryScript : PlayerMovement
         {
             lastPosition = transform.position;
 
-            direction += transform.position;
+            if (timer.IsDead() == false)
+            {
+                direction += transform.position;
 
-            nextposition = direction;
+                nextposition = direction;
+            }
 
-        }
+            UpdatePosition();
 
-        UpdatePosition();
-
-        if (isFliyng == false)
-        {
-            AudioManager.Instance.PlaySFX(9);
-            animator.Rebind();
-            animator.Play("Jump");
+            if (isFliyng == false)
+            {
+                AudioManager.Instance.PlaySFX(9);
+                animator.Rebind();
+                animator.Play("Jump");
+            }
         }
     }
 

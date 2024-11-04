@@ -16,7 +16,7 @@ public class SwipeManager : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             tutorialManager = GameObject.Find("TutorialManager").GetComponent<TutorialManager>();
         }
