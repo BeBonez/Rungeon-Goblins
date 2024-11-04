@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GarryScript : PlayerMovement
@@ -10,7 +11,7 @@ public class GarryScript : PlayerMovement
     [SerializeField] bool isMagicActive = false;
     [SerializeField] float timeBetweenDashes;
     [SerializeField] float actualTime;
-    bool isMagicCoolingDown;
+    //bool isMagicCoolingDown;
     IEnumerator magicCoroutine;
 
     [Header("UI Components")]
@@ -32,10 +33,23 @@ public class GarryScript : PlayerMovement
 
         timer = GameObject.Find("GameManager").GetComponent<Timer>();
 
+        originalKillLimit = killLimit;
+
+        powerBar = gameManager.GetComponent<PowerBar>();
+
+        powerBar.SetMaximumFill(originalKillLimit);
+
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            actualKills = originalKillLimit - 2;
+        }
+
+        powerBar.SetCurrentFill(actualKills);
+
         UpdatePosition();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         MoveToDestiny();
 
@@ -92,9 +106,9 @@ public class GarryScript : PlayerMovement
                 }
                 else if (direction.y <= -1 && posZ != -5)
                 {
-                    if (isMagicActive == false && isMagicCoolingDown == false)
+                    if (isMagicActive == false && CanUsePower())
                     {
-                        Dash(new Vector3(0, 0, -moveDistance));
+                        //Dash(new Vector3(0, 0, -moveDistance));
                         UpdatePosition();
 
                         gameManager.AddDistance(-1);
@@ -164,60 +178,38 @@ public class GarryScript : PlayerMovement
     private IEnumerator TeleportMagic()
     {
         AudioManager.Instance.PlaySFX(6);
-
         isMagicActive = true;
-
         isFliyng = true;
-
         uiPower.color = Color.blue;
-
         posY += 3; //PH
-
         canTakeDamge = false;
-
         transform.position = new Vector3(posX, posY, posZ); //PH
 
         yield return new WaitForSeconds(activeTime);
 
-        AudioManager.Instance.StopSFX(6);
+        if (timer.IsDead() == false)
+        {
+            animator.Play("Idle");
+        }
 
-        isMagicActive = false;
-
-        isFliyng = false;
-
-        canTakeDamge = true;
-
-        uiPower.color = Color.red;
-
-        isMagicCoolingDown = true;
-
-        animator.Play("Idle");
+        DeactivatePower();
 
         posY -= 3; //PH
 
-        gameObject.GetComponent<BoxCollider>().enabled = false;
-        gameObject.GetComponent<BoxCollider>().enabled = true;
+        CapsuleCollider collider = GetComponent<CapsuleCollider>();
+
+        collider.enabled = false;
+        collider.enabled = true;
 
         UpdatePosition();
 
         transform.position = new Vector3(posX, posY, posZ); //PH
-
-        yield return new WaitForSeconds(powerCooldown);
-
-        uiPower.color = Color.white;
-
-        AudioManager.Instance.PlaySFX(7);
-
-        isMagicCoolingDown = false;
-
-        StopCoroutine(magicCoroutine);
     }
 
     public bool IsMagicActive() { return isMagicActive; }
 
     protected override void Dash(Vector3 direction)
     {
-
 
         if (hasReached == false)
         {
@@ -228,33 +220,34 @@ public class GarryScript : PlayerMovement
             direction += transform.position;
 
             nextposition = direction;
-
         }
         else
         {
+            direction += transform.position;
+
             lastPosition = transform.position;
 
-            if (timer.IsDead() == false)
-            {
-                direction += transform.position;
+            nextposition = direction;
 
-                nextposition = direction;
-            }
-
-            UpdatePosition();
-
-            if (isFliyng == false)
-            {
-                AudioManager.Instance.PlaySFX(9);
-                animator.Rebind();
-                animator.Play("Jump");
-            }
         }
+
+        AudioManager.Instance.PlaySFX(9);
+
+        if (isFliyng == false)
+        {
+            animator.Rebind();
+            animator.Play("Jump");
+        }
+
     }
 
     public override void DeactivatePower()
     {
-        isFliyng = false;
+        AudioManager.Instance.StopSFX(6);
+        ResetPowerFill();
         isMagicActive = false;
+        isFliyng = false;
+        canTakeDamge = true;
+        uiPower.color = Color.white;
     }
 }

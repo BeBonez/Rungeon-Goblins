@@ -10,22 +10,27 @@ public abstract class PlayerMovement : MonoBehaviour
     protected string charName;
     [SerializeField] protected float moveDistance;
     [SerializeField] public GameManager gameManager;
-    [SerializeField] protected bool canTakeDamge = true;
-    [SerializeField] protected bool isFliyng = false;
     [SerializeField] protected float speed;
     [SerializeField] protected int hitSound;
     protected IEnumerator dash;
     protected bool canMove = true;
     protected Animator animator;
-    [SerializeField] protected float powerCooldown;
     protected Timer timer;
+
+    [Header("Power")]
+    //[SerializeField] protected float powerCooldown;
+    [SerializeField] protected bool canTakeDamge = true;
+    [SerializeField] protected bool isFliyng = false;
+    [SerializeField] protected int killLimit;
+    [SerializeField] protected PowerBar powerBar;
+    protected int originalKillLimit;
+    protected int actualKills;
 
     [Header("FrontDash")]
     [SerializeField] protected int maxCharges;
     [SerializeField] protected int actualCharges;
     [SerializeField] protected float dashCoolDown;
     [SerializeField] protected bool isDashCoolingDown;
-
     [SerializeField] protected TMP_Text uiMaxCharges;
     [SerializeField] protected TMP_Text uiActualCharges;
 
@@ -34,61 +39,7 @@ public abstract class PlayerMovement : MonoBehaviour
     protected Vector3 nextposition;
     protected bool hasReached;
     protected bool canceled = false;
-
     public abstract void Move(Vector2 direction);
-    //{
-    //    //if (Time.timeScale > 0)
-    //    //{
-    //    //    if (direction.y >= 1)
-    //    //    {
-    //    //        //Debug.Log("UP");
-    //    //        transform.position = new Vector3(posX, posY, posZ + moveDistance);
-    //    //        canMoveBackwards = true; // PH
-    //    //        gameManager.AddDistance(1);
-    //    //    }
-    //    //    else if (direction.y <= -1)
-    //    //    {
-    //    //        if (gameManager.GetDistance() != 0 && canMoveBackwards)
-    //    //        {
-    //    //            transform.position = new Vector3(posX, posY, posZ - moveDistance);
-    //    //            canMoveBackwards = false;
-    //    //            gameManager.AddDistance(-1);
-    //    //        }
-    //    //        //Debug.Log("DOWN");
-    //    //    }
-    //    //    else if (direction.x >= 1)
-    //    //    {
-    //    //        //Debug.Log("RIGHT");
-    //    //        if (transform.position.x >= moveDistance)
-    //    //        {
-    //    //            transform.position = new Vector3(posX - moveDistance * 2, posY, posZ + moveDistance);
-    //    //        }
-    //    //        else
-    //    //        {
-    //    //            transform.position = new Vector3(posX + moveDistance, posY, posZ + moveDistance);
-    //    //        }
-    //    //        canMoveBackwards = true; // PH
-    //    //        gameManager.AddDistance(1);
-
-    //    //    }
-    //    //    else if (direction.x <= -1)
-    //    //    {
-    //    //        //Debug.Log("LEFT");
-    //    //        if (transform.position.x <= -moveDistance)
-    //    //        {
-    //    //            transform.position = new Vector3(posX + moveDistance * 2, posY, posZ + moveDistance);
-    //    //        }
-    //    //        else
-    //    //        {
-    //    //            transform.position = new Vector3(posX - moveDistance, posY, posZ + moveDistance);
-    //    //        }
-    //    //        canMoveBackwards = true; // PH
-    //    //        gameManager.AddDistance(1);
-    //    //    }
-    //    //    UpdatePosition();
-    //    }
-    //}
-
     public void UpdatePosition()
     {
         posX = transform.position.x;
@@ -192,5 +143,27 @@ public abstract class PlayerMovement : MonoBehaviour
         uiMaxCharges.text = maxCharges.ToString();
     }
 
+    public void AddKill(int value)
+    {
+        actualKills += value;
+        powerBar.SetCurrentFill(actualKills);
+    }
+    protected bool CanUsePower()
+    {
+        return actualKills >= killLimit;
+    }
+    protected void ResetPowerFill()
+    {
+        actualKills = 0;
+        powerBar.SetCurrentFill(actualKills);
+    }
+    public int GetKillLimit()
+    {
+        return originalKillLimit;
+    }
+    public int GetActualKills()
+    {
+        return actualKills;
+    }
     #endregion
 }

@@ -202,10 +202,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDistance: 10
   gameManager: {fileID: 0}
-  canTakeDamge: 1
-  isFliyng: 0
   speed: 60
   hitSound: 13
+  canTakeDamge: 1
+  isFliyng: 0
+  killLimit: 15
+  powerBar: {fileID: 0}
   maxCharges: 1
   actualCharges: 1
   dashCoolDown: 0
@@ -213,7 +215,6 @@ MonoBehaviour:
   uiMaxCharges: {fileID: 0}
   uiActualCharges: {fileID: 0}
   activeTime: 6
-  magicCooldown: 10
   isMagicActive: 0
   timeBetweenDashes: 0.15
   actualTime: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -39,7 +40,11 @@ public class GameManager : MonoBehaviour
         playerScript = player.GetComponent<PlayerMovement>();
         playerScript.gameManager = this;
         timer = GetComponent<Timer>();
-        coinHUD[0].text = "$" + PlayerPrefs.GetInt("Money", 0);
+        if (SceneManager.GetActiveScene().buildIndex != 2)
+        {
+            coinHUD[0].text = "$" + PlayerPrefs.GetInt("Money", 0);
+        }
+
         coins = PlayerPrefs.GetInt("Money", 0);
     }
 

@@ -27,12 +27,7 @@ public class PlayerCombat : MonoBehaviour
                 case "Goblin":
                     if (playerBase.IsFliyng() == false)
                     {
-                        if (playerBase.CanTakeDamage() == true)
-                        {
-                            playerBase.GetAnimator().Play("Attack");
-
-                            playerBase.AddCharge(1, "Kill");
-                        }
+                        playerBase.GetAnimator().Play("Attack");
                     }
                     EnemyDefeat(other);
                     timer.AddTime(3);
@@ -91,6 +86,8 @@ public class PlayerCombat : MonoBehaviour
     {
         Destroy(other.gameObject);
         playerBase.PlayHitSFX();
+        playerBase.AddCharge(1, "Kill");
+        playerBase.AddKill(1);
         //cameraAnimator.SetTrigger("Default");
         cameraAnimator.SetTrigger("EnemyDefeat");
         timeAnimator.SetTrigger("AddTime");

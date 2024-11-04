@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Unused\Cooldown.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\Enemies&amp;Traps\SawTrap.cs" />
+    <Compile Include="Assets\Scripts\Player\PowerBar.cs" />
     <Compile Include="Assets\Scripts\Enemies&amp;Traps\Worg.cs" />
     <Compile Include="Assets\Scripts\Enemies&amp;Traps\Goblin.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />

@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
         uiComponents = GameObject.Find("UI");
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (timer > 0)
         {
@@ -72,6 +72,7 @@ public class Timer : MonoBehaviour
             if (isDeadByHole == true)
             {
                 isDeadByHole = false;
+                gameManager.GetPlayerScript().SetNextPosition(holePosition.position);
                 StartCoroutine(Death("Hole"));
             }
             else

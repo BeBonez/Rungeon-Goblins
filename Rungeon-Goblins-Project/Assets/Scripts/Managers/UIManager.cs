@@ -24,7 +24,7 @@ public class UIManager : MonoBehaviour
         {
             AudioManager.Instance.PlayBGLoop(0);
         }
-        else if (id == 1)
+        else if (id == 1 || id == 2)
         {
             int randomMusic = Random.Range(1, 4);
             AudioManager.Instance.PlayBGLoop(randomMusic);
@@ -47,5 +47,10 @@ public class UIManager : MonoBehaviour
     public void PlaySound(int index)
     {
         AudioManager.Instance.PlaySFX(index);
+    }
+
+    public void CheckTutorial()
+    {
+        PlayerPrefs.SetInt("didTutorial", 1);
     }
 }

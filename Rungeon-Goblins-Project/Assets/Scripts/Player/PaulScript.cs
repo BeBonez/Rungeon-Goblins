@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PaulScript : PlayerMovement
@@ -9,8 +10,8 @@ public class PaulScript : PlayerMovement
 
     [Header("Shield")]
     [SerializeField] float timeActive;
-    float actualShieldTimeCooldown;
-    bool isShieldCoolingDown;
+    //float actualShieldTimeCooldown;
+    //bool isShieldCoolingDown;
     bool isActive;
     IEnumerator powerCoroutine;
     IEnumerator rechargeCoroutine;
@@ -36,10 +37,24 @@ public class PaulScript : PlayerMovement
 
         timer = GameObject.Find("GameManager").GetComponent<Timer>();
 
+        originalKillLimit = killLimit;
+
+        powerBar = gameManager.GetComponent<PowerBar>();
+
+        powerBar.SetMaximumFill(originalKillLimit);
+
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            actualKills = originalKillLimit - 2;
+            powerBar.SetCurrentFill(actualKills);
+        }
+
+        powerBar.SetCurrentFill(actualKills);
+
         UpdatePosition();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         MoveToDestiny();
 
@@ -48,12 +63,12 @@ public class PaulScript : PlayerMovement
             if (Time.time > timeBetweenDashes + actualTime)
             {
                 Dash(new Vector3(0, 0, moveDistance));
+                //nextposition = new Vector3(nextposition.x, nextposition.y, moveDistance + nextposition.z);
                 gameManager.AddDistance(1);
                 actualTime = Time.time;
 
             }
         }
-
 
         //if (actualCharges < maxCharges && isDashCoolingDown == false)
         //{
@@ -69,52 +84,83 @@ public class PaulScript : PlayerMovement
         if (canMove)
         {
 
-            if (direction.y >= 1)
+            // Sem poder
+
+            if (isActive == false)
             {
-
-                if (actualCharges > 0)
+                if (direction.y >= 1)
                 {
-                    Dash(new Vector3(0, 0, moveDistance));
 
-                    actualCharges--;
-                    gameManager.AddDistance(1);
+                    if (actualCharges > 0)
+                    {
+                        Dash(new Vector3(0, 0, moveDistance));
+
+                        actualCharges--;
+                        gameManager.AddDistance(1);
+                    }
+
+                }
+                else if (direction.y <= -1)
+                {
+                    if (CanUsePower() && isActive == false)
+                    {
+                        animator.Play("Run");
+                        animator.SetTrigger("Run");
+                        powerCoroutine = RaiseShield();
+                        StartCoroutine(powerCoroutine);
+                    }
+                    else
+                    {
+                        AudioManager.Instance.PlaySFX(11);
+                    }
                 }
 
+                else if (direction.x >= 1)
+                {
+                    if (!(transform.position.x >= 10) && (moveDistance + nextposition.x <= 10)) // Se não for ultrapassar o limite da direita, ele pode mover
+                    {
+                        Dash(new Vector3(moveDistance, 0, moveDistance));
+                        gameManager.AddDistance(1);
+                    }
+
+                }
+
+                else if (direction.x <= -1)
+                {
+                    if (!(transform.position.x <= -10) && (nextposition.x - moveDistance >= -10)) // Se não for ultrapassar o limite da esquerda, ele pode mover
+                    {
+                        Dash(new Vector3(-moveDistance, 0, moveDistance));
+                        gameManager.AddDistance(1);
+                    }
+                }
             }
-            else if (direction.y <= -1)
+
+            //Com poder
+
+            else
             {
-                if (isShieldCoolingDown == false && isActive == false)
+                if (direction.x >= 1)
                 {
-                    animator.Play("Run");
-                    animator.SetTrigger("Run");
-                    powerCoroutine = RaiseShield();
-                    StartCoroutine(powerCoroutine);
+                    if (!(transform.position.x >= 10) && (moveDistance + nextposition.x <= 10)) // Se não for ultrapassar o limite da direita, ele pode mover
+                    {
+                        Dash(new Vector3(moveDistance, 0, 0));
+                        //nextposition = new Vector3(moveDistance + nextposition.x, nextposition.y , nextposition.z);
+                        gameManager.AddDistance(1);
+                    }
+
                 }
-                else
+
+                else if (direction.x <= -1)
                 {
-                    AudioManager.Instance.PlaySFX(11);
+                    if (!(transform.position.x <= -10) && (nextposition.x - moveDistance >= -10)) // Se não for ultrapassar o limite da esquerda, ele pode mover
+                    {
+                        Dash(new Vector3(-moveDistance, 0, 0));
+                        //nextposition = new Vector3(-moveDistance + nextposition.x, nextposition.y, nextposition.z);
+                        gameManager.AddDistance(1);
+                    }
                 }
             }
 
-            else if (direction.x >= 1)
-            {
-                if (!(transform.position.x >= 10) && (moveDistance + nextposition.x <= 10)) // Se não for ultrapassar o limite da direita, ele pode mover
-                {
-                    Dash(new Vector3(moveDistance, 0, moveDistance));
-                    gameManager.AddDistance(1);
-                }
-
-            }
-
-            else if (direction.x <= -1)
-            {
-                if (!(transform.position.x <= -10) && (nextposition.x - moveDistance >= -10)) // Se não for ultrapassar o limite da esquerda, ele pode mover
-                {
-                    Dash(new Vector3(-moveDistance, 0, moveDistance));
-                    gameManager.AddDistance(1);
-                }
-
-            }
         }
 
         UpdatePosition();
@@ -141,18 +187,22 @@ public class PaulScript : PlayerMovement
 
         yield return new WaitForSeconds(timeActive);
 
+        DeactivatePower();
+
+        if (timer.IsDead() == false)
+        {
+            animator.Play("Idle");
+            animator.SetTrigger("Idle");
+        }
+
+    }
+
+    public override void DeactivatePower()
+    {
+        ResetPowerFill();
         isActive = false;
         canTakeDamge = true;
-        isShieldCoolingDown = true;
-        animator.Play("Idle");
-        animator.SetTrigger("Idle");
-        uiShield.color = Color.red;
-
-        yield return new WaitForSeconds(powerCooldown);
-
-        isShieldCoolingDown = false;
         uiShield.color = Color.white;
-        StopCoroutine(powerCoroutine);
     }
 
     protected override void Dash(Vector3 direction)
@@ -186,10 +236,5 @@ public class PaulScript : PlayerMovement
             animator.Play("Jump");
         }
 
-    }
-
-    public override void DeactivatePower()
-    {
-        isActive = false;
     }
 }

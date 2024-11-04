@@ -38,7 +38,6 @@ public class TutorialManager : MonoBehaviour
                     {
                         popUps[i].SetActive(true);
                         Time.timeScale = 0.3f;
-                        Debug.Log("Ativado: " + i);
                     }
                 }
             }
