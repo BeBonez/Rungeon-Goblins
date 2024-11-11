@@ -22,7 +22,7 @@ public class SpikeTrap : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x, originalY, transform.position.z);
         yield return new WaitForSeconds(upTime);
-        transform.position = new Vector3(transform.position.x, originalY - 5, transform.position.z);
+        transform.position = new Vector3(transform.position.x, originalY - 15, transform.position.z);
         yield return new WaitForSeconds(downTime);
         onOff = false;
     }

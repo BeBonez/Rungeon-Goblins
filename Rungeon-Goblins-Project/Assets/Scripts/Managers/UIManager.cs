@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
 
     public void ChangeScene(int id)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(id);
         if (id == 0)
         {
@@ -29,7 +30,6 @@ public class UIManager : MonoBehaviour
             int randomMusic = Random.Range(1, 4);
             AudioManager.Instance.PlayBGLoop(randomMusic);
         }
-        Time.timeScale = 1f;
     }
 
     public void ActivateElement(GameObject element)

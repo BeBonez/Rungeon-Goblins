@@ -58,10 +58,10 @@ public class PlayerCombat : MonoBehaviour
                     {
                         TookDamage(3);
                     }
-                    else if (playerBase.GetName() == "Paul" && playerBase.CanTakeDamage() == false)
-                    {
-                        playerBase.GetAnimator().Play("Shield");
-                    }
+                    // else if (playerBase.GetName() == "Paul" && playerBase.CanTakeDamage() == false)
+                    // {
+                    //     playerBase.GetAnimator().Play("Shield");
+                    // }
                     break;
                 case "Coin":
                     Destroy(other.gameObject);

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class PaulScript : PlayerMovement
 {
-    [Header("Dash")]
+    [Header("Power")]
+    [SerializeField] PaulPowerCast detector;
 
     [Header("Shield")]
     [SerializeField] float timeActive;
@@ -58,15 +59,15 @@ public class PaulScript : PlayerMovement
     {
         MoveToDestiny();
 
-        if (isActive)
+        if (isFliyng == true)
         {
             if (Time.time > timeBetweenDashes + actualTime)
             {
-                Dash(new Vector3(0, 0, moveDistance));
-                //nextposition = new Vector3(nextposition.x, nextposition.y, moveDistance + nextposition.z);
-                gameManager.AddDistance(1);
-                actualTime = Time.time;
+                detector.CanTeleport = true;
 
+                Dash(detector.GetGoblin().transform.position);
+
+                detector.CanTeleport = false;
             }
         }
 
@@ -117,7 +118,7 @@ public class PaulScript : PlayerMovement
 
                 else if (direction.x >= 1)
                 {
-                    if (!(transform.position.x >= 10) && (moveDistance + nextposition.x <= 10)) // Se não for ultrapassar o limite da direita, ele pode mover
+                    if (!(transform.position.x >= 10) && (moveDistance + nextposition.x <= 10)) // Se nï¿½o for ultrapassar o limite da direita, ele pode mover
                     {
                         Dash(new Vector3(moveDistance, 0, moveDistance));
                         gameManager.AddDistance(1);
@@ -127,7 +128,7 @@ public class PaulScript : PlayerMovement
 
                 else if (direction.x <= -1)
                 {
-                    if (!(transform.position.x <= -10) && (nextposition.x - moveDistance >= -10)) // Se não for ultrapassar o limite da esquerda, ele pode mover
+                    if (!(transform.position.x <= -10) && (nextposition.x - moveDistance >= -10)) // Se nï¿½o for ultrapassar o limite da esquerda, ele pode mover
                     {
                         Dash(new Vector3(-moveDistance, 0, moveDistance));
                         gameManager.AddDistance(1);
@@ -141,7 +142,7 @@ public class PaulScript : PlayerMovement
             {
                 if (direction.x >= 1)
                 {
-                    if (!(transform.position.x >= 10) && (moveDistance + nextposition.x <= 10)) // Se não for ultrapassar o limite da direita, ele pode mover
+                    if (!(transform.position.x >= 10) && (moveDistance + nextposition.x <= 10)) // Se nï¿½o for ultrapassar o limite da direita, ele pode mover
                     {
                         Dash(new Vector3(moveDistance, 0, 0));
                         //nextposition = new Vector3(moveDistance + nextposition.x, nextposition.y , nextposition.z);
@@ -152,7 +153,7 @@ public class PaulScript : PlayerMovement
 
                 else if (direction.x <= -1)
                 {
-                    if (!(transform.position.x <= -10) && (nextposition.x - moveDistance >= -10)) // Se não for ultrapassar o limite da esquerda, ele pode mover
+                    if (!(transform.position.x <= -10) && (nextposition.x - moveDistance >= -10)) // Se nï¿½o for ultrapassar o limite da esquerda, ele pode mover
                     {
                         Dash(new Vector3(-moveDistance, 0, 0));
                         //nextposition = new Vector3(-moveDistance + nextposition.x, nextposition.y, nextposition.z);
@@ -182,7 +183,7 @@ public class PaulScript : PlayerMovement
     private IEnumerator RaiseShield()
     {
         isActive = true;
-        uiShield.color = Color.blue;
+        isFliyng = true;
         canTakeDamge = false;
 
         yield return new WaitForSeconds(timeActive);
@@ -202,7 +203,7 @@ public class PaulScript : PlayerMovement
         ResetPowerFill();
         isActive = false;
         canTakeDamge = true;
-        uiShield.color = Color.white;
+        isFliyng = false;
     }
 
     protected override void Dash(Vector3 direction)

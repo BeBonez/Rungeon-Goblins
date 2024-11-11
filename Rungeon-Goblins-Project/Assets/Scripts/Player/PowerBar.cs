@@ -9,7 +9,15 @@ public class PowerBar : MonoBehaviour
     [SerializeField] int maximum;
     [SerializeField] int current;
     [SerializeField] Image mask;
+    [SerializeField] Image[] masks;
 
+
+    void Start()
+    {
+        int charIndex = PlayerPrefs.GetInt("SelectedChar", 0);
+        mask = masks[charIndex];
+
+    }
     private void Update()
     {
         GetCurrentFill();

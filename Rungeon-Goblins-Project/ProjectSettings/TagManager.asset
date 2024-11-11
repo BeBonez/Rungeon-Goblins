@@ -11,6 +11,7 @@ TagManager:
   - Hole
   - GoblinAttack
   - TutorialCube
+  - PaulPower
   layers:
   - Default
   - TransparentFX

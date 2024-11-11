@@ -47,7 +47,6 @@ public class GameManager : MonoBehaviour
 
         coins = PlayerPrefs.GetInt("Money", 0);
     }
-
     public void Pause()
     {
         Time.timeScale = 0f;

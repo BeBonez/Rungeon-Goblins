@@ -180,7 +180,6 @@ public class GarryScript : PlayerMovement
         AudioManager.Instance.PlaySFX(6);
         isMagicActive = true;
         isFliyng = true;
-        uiPower.color = Color.blue;
         posY += 3; //PH
         canTakeDamge = false;
         transform.position = new Vector3(posX, posY, posZ); //PH
@@ -248,6 +247,5 @@ public class GarryScript : PlayerMovement
         isMagicActive = false;
         isFliyng = false;
         canTakeDamge = true;
-        uiPower.color = Color.white;
     }
 }
