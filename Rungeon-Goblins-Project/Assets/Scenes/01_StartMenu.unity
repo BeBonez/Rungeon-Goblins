@@ -640,7 +640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7988780238991891670, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.473633
+      value: 9.873535
       objectReference: {fileID: 0}
     - target: {fileID: 7988780238991891670, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -844,6 +844,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 515838893}
   - {fileID: 312126892}
   - {fileID: 792265504}
   - {fileID: 6393509951421363861}
@@ -1017,7 +1018,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 78.2
+  field of view: 87.8
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1043,12 +1044,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515838890}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.008726465, y: 0, z: 0, w: 0.999962}
-  m_LocalPosition: {x: 2332.3, y: 740.9, z: 32}
+  m_LocalRotation: {x: -0.008726465, y: -0, z: -0, w: 0.999962}
+  m_LocalPosition: {x: -7.74, y: 3.3188477, z: -10.770325}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 304622337}
   m_LocalEulerAnglesHint: {x: -1, y: 0, z: 0}
 --- !u!1 &621618948
 GameObject:
@@ -1934,7 +1935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 907436675235216111, guid: 658bcd1c78212994ead6c2f855e416ad, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.026367
+      value: -25.126465
       objectReference: {fileID: 0}
     - target: {fileID: 907436675235216111, guid: 658bcd1c78212994ead6c2f855e416ad, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4381,8 +4382,8 @@ Transform:
   m_GameObject: {fileID: 3087235669420749915}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -494.13055, y: -1043.4064, z: 100}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -494.13055, y: -1043.4064, z: 91.9}
+  m_LocalScale: {x: 1, y: 1, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1252717241472737371}
@@ -4536,7 +4537,7 @@ PrefabInstance:
     - target: {fileID: 9109537013240755097, guid: 984fad1a870ecb54a81fa0f55d9e4158, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 8290934be2e3f5d408a673c11867f66b, type: 3}
     - target: {fileID: 9109537013240755097, guid: 984fad1a870ecb54a81fa0f55d9e4158, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -7704,5 +7705,4 @@ SceneRoots:
   - {fileID: 966660344}
   - {fileID: 2786507788239294844}
   - {fileID: 4912853695132394098}
-  - {fileID: 515838893}
   - {fileID: 304622337}

@@ -7,17 +7,13 @@ using UnityEngine.UI;
 public class PaulScript : PlayerMovement
 {
     [Header("Power")]
-    [SerializeField] PaulPowerCast detector;
-
-    [Header("Shield")]
+    public GameObject nextGoblin;
+    [SerializeField] float speedMultiplier;
     [SerializeField] float timeActive;
-    //float actualShieldTimeCooldown;
-    //bool isShieldCoolingDown;
-    bool isActive;
     IEnumerator powerCoroutine;
     IEnumerator rechargeCoroutine;
     [SerializeField] float timeBetweenDashes;
-    [SerializeField] float actualTime;
+    float actualTime;
 
     [Header("UI Components")]
     [SerializeField] protected Image uiShield;
@@ -63,11 +59,20 @@ public class PaulScript : PlayerMovement
         {
             if (Time.time > timeBetweenDashes + actualTime)
             {
-                detector.CanTeleport = true;
+                nextGoblin = GetClosest("Goblin");
 
-                Dash(detector.GetGoblin().transform.position);
+                if (nextGoblin != null)
+                {
+                    nextGoblin.transform.Rotate(0, 90, 0);
 
-                detector.CanTeleport = false;
+                    nextposition = nextGoblin.transform.position;
+
+                    float distanceToAdd = (nextGoblin.transform.position.z - transform.position.z) / 10;
+
+                    gameManager.AddDistance((int)distanceToAdd);
+                }
+
+                actualTime = Time.time;
             }
         }
 
@@ -87,7 +92,7 @@ public class PaulScript : PlayerMovement
 
             // Sem poder
 
-            if (isActive == false)
+            if (isFliyng == false)
             {
                 if (direction.y >= 1)
                 {
@@ -103,7 +108,7 @@ public class PaulScript : PlayerMovement
                 }
                 else if (direction.y <= -1)
                 {
-                    if (CanUsePower() && isActive == false)
+                    if (CanUsePower() && isFliyng == false)
                     {
                         animator.Play("Run");
                         animator.SetTrigger("Run");
@@ -182,9 +187,9 @@ public class PaulScript : PlayerMovement
 
     private IEnumerator RaiseShield()
     {
-        isActive = true;
         isFliyng = true;
-        canTakeDamge = false;
+
+        speed *= speedMultiplier;
 
         yield return new WaitForSeconds(timeActive);
 
@@ -201,8 +206,7 @@ public class PaulScript : PlayerMovement
     public override void DeactivatePower()
     {
         ResetPowerFill();
-        isActive = false;
-        canTakeDamge = true;
+        speed /= speedMultiplier;
         isFliyng = false;
     }
 
@@ -231,11 +235,36 @@ public class PaulScript : PlayerMovement
 
         AudioManager.Instance.PlaySFX(9);
 
-        if (isActive == false)
+        if (isFliyng == false)
         {
             animator.Rebind();
             animator.Play("Jump");
         }
 
+    }
+
+    public GameObject GetClosest(string tag)
+    {
+        GameObject[] objects = GameObject.FindGameObjectsWithTag(tag);
+
+        GameObject closestObject = null;
+
+        float nearestDistance = 10000;
+
+        for (int i = 0; i < objects.Length; i++)
+        {
+            if (objects[i].transform.position.z - transform.position.z >= 0)
+            {
+                float distance = Vector3.Distance(transform.position, objects[i].transform.position);
+
+                if (distance < nearestDistance)
+                {
+                    closestObject = objects[i];
+                    nearestDistance = distance;
+                }
+            }
+        }
+
+        return closestObject;
     }
 }
