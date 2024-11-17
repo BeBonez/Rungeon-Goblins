@@ -10453,9 +10453,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  maxTimer: 20
-  LeastMaxTimer: 8
-  reduceTimeDistance: 50
+  maxTimer: 24
+  LeastMaxTimer: 12
+  reduceTimeDistance: 75
   gameManager: {fileID: 542785193995537962}
   timeHUD: {fileID: 379530309}
   animator: {fileID: 379530310}

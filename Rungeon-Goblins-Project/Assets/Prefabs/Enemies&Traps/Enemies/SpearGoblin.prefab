@@ -740,8 +740,8 @@ MonoBehaviour:
   attacks:
   - {fileID: 9042628950811608040}
   - {fileID: 5390512014067237859}
-  downTime: 4
-  upTime: 1
+  downTime: 3
+  upTime: 2
 --- !u!1 &9042628950811608040
 GameObject:
   m_ObjectHideFlags: 0

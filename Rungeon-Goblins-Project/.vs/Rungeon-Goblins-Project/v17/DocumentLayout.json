@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\paulscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|d:\\escola\\puc\\2 periodo\\ti\\rungeon-goblins\\rungeon-goblins-project\\assets\\scripts\\player\\nextgoblin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\assets\\scripts\\player\\nextgoblin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A76B9DC-F251-C02E-7F87-E4000C1C4108}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\nextgoblin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -102,8 +102,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Player\\NextGoblin.cs",
               "ViewState": "AQIAAAUAAAAAAAAAAAAQwBQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T21:43:04.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T21:43:04.946Z"
             },
             {
               "$type": "Document",
@@ -173,7 +172,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PaulScript.cs",
               "ToolTip": "D:\\Escola\\PUC\\2 Periodo\\TI\\Rungeon-Goblins\\Rungeon-Goblins-Project\\Assets\\Scripts\\Player\\PaulScript.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PaulScript.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAnwEkAAAAAAAAA",
+              "ViewState": "AQIAALwAAAAAAAAAAAAIwNQAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T15:46:26.098Z",
               "EditorCaption": ""

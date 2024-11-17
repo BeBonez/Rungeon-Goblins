@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PaulScript : PlayerMovement
 {
+    private float originalSpeed;
+
     [Header("Power")]
     public GameObject nextGoblin;
     [SerializeField] float speedMultiplier;
@@ -21,6 +23,8 @@ public class PaulScript : PlayerMovement
     private void Start()
     {
         charName = "Paul";
+
+        originalSpeed = speed;
 
         nextposition = transform.position;
 
@@ -206,7 +210,7 @@ public class PaulScript : PlayerMovement
     public override void DeactivatePower()
     {
         ResetPowerFill();
-        speed /= speedMultiplier;
+        speed = originalSpeed;
         isFliyng = false;
     }
 

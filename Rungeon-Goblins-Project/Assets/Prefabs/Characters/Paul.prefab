@@ -373,8 +373,8 @@ MonoBehaviour:
   uiActualCharges: {fileID: 0}
   nextGoblin: {fileID: 0}
   speedMultiplier: 5
-  timeActive: 6
-  timeBetweenDashes: 0.1
+  timeActive: 2
+  timeBetweenDashes: 0.2
   uiShield: {fileID: 0}
 --- !u!136 &4473474606672337653
 CapsuleCollider:
