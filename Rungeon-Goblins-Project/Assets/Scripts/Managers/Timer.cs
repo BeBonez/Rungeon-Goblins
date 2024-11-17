@@ -49,7 +49,7 @@ public class Timer : MonoBehaviour
             if (currentDistance > reduceTimeDistance)
             {
                 maxTimer--;
-                reduceTimeDistance += 25;
+                reduceTimeDistance += 75; // Balancear reduzir tempo
             }
         }
 

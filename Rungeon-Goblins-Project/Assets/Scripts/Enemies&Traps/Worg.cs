@@ -13,7 +13,7 @@ public class Worg : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Translate(transform.forward * Time.deltaTime * speed);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
         if (transform.position.z < playerTransform.position.z - 40)
         {

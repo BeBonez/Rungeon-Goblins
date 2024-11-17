@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8945930307161608518}
   m_Layer: 0
   m_Name: attackUpperHalf
-  m_TagString: GoblinAttack
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 2356777482478392572}
   m_Layer: 0
   m_Name: attackUpperHalf
-  m_TagString: GoblinAttack
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
