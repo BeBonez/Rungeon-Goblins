@@ -70,6 +70,7 @@
     <Compile Include="Assets\Tutorial\TutorialManager.cs" />
     <Compile Include="Assets\Scripts\Player\PaulScript.cs" />
     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\spin.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Enemies&amp;Traps\SpikeTrap.cs" />
     <Compile Include="Assets\Scripts\Player\SwipeManager.cs" />
@@ -81,7 +82,6 @@
     <Compile Include="Assets\Scripts\Enemies&amp;Traps\Worg.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Managers\TileGenerator200.cs" />
-    <Compile Include="Assets\spin.cs" />
     <Compile Include="Assets\Scripts\Player\Unused\KeyBoard.cs" />
     <Compile Include="Assets\Scripts\Player\GarryScript.cs" />
     <Compile Include="Assets\Scripts\Player\NextGoblin.cs" />

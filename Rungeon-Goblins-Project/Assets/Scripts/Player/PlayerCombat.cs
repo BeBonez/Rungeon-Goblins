@@ -56,7 +56,7 @@ public class PlayerCombat : MonoBehaviour
 
                     if (playerBase.CanTakeDamage())
                     {
-                        TookDamage(5);
+                        TookDamage(4);
                     }
                     // else if (playerBase.GetName() == "Paul" && playerBase.CanTakeDamage() == false)
                     // {

@@ -10455,7 +10455,7 @@ MonoBehaviour:
   timer: 0
   maxTimer: 24
   LeastMaxTimer: 12
-  reduceTimeDistance: 100
+  reduceTimeDistance: 25
   gameManager: {fileID: 542785193995537962}
   timeHUD: {fileID: 379530309}
   animator: {fileID: 379530310}
@@ -10529,19 +10529,19 @@ MonoBehaviour:
   tilePrefabs:
   - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
   - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
-  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
-  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
-  - {fileID: 5235507734857844917, guid: 5135e66b945858041ac3c410625e1125, type: 3}
-  - {fileID: 5235507734857844917, guid: eb69d160dcb3fff4bb662a77cddf22cc, type: 3}
-  - {fileID: 5235507734857844917, guid: eb69d160dcb3fff4bb662a77cddf22cc, type: 3}
-  - {fileID: 5235507734857844917, guid: eb69d160dcb3fff4bb662a77cddf22cc, type: 3}
-  - {fileID: 5235507734857844917, guid: eb69d160dcb3fff4bb662a77cddf22cc, type: 3}
-  - {fileID: 5235507734857844917, guid: eb69d160dcb3fff4bb662a77cddf22cc, type: 3}
-  - {fileID: 5235507734857844917, guid: b273e76fd64e23346b6d4a87183aa088, type: 3}
-  - {fileID: 5235507734857844917, guid: b273e76fd64e23346b6d4a87183aa088, type: 3}
-  - {fileID: 5235507734857844917, guid: b273e76fd64e23346b6d4a87183aa088, type: 3}
-  - {fileID: 5235507734857844917, guid: b273e76fd64e23346b6d4a87183aa088, type: 3}
-  - {fileID: 5235507734857844917, guid: b273e76fd64e23346b6d4a87183aa088, type: 3}
+  - {fileID: 5235507734857844917, guid: 9c252de6b28bef245adf5cbbfd0e44e5, type: 3}
+  - {fileID: 5235507734857844917, guid: 9c252de6b28bef245adf5cbbfd0e44e5, type: 3}
+  - {fileID: 5235507734857844917, guid: 9c252de6b28bef245adf5cbbfd0e44e5, type: 3}
+  - {fileID: 5235507734857844917, guid: 7ea3550596132934c9c7ed77c143613e, type: 3}
+  - {fileID: 5235507734857844917, guid: 7ea3550596132934c9c7ed77c143613e, type: 3}
+  - {fileID: 5235507734857844917, guid: 7ea3550596132934c9c7ed77c143613e, type: 3}
+  - {fileID: 5235507734857844917, guid: 127f95d1a1a72394cba3f5584e83be16, type: 3}
+  - {fileID: 5235507734857844917, guid: 127f95d1a1a72394cba3f5584e83be16, type: 3}
+  - {fileID: 5235507734857844917, guid: 1a9120ff6ed190c4b99c3c1bf418f410, type: 3}
+  - {fileID: 5235507734857844917, guid: 1a9120ff6ed190c4b99c3c1bf418f410, type: 3}
+  - {fileID: 5235507734857844917, guid: 1a9120ff6ed190c4b99c3c1bf418f410, type: 3}
+  - {fileID: 5235507734857844917, guid: 4fc782812a0a98e419dc35dc310234e7, type: 3}
+  - {fileID: 5235507734857844917, guid: 4fc782812a0a98e419dc35dc310234e7, type: 3}
 --- !u!4 &2103509128171840019
 Transform:
   m_ObjectHideFlags: 0
@@ -10668,7 +10668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximum: 0
   current: 0
-  mask: {fileID: 1861844078}
+  mask: {fileID: 1961165037}
   masks:
   - {fileID: 1961165037}
   - {fileID: 1861844078}
