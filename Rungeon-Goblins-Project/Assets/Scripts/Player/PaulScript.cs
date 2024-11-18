@@ -8,12 +8,8 @@ public class PaulScript : PlayerMovement
 {
     [Header("Power")]
     public GameObject nextGoblin;
-    [SerializeField] float speedMultiplier;
-    [SerializeField] float timeActive;
-    IEnumerator powerCoroutine;
-    IEnumerator rechargeCoroutine;
-    [SerializeField] float timeBetweenDashes;
-    float actualTime;
+    [SerializeField] float speedMultiplier, timeActive, timeBetweenDashes, actualTime;
+    IEnumerator powerCoroutine, rechargeCoroutine;
 
     [Header("UI Components")]
     [SerializeField] protected Image uiShield;
@@ -36,15 +32,15 @@ public class PaulScript : PlayerMovement
 
         timer = GameObject.Find("GameManager").GetComponent<Timer>();
 
-        originalKillLimit = killLimit;
+        originalKillMeta = killMeta;
 
         powerBar = gameManager.GetComponent<PowerBar>();
 
-        powerBar.SetMaximumFill(originalKillLimit);
+        powerBar.SetMaximumFill(originalKillMeta);
 
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            actualKills = originalKillLimit - 2;
+            actualKills = originalKillMeta - 2;
             powerBar.SetCurrentFill(actualKills);
         }
 
@@ -59,25 +55,48 @@ public class PaulScript : PlayerMovement
 
         if (isPowerActive == true)
         {
+
             if (Time.time > timeBetweenDashes + actualTime)
             {
                 nextGoblin = GetClosest("Goblin");
 
                 if (nextGoblin != null)
                 {
-                    nextposition = nextGoblin.transform.position;
+                    actualTime = Time.time;
 
-                    float distanceToAdd = (nextGoblin.transform.position.z - transform.position.z) / 10;
+                    if (kills < maxKills)
+                    {
 
-                    transform.position = nextposition;
+                        if (killed == true)
+                        {
+                            kills++;
 
-                    UpdatePosition();
+                            animator.Rebind();
 
-                    gameManager.AddDistance((int)distanceToAdd);
+                            animator.Play("Jump");
+
+                            Debug.Log("Kill:" + kills);
+
+                            nextposition = nextGoblin.transform.position;
+
+                            float distanceToAdd = (nextGoblin.transform.position.z - transform.position.z) / 10;
+
+                            UpdatePosition();
+
+                            gameManager.AddDistance((int)distanceToAdd);
+
+                            killed = false;
+                        }
+                    }
+                    
+                    else
+                    {
+                        DeactivatePower();
+                    }
+
                 }
-
-                actualTime = Time.time;
             }
+
         }
 
         //if (actualCharges < maxCharges && isDashCoolingDown == false)
@@ -191,13 +210,15 @@ public class PaulScript : PlayerMovement
 
     private IEnumerator RaiseShield()
     {
+        killed = true;
+
         isPowerActive = true;
 
         speed *= speedMultiplier;
 
         yield return new WaitForSeconds(timeActive);
 
-        DeactivatePower();
+        //DeactivatePower();
 
         if (timer.IsDead() == false)
         {
@@ -210,8 +231,14 @@ public class PaulScript : PlayerMovement
     public override void DeactivatePower()
     {
         ResetPowerFill();
+
+        kills = 0;
+
         speed = originalSpeed;
+
         isPowerActive = false;
+
+        animator.Play("Idle");
     }
 
     protected override void Dash(Vector3 direction)

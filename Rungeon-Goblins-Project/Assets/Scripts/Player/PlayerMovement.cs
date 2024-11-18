@@ -21,10 +21,13 @@ public abstract class PlayerMovement : MonoBehaviour
     [Header("Power")]
     //[SerializeField] protected float powerCooldown;
     [SerializeField] protected bool isPowerActive = false;
-    [SerializeField] protected int killLimit;
-    [SerializeField] protected PowerBar powerBar;
-    protected int originalKillLimit;
+    [SerializeField] protected int killMeta;
+    protected int originalKillMeta;
     protected int actualKills;
+    [SerializeField] protected int maxKills;
+    protected int kills;
+    [SerializeField] public bool killed;
+    [SerializeField] protected PowerBar powerBar;
 
     [Header("FrontDash")]
     [SerializeField] protected int maxCharges;
@@ -68,7 +71,7 @@ public abstract class PlayerMovement : MonoBehaviour
     }
 
     #region GetSets
-    public bool CanTakeDamage()
+    public bool IsPowerActive()
     {
         return isPowerActive;
     }
@@ -81,11 +84,6 @@ public abstract class PlayerMovement : MonoBehaviour
     public void SwitchCanMove(bool condition)
     {
         canMove = condition;
-    }
-
-    public bool IsFliyng()
-    {
-        return isPowerActive;
     }
 
     public Animator GetAnimator()
@@ -128,7 +126,8 @@ public abstract class PlayerMovement : MonoBehaviour
         }
         if (type == "Kill")
         {
-            if (actualCharges + amount > maxCharges) {
+            if (actualCharges + amount > maxCharges)
+            {
                 actualCharges = maxCharges;
             }
             else
@@ -140,7 +139,8 @@ public abstract class PlayerMovement : MonoBehaviour
         AudioManager.Instance.PlaySFX(12);
     }
 
-    public int GetMaxCharges() {
+    public int GetMaxCharges()
+    {
         return maxCharges;
     }
 
@@ -157,7 +157,7 @@ public abstract class PlayerMovement : MonoBehaviour
     }
     protected bool CanUsePower()
     {
-        return actualKills >= killLimit;
+        return actualKills >= killMeta;
     }
     protected void ResetPowerFill()
     {
@@ -166,19 +166,27 @@ public abstract class PlayerMovement : MonoBehaviour
     }
     public int GetKillLimit()
     {
-        return originalKillLimit;
+        return originalKillMeta;
     }
     public int GetActualKills()
     {
         return actualKills;
     }
 
-    public void SetSpeed(float amount) {
+    public void SetSpeed(float amount)
+    {
         speed = amount;
     }
 
-    public float GetOriginalSpeed() {
+    public float GetOriginalSpeed()
+    {
         return originalSpeed;
     }
+
+    public void AddPowerKill(int amount)
+    {
+        kills += amount;
+    }
+
     #endregion
 }

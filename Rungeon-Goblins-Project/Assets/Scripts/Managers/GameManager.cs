@@ -140,13 +140,14 @@ public class GameManager : MonoBehaviour
 
         player.transform.position = newPos;
 
+        playerScript.UpdatePosition();
+
         playerScript.AddCharge(playerScript.GetMaxCharges(), "Cheat");
         
         playerScript.SetSpeed(playerScript.GetOriginalSpeed());
 
         AddDistance(-2);
 
-        playerScript.UpdatePosition();
         player.GetComponent<Animator>().Play("Idle");
 
         timer.AddTime(timer.GetMaxTime());

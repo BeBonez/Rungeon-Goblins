@@ -362,7 +362,9 @@ MonoBehaviour:
   speed: 60
   hitSound: 1
   isPowerActive: 0
-  killLimit: 10
+  killMeta: 2
+  maxKills: 10
+  killed: 0
   powerBar: {fileID: 0}
   maxCharges: 3
   actualCharges: 1
@@ -374,6 +376,7 @@ MonoBehaviour:
   speedMultiplier: 5
   timeActive: 2
   timeBetweenDashes: 0.2
+  actualTime: 0
   uiShield: {fileID: 0}
 --- !u!136 &4473474606672337653
 CapsuleCollider:

@@ -21,6 +21,8 @@ public class GarryScript : PlayerMovement
     {
         charName = "Garry";
 
+        originalSpeed = speed;
+
         nextposition = transform.position;
 
         uiPower = GameObject.Find("MagicImage").GetComponent<Image>();
@@ -33,15 +35,15 @@ public class GarryScript : PlayerMovement
 
         timer = GameObject.Find("GameManager").GetComponent<Timer>();
 
-        originalKillLimit = killLimit;
+        originalKillMeta = killMeta;
 
         powerBar = gameManager.GetComponent<PowerBar>();
 
-        powerBar.SetMaximumFill(originalKillLimit);
+        powerBar.SetMaximumFill(originalKillMeta);
 
         if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            actualKills = originalKillLimit - 2;
+            actualKills = originalKillMeta - 2;
         }
 
         powerBar.SetCurrentFill(actualKills);

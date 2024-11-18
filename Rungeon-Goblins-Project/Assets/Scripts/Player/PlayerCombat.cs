@@ -25,7 +25,11 @@ public class PlayerCombat : MonoBehaviour
             switch (other.tag)
             {
                 case "Goblin":
-                    if (playerBase.IsFliyng() == false)
+                    if (playerBase.IsPowerActive() == true && playerBase.GetName() == "Garry")
+                    {
+
+                    }
+                    else
                     {
                         playerBase.GetAnimator().Play("Attack");
                     }
@@ -33,13 +37,13 @@ public class PlayerCombat : MonoBehaviour
                     timer.AddTime(4.5f);
                     break;
                 case "Trap":
-                    if (playerBase.IsFliyng() == false)
+                    if (playerBase.IsPowerActive() == false)
                     {
                         TookDamage(2.5f);
                     }
                     break;
                 case "Hole":
-                    if (playerBase.IsFliyng() == false)
+                    if (playerBase.IsPowerActive() == false)
                     {
                         timer.DeadByHole(other.gameObject);
                         timer.AddTime(-timer.GetMaxTime());
@@ -53,15 +57,10 @@ public class PlayerCombat : MonoBehaviour
                     timer.AddTime(timer.GetMaxTime());
                     break;
                 case "GoblinAttack":
-
-                    if (playerBase.CanTakeDamage())
+                    if (playerBase.IsPowerActive() == false)
                     {
                         TookDamage(3.5f);
                     }
-                    // else if (playerBase.GetName() == "Paul" && playerBase.CanTakeDamage() == false)
-                    // {
-                    //     playerBase.GetAnimator().Play("Shield");
-                    // }
                     break;
                 case "Coin":
                     Destroy(other.gameObject);
@@ -85,18 +84,27 @@ public class PlayerCombat : MonoBehaviour
     private void EnemyDefeat(Collider other)
     {
         Destroy(other.gameObject);
+
+        cameraAnimator.SetTrigger("EnemyDefeat");
+
         playerBase.PlayHitSFX();
 
-        if (playerBase.name == "Paul") {
+        if (playerBase.GetName() == "Paul")
+        {
             playerBase.AddCharge(2, "Kill");
+
+            if (playerBase.IsPowerActive() == true)
+            {
+                playerBase.killed = true;
+            }
         }
-        else {
+        else
+        {
             playerBase.AddCharge(1, "Kill");
         }
         playerBase.AddCharge(1, "Kill");
         playerBase.AddKill(1);
         //cameraAnimator.SetTrigger("Default");
-        cameraAnimator.SetTrigger("EnemyDefeat");
         timeAnimator.SetTrigger("AddTime");
     }
 }
