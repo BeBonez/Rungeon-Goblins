@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public abstract class PlayerMovement : MonoBehaviour
 {
+    protected float originalSpeed;
     protected float posX, posY, posZ;
     protected string charName;
     [SerializeField] protected float moveDistance;
@@ -19,8 +20,7 @@ public abstract class PlayerMovement : MonoBehaviour
 
     [Header("Power")]
     //[SerializeField] protected float powerCooldown;
-    [SerializeField] protected bool canTakeDamge = true;
-    [SerializeField] protected bool isFliyng = false;
+    [SerializeField] protected bool isPowerActive = false;
     [SerializeField] protected int killLimit;
     [SerializeField] protected PowerBar powerBar;
     protected int originalKillLimit;
@@ -70,7 +70,7 @@ public abstract class PlayerMovement : MonoBehaviour
     #region GetSets
     public bool CanTakeDamage()
     {
-        return canTakeDamge;
+        return isPowerActive;
     }
 
     public Vector3 GetLastPosition()
@@ -85,7 +85,7 @@ public abstract class PlayerMovement : MonoBehaviour
 
     public bool IsFliyng()
     {
-        return isFliyng;
+        return isPowerActive;
     }
 
     public Animator GetAnimator()
@@ -128,13 +128,20 @@ public abstract class PlayerMovement : MonoBehaviour
         }
         if (type == "Kill")
         {
-            if (actualCharges < maxCharges)
+            if (actualCharges + amount > maxCharges) {
+                actualCharges = maxCharges;
+            }
+            else
             {
                 actualCharges += amount;
             }
         }
 
         AudioManager.Instance.PlaySFX(12);
+    }
+
+    public int GetMaxCharges() {
+        return maxCharges;
     }
 
     protected void UpdateUIInfo()
@@ -164,6 +171,14 @@ public abstract class PlayerMovement : MonoBehaviour
     public int GetActualKills()
     {
         return actualKills;
+    }
+
+    public void SetSpeed(float amount) {
+        speed = amount;
+    }
+
+    public float GetOriginalSpeed() {
+        return originalSpeed;
     }
     #endregion
 }

@@ -6,9 +6,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private float timer = 0;
-    [SerializeField] private float maxTimer = 0;
-    [SerializeField] private float LeastMaxTimer = 0;
+    [SerializeField] private float timer = 0, maxTimer = 0, LeastMaxTimer = 0;
     [SerializeField] private int reduceTimeDistance = 0;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private Slider timeHUD;
@@ -64,7 +62,7 @@ public class Timer : MonoBehaviour
             animator.SetTrigger("Default");
         }
 
-        // se tempo acabar chama método e perde
+        // se tempo acabar chama mï¿½todo e perde
         if (timer <= 0 && isDead == false)
         {
             isDead = true;

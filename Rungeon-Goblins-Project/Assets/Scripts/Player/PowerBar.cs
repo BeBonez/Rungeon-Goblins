@@ -3,24 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[ExecuteInEditMode()]
 public class PowerBar : MonoBehaviour
 {
     [SerializeField] int maximum;
     [SerializeField] int current;
     [SerializeField] Image mask;
+    [SerializeField] GameObject outline;
+    [SerializeField] GameObject[] outlines;
     [SerializeField] Image[] masks;
-
 
     void Start()
     {
         int charIndex = PlayerPrefs.GetInt("SelectedChar", 0);
+        outline = outlines[charIndex];
         mask = masks[charIndex];
 
     }
     private void Update()
     {
         GetCurrentFill();
+
+        if (current >= maximum) {
+            outline.SetActive(true);
+        }
+        else {
+            outline.SetActive(false);
+        }
     }
 
     private void GetCurrentFill()

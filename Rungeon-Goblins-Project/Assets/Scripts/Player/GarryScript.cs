@@ -55,7 +55,7 @@ public class GarryScript : PlayerMovement
 
         UpdateUIInfo();
 
-        if (isFliyng == true)
+        if (isPowerActive == true)
         {
             if (Time.time > timeBetweenDashes + actualTime)
             {
@@ -177,11 +177,15 @@ public class GarryScript : PlayerMovement
 
     private IEnumerator TeleportMagic()
     {
+
         AudioManager.Instance.PlaySFX(6);
+
         isMagicActive = true;
-        isFliyng = true;
+
+        isPowerActive = true;
+
         posY += 3; //PH
-        canTakeDamge = false;
+
         transform.position = new Vector3(posX, posY, posZ); //PH
 
         yield return new WaitForSeconds(activeTime);
@@ -232,7 +236,7 @@ public class GarryScript : PlayerMovement
 
         AudioManager.Instance.PlaySFX(9);
 
-        if (isFliyng == false)
+        if (isPowerActive == false)
         {
             animator.Rebind();
             animator.Play("Jump");
@@ -245,7 +249,6 @@ public class GarryScript : PlayerMovement
         AudioManager.Instance.StopSFX(6);
         ResetPowerFill();
         isMagicActive = false;
-        isFliyng = false;
-        canTakeDamge = true;
+        isPowerActive = false;
     }
 }

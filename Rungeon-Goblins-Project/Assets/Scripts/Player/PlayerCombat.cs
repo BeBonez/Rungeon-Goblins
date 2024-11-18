@@ -86,6 +86,13 @@ public class PlayerCombat : MonoBehaviour
     {
         Destroy(other.gameObject);
         playerBase.PlayHitSFX();
+
+        if (playerBase.name == "Paul") {
+            playerBase.AddCharge(2, "Kill");
+        }
+        else {
+            playerBase.AddCharge(1, "Kill");
+        }
         playerBase.AddCharge(1, "Kill");
         playerBase.AddKill(1);
         //cameraAnimator.SetTrigger("Default");

@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class PaulScript : PlayerMovement
 {
-    private float originalSpeed;
-
     [Header("Power")]
     public GameObject nextGoblin;
     [SerializeField] float speedMultiplier;
@@ -59,7 +57,7 @@ public class PaulScript : PlayerMovement
     {
         MoveToDestiny();
 
-        if (isFliyng == true)
+        if (isPowerActive == true)
         {
             if (Time.time > timeBetweenDashes + actualTime)
             {
@@ -67,11 +65,13 @@ public class PaulScript : PlayerMovement
 
                 if (nextGoblin != null)
                 {
-                    nextGoblin.transform.Rotate(0, 90, 0);
-
                     nextposition = nextGoblin.transform.position;
 
                     float distanceToAdd = (nextGoblin.transform.position.z - transform.position.z) / 10;
+
+                    transform.position = nextposition;
+
+                    UpdatePosition();
 
                     gameManager.AddDistance((int)distanceToAdd);
                 }
@@ -96,7 +96,7 @@ public class PaulScript : PlayerMovement
 
             // Sem poder
 
-            if (isFliyng == false)
+            if (isPowerActive == false)
             {
                 if (direction.y >= 1)
                 {
@@ -112,10 +112,10 @@ public class PaulScript : PlayerMovement
                 }
                 else if (direction.y <= -1)
                 {
-                    if (CanUsePower() && isFliyng == false)
+                    if (CanUsePower() && isPowerActive == false)
                     {
-                        animator.Play("Run");
-                        animator.SetTrigger("Run");
+                        // animator.Play("Run");
+                        // animator.SetTrigger("Run");
                         powerCoroutine = RaiseShield();
                         StartCoroutine(powerCoroutine);
                     }
@@ -191,7 +191,7 @@ public class PaulScript : PlayerMovement
 
     private IEnumerator RaiseShield()
     {
-        isFliyng = true;
+        isPowerActive = true;
 
         speed *= speedMultiplier;
 
@@ -211,7 +211,7 @@ public class PaulScript : PlayerMovement
     {
         ResetPowerFill();
         speed = originalSpeed;
-        isFliyng = false;
+        isPowerActive = false;
     }
 
     protected override void Dash(Vector3 direction)
@@ -239,7 +239,7 @@ public class PaulScript : PlayerMovement
 
         AudioManager.Instance.PlaySFX(9);
 
-        if (isFliyng == false)
+        if (isPowerActive == false)
         {
             animator.Rebind();
             animator.Play("Jump");

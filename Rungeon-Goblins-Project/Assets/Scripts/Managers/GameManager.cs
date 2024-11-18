@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -133,10 +134,15 @@ public class GameManager : MonoBehaviour
 
         UpdateData();
 
-        Vector3 newPos = new Vector3(deathPosition.x, deathPosition.y, deathPosition.z - 20);
+        Vector3 newPos = new Vector3((float)Math.Floor(deathPosition.x), 0, (float)Math.Floor(deathPosition.z - 20));
 
         playerScript.SetNextPosition(newPos);
+
         player.transform.position = newPos;
+
+        playerScript.AddCharge(playerScript.GetMaxCharges(), "Cheat");
+        
+        playerScript.SetSpeed(playerScript.GetOriginalSpeed());
 
         AddDistance(-2);
 
