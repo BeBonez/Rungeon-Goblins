@@ -50,13 +50,19 @@ public class TileGenerator200 : MonoBehaviour
     {
         int random;
 
-        if (currentDistance > 740)
+        while (currentDistance > 750) 
         {
-            random = Random.Range(0, 15);
-        } else if (currentDistance > 490)
+            currentDistance -= 750;
+        }
+
+        if (currentDistance > 730)
+        {
+            random = Random.Range(0, 5);
+        }
+        else if (currentDistance > 470)
         {
             random = Random.Range(10, 15);
-        } else if (currentDistance > 240) {
+        } else if (currentDistance > 220) {
             random = Random.Range(5, 10);
         } else
         {

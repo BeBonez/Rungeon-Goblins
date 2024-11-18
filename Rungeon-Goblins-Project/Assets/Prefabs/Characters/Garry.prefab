@@ -204,9 +204,8 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   speed: 60
   hitSound: 13
-  canTakeDamge: 1
-  isFliyng: 0
-  killLimit: 15
+  isPowerActive: 0
+  killLimit: 12
   powerBar: {fileID: 0}
   maxCharges: 1
   actualCharges: 1

@@ -30,12 +30,12 @@ public class PlayerCombat : MonoBehaviour
                         playerBase.GetAnimator().Play("Attack");
                     }
                     EnemyDefeat(other);
-                    timer.AddTime(4);
+                    timer.AddTime(4.5f);
                     break;
                 case "Trap":
                     if (playerBase.IsFliyng() == false)
                     {
-                        TookDamage(3);
+                        TookDamage(2.5f);
                     }
                     break;
                 case "Hole":
@@ -56,7 +56,7 @@ public class PlayerCombat : MonoBehaviour
 
                     if (playerBase.CanTakeDamage())
                     {
-                        TookDamage(4);
+                        TookDamage(3.5f);
                     }
                     // else if (playerBase.GetName() == "Paul" && playerBase.CanTakeDamage() == false)
                     // {

@@ -362,7 +362,7 @@ MonoBehaviour:
   speed: 60
   hitSound: 1
   isPowerActive: 0
-  killLimit: 2
+  killLimit: 10
   powerBar: {fileID: 0}
   maxCharges: 3
   actualCharges: 1
