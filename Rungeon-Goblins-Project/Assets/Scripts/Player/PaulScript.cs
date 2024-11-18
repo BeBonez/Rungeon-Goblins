@@ -166,29 +166,29 @@ public class PaulScript : PlayerMovement
 
             //Com poder
 
-            else
-            {
-                if (direction.x >= 1)
-                {
-                    if (!(transform.position.x >= 10) && (moveDistance + nextposition.x <= 10)) // Se n�o for ultrapassar o limite da direita, ele pode mover
-                    {
-                        Dash(new Vector3(moveDistance, 0, 0));
-                        //nextposition = new Vector3(moveDistance + nextposition.x, nextposition.y , nextposition.z);
-                        gameManager.AddDistance(1);
-                    }
+            // else
+            // {
+            //     if (direction.x >= 1)
+            //     {
+            //         if (!(transform.position.x >= 10) && (moveDistance + nextposition.x <= 10)) // Se n�o for ultrapassar o limite da direita, ele pode mover
+            //         {
+            //             Dash(new Vector3(moveDistance, 0, 0));
+            //             //nextposition = new Vector3(moveDistance + nextposition.x, nextposition.y , nextposition.z);
+            //             gameManager.AddDistance(1);
+            //         }
 
-                }
+            //     }
 
-                else if (direction.x <= -1)
-                {
-                    if (!(transform.position.x <= -10) && (nextposition.x - moveDistance >= -10)) // Se n�o for ultrapassar o limite da esquerda, ele pode mover
-                    {
-                        Dash(new Vector3(-moveDistance, 0, 0));
-                        //nextposition = new Vector3(-moveDistance + nextposition.x, nextposition.y, nextposition.z);
-                        gameManager.AddDistance(1);
-                    }
-                }
-            }
+            //     else if (direction.x <= -1)
+            //     {
+            //         if (!(transform.position.x <= -10) && (nextposition.x - moveDistance >= -10)) // Se n�o for ultrapassar o limite da esquerda, ele pode mover
+            //         {
+            //             Dash(new Vector3(-moveDistance, 0, 0));
+            //             //nextposition = new Vector3(-moveDistance + nextposition.x, nextposition.y, nextposition.z);
+            //             gameManager.AddDistance(1);
+            //         }
+            //     }
+            // }
 
         }
 
