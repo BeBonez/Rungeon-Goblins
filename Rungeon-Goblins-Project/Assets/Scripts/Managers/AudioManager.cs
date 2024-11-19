@@ -30,7 +30,10 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+    }
 
+    void Start()
+    {
         LoadPlayerPrefSound("SFXVolume");
         LoadPlayerPrefSound("BGVolume");
     }

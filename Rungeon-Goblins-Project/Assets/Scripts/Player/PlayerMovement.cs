@@ -25,7 +25,7 @@ public abstract class PlayerMovement : MonoBehaviour
     protected int originalKillMeta;
     protected int actualKills;
     [SerializeField] protected int maxKills;
-    protected int kills;
+    [SerializeField] public int kills;
     [SerializeField] public bool killed;
     [SerializeField] protected PowerBar powerBar;
 

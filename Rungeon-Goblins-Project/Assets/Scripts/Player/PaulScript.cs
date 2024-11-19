@@ -55,55 +55,31 @@ public class PaulScript : PlayerMovement
 
         if (isPowerActive == true)
         {
+            nextGoblin = GetClosest("Goblin");
 
-            if (Time.time > timeBetweenDashes + actualTime)
+            if (nextGoblin != null)
             {
-                nextGoblin = GetClosest("Goblin");
-
-                if (nextGoblin != null)
+                if (kills < maxKills)
                 {
-                    actualTime = Time.time;
-
-                    if (kills < maxKills)
+                    if (killed)
                     {
-
-                        if (killed == true)
+                        if (Time.time > timeBetweenDashes + actualTime)
                         {
-                            kills++;
-
-                            animator.Rebind();
-
-                            animator.Play("Jump");
-
-                            Debug.Log("Kill:" + kills);
-
-                            nextposition = nextGoblin.transform.position;
-
-                            float distanceToAdd = (nextGoblin.transform.position.z - transform.position.z) / 10;
-
-                            UpdatePosition();
-
-                            gameManager.AddDistance((int)distanceToAdd);
-
-                            killed = false;
+                            actualTime = Time.time;
+                            DashToGoblin();
                         }
-                    }
-                    
-                    else
-                    {
-                        DeactivatePower();
+
                     }
 
+                }
+
+                else if (kills >= maxKills && killed == true)
+                {
+                    DeactivatePower();
                 }
             }
 
         }
-
-        //if (actualCharges < maxCharges && isDashCoolingDown == false)
-        //{
-        //    rechargeCoroutine = Recharge();
-        //    StartCoroutine(rechargeCoroutine);
-        //}
 
         UpdateUIInfo();
     }
@@ -112,8 +88,6 @@ public class PaulScript : PlayerMovement
     {
         if (canMove)
         {
-
-            // Sem poder
 
             if (isPowerActive == false)
             {
@@ -163,49 +137,14 @@ public class PaulScript : PlayerMovement
                     }
                 }
             }
-
-            //Com poder
-
-            // else
-            // {
-            //     if (direction.x >= 1)
-            //     {
-            //         if (!(transform.position.x >= 10) && (moveDistance + nextposition.x <= 10)) // Se n�o for ultrapassar o limite da direita, ele pode mover
-            //         {
-            //             Dash(new Vector3(moveDistance, 0, 0));
-            //             //nextposition = new Vector3(moveDistance + nextposition.x, nextposition.y , nextposition.z);
-            //             gameManager.AddDistance(1);
-            //         }
-
-            //     }
-
-            //     else if (direction.x <= -1)
-            //     {
-            //         if (!(transform.position.x <= -10) && (nextposition.x - moveDistance >= -10)) // Se n�o for ultrapassar o limite da esquerda, ele pode mover
-            //         {
-            //             Dash(new Vector3(-moveDistance, 0, 0));
-            //             //nextposition = new Vector3(-moveDistance + nextposition.x, nextposition.y, nextposition.z);
-            //             gameManager.AddDistance(1);
-            //         }
-            //     }
-            // }
-
+            UpdatePosition();
         }
 
-        UpdatePosition();
-    }
-
-    private IEnumerator Recharge()
-    {
-        isDashCoolingDown = true;
-        yield return new WaitForSeconds(dashCoolDown);
-        if (actualCharges < maxCharges)
+        else
         {
-            actualCharges++;
-            isDashCoolingDown = false;
-            AudioManager.Instance.PlaySFX(7);
+            return;
         }
-        StopCoroutine(rechargeCoroutine);
+
     }
 
     private IEnumerator RaiseShield()
@@ -274,6 +213,26 @@ public class PaulScript : PlayerMovement
 
     }
 
+    private void DashToGoblin()
+    {
+        kills++;
+
+        animator.Rebind();
+
+        animator.Play("Jump");
+
+        Debug.Log("Kill:" + kills);
+
+        nextposition = nextGoblin.transform.position;
+
+        float distanceToAdd = (nextGoblin.transform.position.z - transform.position.z) / 10;
+
+        UpdatePosition();
+
+        gameManager.AddDistance((int)distanceToAdd);
+
+        killed = false;
+    }
     public GameObject GetClosest(string tag)
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag(tag);

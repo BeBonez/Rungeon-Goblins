@@ -93,10 +93,8 @@ public class PlayerCombat : MonoBehaviour
         {
             playerBase.AddCharge(2, "Kill");
 
-            if (playerBase.IsPowerActive() == true)
-            {
-                playerBase.killed = true;
-            }
+            playerBase.killed = true;
+
         }
         else
         {

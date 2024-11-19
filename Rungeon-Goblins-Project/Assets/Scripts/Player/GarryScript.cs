@@ -11,6 +11,7 @@ public class GarryScript : PlayerMovement
     [SerializeField] bool isMagicActive = false;
     [SerializeField] float timeBetweenDashes;
     [SerializeField] float actualTime;
+    bool dashed;
     //bool isMagicCoolingDown;
     IEnumerator magicCoroutine;
 
@@ -59,12 +60,15 @@ public class GarryScript : PlayerMovement
 
         if (isPowerActive == true)
         {
-            if (Time.time > timeBetweenDashes + actualTime)
+            if (hasReached)
             {
-                Dash(new Vector3(0, 0, moveDistance));
-                gameManager.AddDistance(1);
-                actualTime = Time.time;
-
+                if (Time.time > timeBetweenDashes + actualTime)
+                {
+                    Dash(new Vector3(0, 0, moveDistance));
+                    gameManager.AddDistance(1);
+                    actualTime = Time.time;
+                    hasReached = false;
+                }
             }
         }
 
@@ -112,8 +116,6 @@ public class GarryScript : PlayerMovement
                     {
                         //Dash(new Vector3(0, 0, -moveDistance));
                         UpdatePosition();
-
-                        gameManager.AddDistance(-1);
 
                         magicCoroutine = TeleportMagic();
                         StartCoroutine(magicCoroutine);

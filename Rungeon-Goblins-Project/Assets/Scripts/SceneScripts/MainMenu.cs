@@ -12,6 +12,6 @@ public class MainMenu : MonoBehaviour
             tutorialPanel.SetActive(true);
         }
 
-        AudioManager.Instance.PlayBGLoop(0);
+        //AudioManager.Instance.PlayBGLoop(0);
     }
 }

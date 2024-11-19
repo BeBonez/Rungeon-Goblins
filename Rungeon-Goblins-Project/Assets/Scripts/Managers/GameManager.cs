@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int coins;
     [SerializeField] int quickReviveTime;
     private int actualQuickReviveTime;
-    private int distance;
+    [SerializeField] int distance;
     private int reviveCost = 50;
     private Timer timer;
     private bool hasRevived = false;

@@ -26,7 +26,7 @@ public class TileGenerator200 : MonoBehaviour
         GenerateNewTile();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         currentDistance = gameManager.GetDistance();
 

@@ -362,8 +362,9 @@ MonoBehaviour:
   speed: 60
   hitSound: 1
   isPowerActive: 0
-  killMeta: 2
-  maxKills: 10
+  killMeta: 0
+  maxKills: 1000
+  kills: 0
   killed: 0
   powerBar: {fileID: 0}
   maxCharges: 3
