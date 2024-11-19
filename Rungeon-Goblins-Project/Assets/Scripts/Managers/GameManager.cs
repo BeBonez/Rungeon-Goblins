@@ -146,8 +146,6 @@ public class GameManager : MonoBehaviour
         
         playerScript.SetSpeed(playerScript.GetOriginalSpeed());
 
-        AddDistance(-2);
-
         player.GetComponent<Animator>().Play("Idle");
 
         timer.AddTime(timer.GetMaxTime());
