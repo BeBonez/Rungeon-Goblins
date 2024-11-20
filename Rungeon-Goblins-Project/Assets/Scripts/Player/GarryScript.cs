@@ -1,22 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GarryScript : PlayerMovement
 {
-    [SerializeField] float activeTime;
-    [SerializeField] bool isMagicActive = false;
-    [SerializeField] float timeBetweenDashes;
-    [SerializeField] float actualTime;
     bool dashed;
-    //bool isMagicCoolingDown;
     IEnumerator magicCoroutine;
 
     [Header("UI Components")]
-    [SerializeField] protected Image uiPower;
+    protected Image uiPower;
 
     private void Start()
     {
@@ -56,19 +52,13 @@ public class GarryScript : PlayerMovement
     {
         MoveToDestiny();
 
-        UpdateUIInfo();
-
         if (isPowerActive == true)
         {
-            if (hasReached)
+            if (Time.time > timeBetweenDashes + actualTime)
             {
-                if (Time.time > timeBetweenDashes + actualTime)
-                {
-                    Dash(new Vector3(0, 0, moveDistance));
-                    gameManager.AddDistance(1);
-                    actualTime = Time.time;
-                    hasReached = false;
-                }
+                Dash(new Vector3(0, 0, moveDistance));
+                gameManager.AddDistance(1);
+                actualTime = Time.time;
             }
         }
 
@@ -87,6 +77,8 @@ public class GarryScript : PlayerMovement
             transform.position = nextposition;
             AudioManager.Instance.PlaySFX(8);
         }
+
+        UpdateUIInfo();
     }
 
     public override void Move(Vector2 direction)
@@ -96,7 +88,7 @@ public class GarryScript : PlayerMovement
 
             // Sem poder
 
-            if (isMagicActive == false)
+            if (isPowerActive == false)
             {
                 if (direction.y >= 1)
                 {
@@ -110,9 +102,9 @@ public class GarryScript : PlayerMovement
                     }
 
                 }
-                else if (direction.y <= -1 && posZ != -5)
+                else if (direction.y <= -1)
                 {
-                    if (isMagicActive == false && CanUsePower())
+                    if (isPowerActive == false && CanUsePower())
                     {
                         //Dash(new Vector3(0, 0, -moveDistance));
                         UpdatePosition();
@@ -129,7 +121,6 @@ public class GarryScript : PlayerMovement
 
                 else if (direction.x >= 1)
                 {
-
                     Dash(new Vector3(moveDistance, 0, moveDistance));
 
                     gameManager.AddDistance(1);
@@ -138,7 +129,6 @@ public class GarryScript : PlayerMovement
 
                 else if (direction.x <= -1)
                 {
-
                     Dash(new Vector3(-moveDistance, 0, moveDistance));
 
                     gameManager.AddDistance(1);
@@ -162,12 +152,14 @@ public class GarryScript : PlayerMovement
 
                 else if (direction.x >= 1)
                 {
+
                     Dash(new Vector3(moveDistance, 0, 0));
 
                 }
 
                 else if (direction.x <= -1)
                 {
+
                     Dash(new Vector3(-moveDistance, 0, 0));
 
                 }
@@ -184,15 +176,13 @@ public class GarryScript : PlayerMovement
 
         AudioManager.Instance.PlaySFX(6);
 
-        isMagicActive = true;
-
         isPowerActive = true;
 
         posY += 3; //PH
 
         transform.position = new Vector3(posX, posY, posZ); //PH
 
-        yield return new WaitForSeconds(activeTime);
+        yield return new WaitForSeconds(timeActive);
 
         if (timer.IsDead() == false)
         {
@@ -212,9 +202,6 @@ public class GarryScript : PlayerMovement
 
         transform.position = new Vector3(posX, posY, posZ); //PH
     }
-
-    public bool IsMagicActive() { return isMagicActive; }
-
     protected override void Dash(Vector3 direction)
     {
 
@@ -238,7 +225,10 @@ public class GarryScript : PlayerMovement
 
         }
 
-        AudioManager.Instance.PlaySFX(9);
+        if (isPowerActive == false)
+        {
+            AudioManager.Instance.PlaySFX(9);
+        }
 
         if (isPowerActive == false)
         {
@@ -252,7 +242,6 @@ public class GarryScript : PlayerMovement
     {
         AudioManager.Instance.StopSFX(6);
         ResetPowerFill();
-        isMagicActive = false;
         isPowerActive = false;
     }
 }

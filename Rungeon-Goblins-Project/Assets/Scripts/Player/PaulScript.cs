@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -6,13 +7,13 @@ using UnityEngine.UI;
 
 public class PaulScript : PlayerMovement
 {
-    [Header("Power")]
-    public GameObject nextGoblin;
-    [SerializeField] float speedMultiplier, timeActive, timeBetweenDashes, actualTime;
+    [Header("Massacre")]
+    [NonSerialized] public GameObject nextGoblin;
+    [SerializeField] float speedMultiplier;
     IEnumerator powerCoroutine, rechargeCoroutine;
 
     [Header("UI Components")]
-    [SerializeField] protected Image uiShield;
+    protected Image uiShield;
 
     private void Start()
     {

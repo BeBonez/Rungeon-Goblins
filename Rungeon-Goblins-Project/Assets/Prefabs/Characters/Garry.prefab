@@ -204,21 +204,16 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   speed: 60
   hitSound: 13
-  isPowerActive: 0
   killMeta: 0
-  maxKills: 0
-  killed: 0
-  powerBar: {fileID: 0}
+  maxKills: 1
+  timeActive: 6
+  timeBetweenDashes: 0.5
   maxCharges: 1
   actualCharges: 1
   dashCoolDown: 0
   isDashCoolingDown: 0
   uiMaxCharges: {fileID: 0}
   uiActualCharges: {fileID: 0}
-  activeTime: 6
-  isMagicActive: 0
-  timeBetweenDashes: 0.15
-  actualTime: 0
   uiPower: {fileID: 0}
 --- !u!136 &6228235774534172419
 CapsuleCollider:

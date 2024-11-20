@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEditor;
@@ -10,7 +11,7 @@ public abstract class PlayerMovement : MonoBehaviour
     protected float posX, posY, posZ;
     protected string charName;
     [SerializeField] protected float moveDistance;
-    [SerializeField] public GameManager gameManager;
+    [NonSerialized] public GameManager gameManager;
     [SerializeField] protected float speed;
     [SerializeField] protected int hitSound;
     protected IEnumerator dash;
@@ -18,24 +19,22 @@ public abstract class PlayerMovement : MonoBehaviour
     protected Animator animator;
     protected Timer timer;
 
-    [Header("Power")]
-    //[SerializeField] protected float powerCooldown;
-    [SerializeField] protected bool isPowerActive = false;
+    [Header("GeneralPower")]
     [SerializeField] protected int killMeta;
-    protected int originalKillMeta;
-    protected int actualKills;
     [SerializeField] protected int maxKills;
-    [SerializeField] public int kills;
-    [SerializeField] public bool killed;
-    [SerializeField] protected PowerBar powerBar;
+    [SerializeField] protected float timeActive, timeBetweenDashes;
+    protected float actualTime;
+    protected bool isPowerActive = false;
+    protected int originalKillMeta, actualKills;
+    [NonSerialized] public int kills;
+    [NonSerialized] public bool killed;
+    protected PowerBar powerBar;
 
     [Header("FrontDash")]
     [SerializeField] protected int maxCharges;
     [SerializeField] protected int actualCharges;
-    [SerializeField] protected float dashCoolDown;
-    [SerializeField] protected bool isDashCoolingDown;
-    [SerializeField] protected TMP_Text uiMaxCharges;
-    [SerializeField] protected TMP_Text uiActualCharges;
+    protected TMP_Text uiMaxCharges;
+    protected TMP_Text uiActualCharges;
 
     [Header("Dash")]
     protected Vector3 lastPosition;

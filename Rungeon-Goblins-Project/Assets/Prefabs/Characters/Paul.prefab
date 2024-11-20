@@ -108,6 +108,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: -4688711305035843975, guid: 3c538bd278f379042a13e5d108f6cd49, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4332706925441422008, guid: 3c538bd278f379042a13e5d108f6cd49, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -172,6 +176,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1082271958561512970, guid: 3c538bd278f379042a13e5d108f6cd49, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1339101018200438765, guid: 3c538bd278f379042a13e5d108f6cd49, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -212,6 +220,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 3c538bd278f379042a13e5d108f6cd49, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 3c538bd278f379042a13e5d108f6cd49, type: 3}
     - target: {fileID: 5866666021909216657, guid: 3c538bd278f379042a13e5d108f6cd49, type: 3}
       propertyPath: m_Controller
       value: 
@@ -358,27 +370,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDistance: 10
-  gameManager: {fileID: 0}
   speed: 60
   hitSound: 1
-  isPowerActive: 0
-  killMeta: 0
+  killMeta: 1
   maxKills: 1000
-  kills: 0
-  killed: 0
-  powerBar: {fileID: 0}
+  timeActive: 0
+  timeBetweenDashes: 0.2
   maxCharges: 3
   actualCharges: 1
-  dashCoolDown: 1.5
-  isDashCoolingDown: 0
-  uiMaxCharges: {fileID: 0}
-  uiActualCharges: {fileID: 0}
-  nextGoblin: {fileID: 0}
   speedMultiplier: 5
-  timeActive: 2
-  timeBetweenDashes: 0.2
-  actualTime: 0
-  uiShield: {fileID: 0}
 --- !u!136 &4473474606672337653
 CapsuleCollider:
   m_ObjectHideFlags: 0
