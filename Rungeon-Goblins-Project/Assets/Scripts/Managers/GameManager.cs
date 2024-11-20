@@ -143,6 +143,8 @@ public class GameManager : MonoBehaviour
         playerScript.UpdatePosition();
 
         playerScript.AddCharge(playerScript.GetMaxCharges(), "Cheat");
+
+        AddDistance(-2);
         
         playerScript.SetSpeed(playerScript.GetOriginalSpeed());
 
