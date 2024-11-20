@@ -372,12 +372,12 @@ MonoBehaviour:
   moveDistance: 10
   speed: 60
   hitSound: 1
-  killMeta: 1
-  maxKills: 1000
+  killMeta: 10
+  maxKills: 8
   timeActive: 0
   timeBetweenDashes: 0.2
   maxCharges: 3
-  actualCharges: 1
+  actualCharges: 3
   speedMultiplier: 5
 --- !u!136 &4473474606672337653
 CapsuleCollider:

@@ -2708,6 +2708,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5865784049051378416, guid: 63921cc21a185b246a9df514ca1fb53a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -99.99988
+      objectReference: {fileID: 0}
     - target: {fileID: 7171798067292359261, guid: 63921cc21a185b246a9df514ca1fb53a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3629,67 +3633,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5186450516223216668, guid: c69fe5a928961f74797b3fe801a48a87, type: 3}
   m_PrefabInstance: {fileID: 596235222}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &906097483
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2089542793612458003, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_Name
-      value: TrapDoorPlaceHolder
-      objectReference: {fileID: 0}
-    - target: {fileID: 2089542793612458003, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398548998441108591, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.2856655
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398548998441108591, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398548998441108591, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398548998441108591, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398548998441108591, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398548998441108591, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398548998441108591, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398548998441108591, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398548998441108591, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6398548998441108591, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 39a564b31a2ed6940b6d949152934c7c, type: 3}
 --- !u!1001 &908009784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4435,6 +4378,10 @@ PrefabInstance:
     - target: {fileID: 7066151862549872423, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7543830159054973344, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -91.99963
       objectReference: {fileID: 0}
     - target: {fileID: 8903603296902530856, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -9274,8 +9221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  maxTimer: 24
-  LeastMaxTimer: 12
+  maxTimer: 32
+  LeastMaxTimer: 16
   reduceTimeDistance: 25
   gameManager: {fileID: 542785193995537962}
   timeHUD: {fileID: 379530309}
@@ -9813,4 +9760,3 @@ SceneRoots:
   - {fileID: 64644373}
   - {fileID: 797071963}
   - {fileID: 1827920385}
-  - {fileID: 906097483}

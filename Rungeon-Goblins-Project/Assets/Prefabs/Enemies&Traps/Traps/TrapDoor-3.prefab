@@ -41,7 +41,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719508399671779672}
-  m_Mesh: {fileID: 4153082656688566024, guid: 685d42af2a657d74286aae7fb9a8a123, type: 3}
+  m_Mesh: {fileID: 7696362191834505464, guid: 8ec96bcf2aa6ae246ad7b675750be94e, type: 3}
 --- !u!23 &4165090122944629024
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 7450819963240078542}
   - component: {fileID: 1599084888254408813}
   m_Layer: 0
-  m_Name: TrapDoor
+  m_Name: TrapDoor-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

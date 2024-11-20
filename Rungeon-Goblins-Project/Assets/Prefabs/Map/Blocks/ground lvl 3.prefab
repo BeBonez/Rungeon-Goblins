@@ -54,10 +54,33 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fbc386f58e2ab5d438838ec17608d0d5, type: 2}
     - target: {fileID: 919132149155446097, guid: c2d20c31ec38cd446b32815081aa9372, type: 3}
       propertyPath: m_Name
-      value: gound3
+      value: ground lvl 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c2d20c31ec38cd446b32815081aa9372, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2506317654441961493}
   m_SourcePrefab: {fileID: 100100000, guid: c2d20c31ec38cd446b32815081aa9372, type: 3}
+--- !u!1 &7489152612122214338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c2d20c31ec38cd446b32815081aa9372, type: 3}
+  m_PrefabInstance: {fileID: 7723595634887262867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2506317654441961493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489152612122214338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7029e90eace38374888c5f3574555f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TierGoal: 470
+  DrillSecondTier: 0
+  DrillThirdTier: 0
