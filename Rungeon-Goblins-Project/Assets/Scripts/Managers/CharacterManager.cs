@@ -20,7 +20,7 @@ public class CharacterManager : MonoBehaviour
         selectedChar = characters[PlayerPrefs.GetInt("SelectedChar", 0)];
 
         if (SceneManager.GetActiveScene().buildIndex != 0) {
-        Debug.Log(selectedChar.name);
+        //(selectedChar.name);
         Instantiate(selectedChar, spawnPoint, Quaternion.identity);
             uiCharactersPanel[PlayerPrefs.GetInt("SelectedChar", 0)].SetActive(true);
         }

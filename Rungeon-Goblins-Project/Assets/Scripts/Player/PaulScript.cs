@@ -204,6 +204,8 @@ public class PaulScript : PlayerMovement
 
         }
 
+        nextposition = new Vector3((float)Math.Floor(nextposition.x), (float)Math.Floor(nextposition.y), (float)Math.Floor(nextposition.z));
+
         AudioManager.Instance.PlaySFX(9);
 
         if (isPowerActive == false)
@@ -222,7 +224,7 @@ public class PaulScript : PlayerMovement
 
         animator.Play("Jump");
 
-        Debug.Log("Kill:" + kills);
+        //Debug.Log("Kill:" + kills);
 
         nextposition = nextGoblin.transform.position;
 

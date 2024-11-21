@@ -769,6 +769,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2054523297}
   - {fileID: 1798631445}
   m_Father: {fileID: 428691078}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1617,6 +1618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialPanel: {fileID: 2034787951}
+  goblinEasterEgg: {fileID: 2054523296}
 --- !u!1 &1194380066
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,7 +2634,7 @@ GameObject:
   - component: {fileID: 2014501074}
   - component: {fileID: 2014501073}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2848,6 +2850,81 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1760361167908483906, guid: bdf3cb73fb12a594886b768b47758a01, type: 3}
   m_PrefabInstance: {fileID: 2034787948}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2054523296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2054523297}
+  - component: {fileID: 2054523299}
+  - component: {fileID: 2054523298}
+  m_Layer: 5
+  m_Name: Goblin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &2054523297
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054523296}
+  m_LocalRotation: {x: -0, y: -0, z: -0.08088299, w: 0.9967236}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 287942832}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.279}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 420, y: 511}
+  m_SizeDelta: {x: 874.433, y: 826.255}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2054523298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054523296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 716bf0f0a329dd947bd2bc9ec94349f4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2054523299
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054523296}
+  m_CullTransparentMesh: 1
 --- !u!1 &2084809979
 GameObject:
   m_ObjectHideFlags: 0
@@ -5353,18 +5430,6 @@ PrefabInstance:
     - target: {fileID: 7066151862549872423, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7543830159054973344, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -91.99988
-      objectReference: {fileID: 0}
-    - target: {fileID: 8903603296902530856, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 49.909058
-      objectReference: {fileID: 0}
-    - target: {fileID: 8903603296902530856, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -286.6101
       objectReference: {fileID: 0}
     - target: {fileID: 9086086783736187447, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
       propertyPath: m_AnchorMax.x

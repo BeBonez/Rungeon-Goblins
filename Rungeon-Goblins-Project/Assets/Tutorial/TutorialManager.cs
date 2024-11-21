@@ -109,7 +109,7 @@ public class TutorialManager : MonoBehaviour
 
     public void Direction(Vector2 direction)
     {
-        Debug.Log("Legal");
+        //Debug.Log("Legal");
         this.direction = direction;
     }
 }

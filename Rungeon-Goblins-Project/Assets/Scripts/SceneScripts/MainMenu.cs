@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject tutorialPanel;
+    [SerializeField] GameObject goblinEasterEgg;
     private void Awake()
     {
         if (PlayerPrefs.GetInt("didTutorial", 0) == 0)
@@ -13,5 +14,15 @@ public class MainMenu : MonoBehaviour
         }
 
         //AudioManager.Instance.PlayBGLoop(0);
+    }
+
+    void Start()
+    {
+        int number = Random.Range(0,101);
+
+        if (number < 5) 
+        {
+            goblinEasterEgg.SetActive(true);
+        }
     }
 }

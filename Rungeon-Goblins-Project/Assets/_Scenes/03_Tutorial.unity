@@ -12440,7 +12440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1067926048, guid: 368a0637d99901efe88cb1fc6ada4db1, type: 3}
+  m_Sprite: {fileID: -182739904, guid: b2f4d45ca86e0944ba6f37e725126774, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14643,6 +14643,7 @@ MonoBehaviour:
   playerScript: {fileID: 0}
   coins: 400
   quickReviveTime: 5
+  distance: 0
 --- !u!1 &893500204011317982
 GameObject:
   m_ObjectHideFlags: 0

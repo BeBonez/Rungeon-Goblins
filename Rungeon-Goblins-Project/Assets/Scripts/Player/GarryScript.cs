@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -204,6 +205,7 @@ public class GarryScript : PlayerMovement
     }
     protected override void Dash(Vector3 direction)
     {
+        
 
         if (hasReached == false)
         {
@@ -224,6 +226,8 @@ public class GarryScript : PlayerMovement
             nextposition = direction;
 
         }
+
+        nextposition = new Vector3((float)Math.Floor(nextposition.x), (float)Math.Floor(nextposition.y), (float)Math.Floor(nextposition.z));
 
         if (isPowerActive == false)
         {

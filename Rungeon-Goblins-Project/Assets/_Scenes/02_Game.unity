@@ -688,7 +688,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7749445, y: -0, z: -0, w: 0.6320294}
   m_LocalPosition: {x: 0, y: 57.099976, z: 277.6}
-  m_LocalScale: {x: 8.5, y: 8.5, z: 8.5}
+  m_LocalScale: {x: 6.1323395, y: 6.1323395, z: 6.1323395}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1077191294}
@@ -8657,7 +8657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1067926048, guid: 368a0637d99901efe88cb1fc6ada4db1, type: 3}
+  m_Sprite: {fileID: -182739904, guid: b2f4d45ca86e0944ba6f37e725126774, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -38,7 +38,7 @@ public abstract class PlayerMovement : MonoBehaviour
 
     [Header("Dash")]
     protected Vector3 lastPosition;
-    protected Vector3 nextposition;
+    [SerializeField] protected Vector3 nextposition;
     protected bool hasReached;
     protected bool canceled = false;
     public abstract void Move(Vector2 direction);
@@ -56,6 +56,7 @@ public abstract class PlayerMovement : MonoBehaviour
         if (Vector3.Distance(transform.position, nextposition) < 0.001f)
         {
             hasReached = true;
+            transform.position = new Vector3((float)Math.Floor(transform.position.x), (float)Math.Floor(transform.position.y), (float)Math.Floor(transform.position.z));
         }
         else
         {

@@ -49,7 +49,7 @@ public class Tile : MonoBehaviour
     {
         if (transform.position.z <= gameManager.GetPlayer().transform.position.z - 700) 
         {
-            Debug.Log("Blau");
+            //Debug.Log("Blau");
             Destroy(gameObject);
         }
     }
