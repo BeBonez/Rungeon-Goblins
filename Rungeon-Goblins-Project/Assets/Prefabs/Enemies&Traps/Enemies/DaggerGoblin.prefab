@@ -870,7 +870,7 @@ MonoBehaviour:
   - {fileID: 5390512014067237859}
   - {fileID: 6712066923950312124}
   downTime: 3
-  upTime: 3
+  upTime: 4
 --- !u!1 &8746422197077858993
 GameObject:
   m_ObjectHideFlags: 0
