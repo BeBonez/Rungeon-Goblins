@@ -573,7 +573,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 430f6af1987c4f1448a8d114426b87b4, type: 2}
+  - {fileID: 2100000, guid: 5395f747d2289d54ea00ec6ce9242029, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5258,6 +5258,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1760323369495736156, guid: 66a27832ea94b564d81b55fc870e0362, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5395f747d2289d54ea00ec6ce9242029, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6746,12 +6750,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead29d6b40e1a5849a78ad144f8d7839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  attacks:
-  - {fileID: 2058478986}
-  - {fileID: 906858472}
+  type: 
   downTime: 6
   upTime: 1
+  animator: {fileID: 0}
 --- !u!65 &1133551408
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8026,12 +8028,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead29d6b40e1a5849a78ad144f8d7839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  attacks:
-  - {fileID: 849368008}
-  - {fileID: 1679500013}
+  type: 
   downTime: 6
   upTime: 1
+  animator: {fileID: 0}
 --- !u!65 &1289168310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8543,12 +8543,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead29d6b40e1a5849a78ad144f8d7839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  attacks:
-  - {fileID: 854874991}
-  - {fileID: 1726072743}
+  type: 
   downTime: 6
   upTime: 1
+  animator: {fileID: 0}
 --- !u!65 &1346530252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9556,12 +9554,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead29d6b40e1a5849a78ad144f8d7839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  attacks:
-  - {fileID: 741246537}
-  - {fileID: 2129602762}
+  type: 
   downTime: 6
   upTime: 1
+  animator: {fileID: 0}
 --- !u!65 &1561837287
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11780,12 +11776,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead29d6b40e1a5849a78ad144f8d7839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  attacks:
-  - {fileID: 1145375110}
-  - {fileID: 159676465}
+  type: 
   downTime: 6
   upTime: 1
+  animator: {fileID: 0}
 --- !u!65 &1769330501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13622,12 +13616,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ead29d6b40e1a5849a78ad144f8d7839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  attacks:
-  - {fileID: 401832693}
-  - {fileID: 1489973268}
+  type: 
   downTime: 6
   upTime: 1
+  animator: {fileID: 0}
 --- !u!65 &1999928746
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14591,6 +14583,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1870837189257726162, guid: a5dd5f856126ecc43a8390004c3e6c77, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5395f747d2289d54ea00ec6ce9242029, type: 2}
     - target: {fileID: 6652270858007947835, guid: a5dd5f856126ecc43a8390004c3e6c77, type: 3}
       propertyPath: m_Name
       value: Cube

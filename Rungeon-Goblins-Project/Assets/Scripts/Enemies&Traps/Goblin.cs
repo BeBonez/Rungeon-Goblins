@@ -9,41 +9,49 @@ public class Goblin : MonoBehaviour
     [SerializeField] GameObject[] attacks;
     [SerializeField] private int downTime, upTime;
     [SerializeField] Animator animator;
-    private bool onOff;
+    //private bool onOff;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+
+        DeleteOutsideAttacks();
     }
 
-    IEnumerator Attack()
-    {
-        // Deixar avisos ativos
-        for (int i = 0; i < attacks.Length; i++) {
-            attacks[i].SetActive(true);
-        }
-        yield return new WaitForSeconds(upTime);
-        // Deixar avisos inativos
-        for (int i = 0; i < attacks.Length; i++)
-        {
-            attacks[i].SetActive(false);
-        }
-        yield return new WaitForSeconds(downTime);
-        onOff = false;
-    }
+    // IEnumerator Attack()
+    // {
+    //     // Deixar avisos ativos
+    //     for (int i = 0; i < attacks.Length; i++) {
+    //         attacks[i].SetActive(true);
+    //     }
+    //     yield return new WaitForSeconds(upTime);
+    //     // Deixar avisos inativos
+    //     for (int i = 0; i < attacks.Length; i++)
+    //     {
+    //         attacks[i].SetActive(false);
+    //     }
+    //     yield return new WaitForSeconds(downTime);
+    //     onOff = false;
+    // }
 
     private void FixedUpdate()
     {
-        if (onOff == false)
-        {
-            onOff = true;
-            StartCoroutine("Attack");
-        }
 
-        if (transform.position.z < player.transform.position.z - 15)
+        if (transform.position.z < player.transform.position.z - 45)
         {
-            StopCoroutine("Attack");
+            //StopCoroutine("Attack");
             Destroy(gameObject);
+        }
+    }
+
+    public void DeleteOutsideAttacks() 
+    {
+        for (int i= 0 ; i < attacks.Length; i++) 
+        {
+            if (attacks[i].transform.position.x >= 11 || attacks[i].transform.position.x <= -11)
+            {
+                Destroy(attacks[i]);
+            }
         }
     }
     public void PlayAnim(string direction) 
