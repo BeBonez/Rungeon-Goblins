@@ -63,6 +63,13 @@ public class PlayerCombat : MonoBehaviour
                     }
                     break;
                 case "Coin":
+                    if (playerBase.coinAboveHoleAchievement == false)
+                    {
+                        if (other.GetComponent<CoinAboveHole>().isAboveHole == true)
+                        {
+                            playerBase.coinAboveHoleAchievement = true;
+                        }
+                    }
                     Destroy(other.gameObject);
                     AudioManager.Instance.PlaySFX(2);
                     gameManager.AddCoin(1);

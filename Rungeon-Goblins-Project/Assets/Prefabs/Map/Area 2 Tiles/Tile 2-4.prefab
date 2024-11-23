@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2cb0534b86bd3046a42478ceee78c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TierGoal: 0
+  TierGoal: 220
   SecondTier:
   - {fileID: 7865324891447085222}
   - {fileID: 5740427928905817377}
@@ -884,6 +884,10 @@ PrefabInstance:
     - target: {fileID: 197124837057481982, guid: 789254698f9311c4d9f03417e6809723, type: 3}
       propertyPath: m_Name
       value: Area2 GridTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 551174468387650394, guid: 789254698f9311c4d9f03417e6809723, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 718187054529746500, guid: 789254698f9311c4d9f03417e6809723, type: 3}
       propertyPath: m_LocalPosition.x

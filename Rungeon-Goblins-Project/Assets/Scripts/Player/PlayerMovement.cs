@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public abstract class PlayerMovement : MonoBehaviour
 {
+    public bool coinAboveHoleAchievement;
+
     protected float originalSpeed;
     protected float posX, posY, posZ;
     protected string charName;
@@ -37,6 +39,7 @@ public abstract class PlayerMovement : MonoBehaviour
     protected TMP_Text uiActualCharges;
 
     [Header("Dash")]
+    public int dashedThroughWall = 0;
     protected Vector3 lastPosition;
     [SerializeField] protected Vector3 nextposition;
     protected bool hasReached;
@@ -189,4 +192,6 @@ public abstract class PlayerMovement : MonoBehaviour
     }
 
     #endregion
+
+
 }

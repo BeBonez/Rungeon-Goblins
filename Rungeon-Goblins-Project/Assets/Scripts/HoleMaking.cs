@@ -20,12 +20,12 @@ public class HoleMaking : MonoBehaviour
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         currentDistance = gameManager.GetDistance();
 
-        if (currentDistance > TierGoal + 120)
+        if (currentDistance > TierGoal + 110)
         {
             SecondTier = true;
         }
 
-        if (currentDistance > TierGoal + 740)
+        if (currentDistance > TierGoal + 710)
         {
             ThirdTier = true;       
         }
@@ -34,7 +34,7 @@ public class HoleMaking : MonoBehaviour
         {
             if (SecondTier)
             {
-                gameObject.SetActive(false);
+                Destroy(gameObject);
             }
         }
 
@@ -42,7 +42,7 @@ public class HoleMaking : MonoBehaviour
         {
             if (ThirdTier)
             {
-                gameObject.SetActive(false);
+                Destroy(gameObject);
             }
         }
     }

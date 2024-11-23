@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 2755624354010667164}
   - component: {fileID: 549512048186229500}
   - component: {fileID: 1588182094565199126}
+  - component: {fileID: 2257193516508541372}
   m_Layer: 5
   m_Name: AchievementModel
   m_TagString: Untagged
@@ -422,3 +423,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2257193516508541372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569616021027328139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2581e1ea73ef4949aba90b6a40ed057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 852017897075166387}
+  title: {fileID: 4052024174128449836}
+  description: {fileID: 2808157661345261284}

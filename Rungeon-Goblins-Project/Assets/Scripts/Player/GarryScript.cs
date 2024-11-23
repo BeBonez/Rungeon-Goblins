@@ -65,6 +65,7 @@ public class GarryScript : PlayerMovement
 
         if (transform.position.x >= 12)
         {
+            dashedThroughWall = 1;
             nextposition = new Vector3(-10, 0, nextposition.z);
 
             transform.position = nextposition;
@@ -73,6 +74,7 @@ public class GarryScript : PlayerMovement
 
         if (transform.position.x <= -12)
         {
+            dashedThroughWall = 1;
             nextposition = new Vector3(10, 0, nextposition.z);
 
             transform.position = nextposition;

@@ -6,12 +6,11 @@ public class AttackArea : MonoBehaviour
 {
     [SerializeField] float maxScale, attackCooldown, attackActiveTime;
     [SerializeField] GameObject progressCube, exclamation;
-    [SerializeField] Material material;
-
     private bool isCoolingDown = false;
     private bool isAoERunning = false;
     private float cooldownEndTime;
     private BoxCollider boxCollider;
+    private Material material, cubeMaterial;
 
     void Start()
     {
@@ -20,6 +19,10 @@ public class AttackArea : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        material = GetComponent<Renderer>().material;
+
+        cubeMaterial = progressCube.GetComponent<Renderer>().material;
 
         boxCollider = GetComponent<BoxCollider>();
         StartCoroutine(AoESize(attackCooldown));
@@ -47,6 +50,9 @@ public class AttackArea : MonoBehaviour
 
     IEnumerator AoESize(float duration)
     {
+        material.color = Color.green;
+        cubeMaterial.color = Color.green;
+
         isAoERunning = true;
 
         float time = 0;
@@ -63,13 +69,21 @@ public class AttackArea : MonoBehaviour
             );
 
             material.color = Color.Lerp(Color.green, Color.red, time / duration);
+            cubeMaterial.color = Color.Lerp(Color.green, Color.red, time / duration);
 
             yield return null;
         }
 
-        // Finaliza o AoE
         exclamation.SetActive(true);
         boxCollider.enabled = true;
         isAoERunning = false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Hole"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

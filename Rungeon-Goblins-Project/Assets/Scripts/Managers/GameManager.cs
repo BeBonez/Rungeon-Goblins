@@ -8,6 +8,8 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
+    #region Headers
+
     [Header("UI components")]
     [SerializeField] GameObject losePanel;
     [SerializeField] GameObject revivePanel;
@@ -19,35 +21,50 @@ public class GameManager : MonoBehaviour
     public Slider timeHud;
 
     [Header("Variables: ")]
+    public PlayerData playerData;
+    public SaveSystem saveSystem;
+    public LoadSystem loadSystem;
+    public AchievementSystem achievementSystem;
     [SerializeField] GameObject player;
     [SerializeField] PlayerMovement playerScript;
     [SerializeField] int coins;
     [SerializeField] int quickReviveTime;
     private int actualQuickReviveTime;
     [SerializeField] int distance;
-    private int reviveCost = 50;
+    public int reviveCost = 50;
     private Timer timer;
     private bool hasRevived = false;
     private Vector3 deathPosition;
 
+    #endregion
+
     private void Awake()
     {
-        UpdateData();
+        playerData = loadSystem.LoadPlayerData();
+
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            UpdateData();
+        }
     }
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerScript = player.GetComponent<PlayerMovement>();
-        playerScript.gameManager = this;
-        timer = GetComponent<Timer>();
-        if (SceneManager.GetActiveScene().buildIndex != 2)
+        if (SceneManager.GetActiveScene().buildIndex != 0)
         {
-            coinHUD[0].text = "$" + PlayerPrefs.GetInt("Money", 0);
-        }
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerScript = player.GetComponent<PlayerMovement>();
+            playerScript.gameManager = this;
+            timer = GetComponent<Timer>();
+            if (SceneManager.GetActiveScene().buildIndex != 2)
+            {
+                coinHUD[0].text = "$" + PlayerPrefs.GetInt("Money", 0);
+            }
 
-        coins = PlayerPrefs.GetInt("Money", 0);
+            coins = PlayerPrefs.GetInt("Money", 0);
+        }
     }
+
     public void Pause()
     {
         Time.timeScale = 0f;
