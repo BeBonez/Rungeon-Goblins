@@ -6,6 +6,7 @@ public class AttackArea : MonoBehaviour
 {
     [SerializeField] float maxScale, attackCooldown, attackActiveTime;
     [SerializeField] GameObject progressCube, exclamation;
+    [SerializeField] Color greenColor, redColor;
     private bool isCoolingDown = false;
     private bool isAoERunning = false;
     private float cooldownEndTime;
@@ -50,8 +51,9 @@ public class AttackArea : MonoBehaviour
 
     IEnumerator AoESize(float duration)
     {
-        material.color = Color.green;
-        cubeMaterial.color = Color.green;
+        material.color = greenColor;
+        
+        cubeMaterial.color = greenColor;
 
         isAoERunning = true;
 
@@ -68,8 +70,8 @@ public class AttackArea : MonoBehaviour
                 Mathf.Lerp(0, maxScale, time / duration)
             );
 
-            material.color = Color.Lerp(Color.green, Color.red, time / duration);
-            cubeMaterial.color = Color.Lerp(Color.green, Color.red, time / duration);
+            material.color = Color.LerpUnclamped(greenColor, redColor, time / duration);
+            cubeMaterial.color = Color.LerpUnclamped(greenColor, redColor, time / duration);
 
             yield return null;
         }

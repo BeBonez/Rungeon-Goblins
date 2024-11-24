@@ -40,7 +40,14 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        playerData = loadSystem.LoadPlayerData();
+        if(loadSystem.LoadPlayerData() == null)
+        {
+            playerData = new PlayerData();
+            saveSystem.SavePlayerData(playerData);
+        }
+        else {
+            playerData = loadSystem.LoadPlayerData();
+        }
 
         if (SceneManager.GetActiveScene().buildIndex != 0)
         {

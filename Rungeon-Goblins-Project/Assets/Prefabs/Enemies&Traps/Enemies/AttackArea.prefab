@@ -372,6 +372,8 @@ MonoBehaviour:
   attackActiveTime: 0
   progressCube: {fileID: 8597967622117020838}
   exclamation: {fileID: 353552845672266802}
+  greenColor: {r: 0.2724395, g: 0.9433962, b: 0.12014952, a: 0.5882353}
+  redColor: {r: 0.94509804, g: 0.17196418, b: 0.12156862, a: 0.50980395}
 --- !u!65 &2896495364475036634
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Progress;
-using static UnityEngine.UIElements.UxmlAttributeDescription;
+using UnityEngine.UI;
 
 public class AchievementSystem : MonoBehaviour
 {
     public AchievementModule[] achievementModules;
+    [SerializeField] Image[] stateSprites;
 
     public GameManager gameManager;
 
@@ -87,7 +84,7 @@ public class AchievementSystem : MonoBehaviour
             gameManager.saveSystem.SavePlayerData(gameManager.playerData);
         }
 
-        // THUNDER…spoon? : use the knight’s special power.
+        // THUNDERï¿½spoon? : use the knightï¿½s special power.
 
         if (PlayerPrefs.GetInt("SelectedChar") == 0 && gameManager.playerData.achievements[0] == false)
         {
@@ -133,17 +130,17 @@ public class AchievementSystem : MonoBehaviour
 
     public void LoadAchievements()
     {
-        Debug.Log(gameManager.playerData.achievements.Length + "sou grandao");
+        //Debug.Log(gameManager.playerData.achievements.Length + "sou grandao");
         for (int i = 0; i < achievementModules.Length; i++)
         {
             Debug.Log(gameManager.playerData.achievements[i]);
 
             if (gameManager.playerData.achievements[i])
             {              
-                achievementModules[i].sprite.color = Color.green;
+                achievementModules[i].sprite.sprite = stateSprites[1].sprite;
             } else
             {
-                achievementModules[i].sprite.color = Color.gray;
+                achievementModules[i].sprite.sprite = stateSprites[0].sprite;
             }
         }
     }
