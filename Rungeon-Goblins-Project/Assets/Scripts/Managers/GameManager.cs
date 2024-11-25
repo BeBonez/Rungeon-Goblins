@@ -40,19 +40,24 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(loadSystem.LoadPlayerData() == null)
+        if (SceneManager.GetActiveScene().buildIndex != 2)
         {
-            playerData = new PlayerData();
-            saveSystem.SavePlayerData(playerData);
-        }
-        else {
-            playerData = loadSystem.LoadPlayerData();
+            if (loadSystem.LoadPlayerData() == null)
+            {
+                playerData = new PlayerData();
+                saveSystem.SavePlayerData(playerData);
+            }
+            else
+            {
+                playerData = loadSystem.LoadPlayerData();
+            }
+
+            if (SceneManager.GetActiveScene().buildIndex != 0)
+            {
+                UpdateData();
+            }
         }
 
-        if (SceneManager.GetActiveScene().buildIndex != 0)
-        {
-            UpdateData();
-        }
     }
 
     private void Start()
@@ -84,7 +89,7 @@ public class GameManager : MonoBehaviour
         playerScript.SwitchCanMove(true);
     }
 
-    public void GameOver ()
+    public void GameOver()
     {
         revivePanel.SetActive(false);
         StopAllCoroutines();
@@ -101,7 +106,7 @@ public class GameManager : MonoBehaviour
         reviveCostText.text = "REVIVE $" + reviveCost;
         revivePanel.SetActive(true);
 
-        for (int i = actualQuickReviveTime; i > 0;i--)
+        for (int i = actualQuickReviveTime; i > 0; i--)
         {
             reviveTimer.text = actualQuickReviveTime.ToString();
             actualQuickReviveTime--;
@@ -112,7 +117,7 @@ public class GameManager : MonoBehaviour
         if (hasRevived == false)
         {
             GameOver();
-        }        
+        }
     }
 
     public void AddCoin(int amount)
@@ -125,6 +130,12 @@ public class GameManager : MonoBehaviour
     {
         distance += amount;
         UpdateData();
+    }
+
+    void Update()
+    {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
     }
 
     public void UpdateData()
@@ -144,7 +155,7 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("PersonalBest", distance);
         }
-        
+
         PlayerPrefs.SetInt("Money", coins);
     }
 
@@ -158,7 +169,7 @@ public class GameManager : MonoBehaviour
 
         UpdateData();
 
-        Vector3 newPos = new Vector3((float)Math.Floor(deathPosition.x), 0, (float)Math.Floor(deathPosition.z - 20));
+        Vector3 newPos = new Vector3((float)Math.Floor(deathPosition.x), 0, (float)Math.Floor(deathPosition.z - 10));
 
         playerScript.SetNextPosition(newPos);
 
@@ -168,8 +179,8 @@ public class GameManager : MonoBehaviour
 
         playerScript.AddCharge(playerScript.GetMaxCharges(), "Cheat");
 
-        AddDistance(-2);
-        
+        AddDistance(-1);
+
         playerScript.SetSpeed(playerScript.GetOriginalSpeed());
 
         player.GetComponent<Animator>().Play("Idle");
