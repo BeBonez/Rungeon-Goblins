@@ -191,6 +191,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: fd25a15f9797641458336cccfb445343, type: 3}
   - {fileID: 8300000, guid: 00708efade23fb84ab7f679601a36db6, type: 3}
   - {fileID: 8300000, guid: b0a686ecba2722e41becb29073c6575f, type: 3}
+  - {fileID: 8300000, guid: 8b9e908f25416044aa1458afd77c0ec2, type: 3}
   bgClips:
   - {fileID: 8300000, guid: 8290934be2e3f5d408a673c11867f66b, type: 3}
   - {fileID: 8300000, guid: 85fff9dca836cdf4198bcdd299bf748c, type: 3}

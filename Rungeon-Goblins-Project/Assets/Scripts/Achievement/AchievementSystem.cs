@@ -6,7 +6,8 @@ public class AchievementSystem : MonoBehaviour
 {
     public AchievementModule[] achievementModules;
     [SerializeField] Image[] stateSprites;
-
+    [SerializeField] GameObject popUpPrefab;
+    [SerializeField] Canvas canvas;
     public GameManager gameManager;
 
     [SerializeField] private float achievementTimer;
@@ -103,6 +104,7 @@ public class AchievementSystem : MonoBehaviour
             {
                 gameManager.playerData.achievements[1] = true;
                 gameManager.saveSystem.SavePlayerData(gameManager.playerData);
+                ShowPopUp(1);
             }
         }
 
@@ -143,5 +145,13 @@ public class AchievementSystem : MonoBehaviour
                 achievementModules[i].sprite.sprite = stateSprites[0].sprite;
             }
         }
+    }
+
+    public void ShowPopUp(int achievementNumber)
+    {
+        GameObject popUp = Instantiate(popUpPrefab, canvas.transform);
+        AchievPopUp popUpScript = popUp.GetComponent<AchievPopUp>();
+        popUpScript.achievementModule = achievementModules[achievementNumber].gameObject;
+        popUpScript.checkedSprite = stateSprites[1];
     }
 }
