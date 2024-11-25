@@ -33,16 +33,14 @@ public class AchievementSystem : MonoBehaviour
 
         if (gameManager.GetDistance() >= 750 && gameManager.playerData.achievements[3] == false)
         {
-            gameManager.playerData.achievements[3] = true;
-            gameManager.saveSystem.SavePlayerData(gameManager.playerData);
+            ApplyAchievements(3);
         }
 
         // There is no exit : Finish all the areas twice. // reach 1500
 
         if (gameManager.GetDistance() >= 1500 && gameManager.playerData.achievements[5] == false)
         {
-            gameManager.playerData.achievements[5] = true;
-            gameManager.saveSystem.SavePlayerData(gameManager.playerData);
+            ApplyAchievements(5);
         }
 
         // Knight expertise : Reach 3000m as the knight.  // that means traversing all the areas 4 times.
@@ -51,8 +49,7 @@ public class AchievementSystem : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("SelectedChar") == 0)
             {
-                gameManager.playerData.achievements[6] = true;
-                gameManager.saveSystem.SavePlayerData(gameManager.playerData);
+                ApplyAchievements(6);
             }
         }
 
@@ -62,8 +59,7 @@ public class AchievementSystem : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("SelectedChar") == 1)
             {
-                gameManager.playerData.achievements[7] = true;
-                gameManager.saveSystem.SavePlayerData(gameManager.playerData);
+                ApplyAchievements(7);
             }
         }
 
@@ -71,8 +67,7 @@ public class AchievementSystem : MonoBehaviour
 
         if (gameManager.GetDistance() >= 7500 && gameManager.playerData.achievements[9] == false)
         {
-            gameManager.playerData.achievements[9] = true;
-            gameManager.saveSystem.SavePlayerData(gameManager.playerData);
+            ApplyAchievements(9);
         }
 
         #endregion
@@ -81,8 +76,7 @@ public class AchievementSystem : MonoBehaviour
 
         if (gameManager.reviveCost >= 300 && gameManager.playerData.achievements[8] == false)
         {
-            gameManager.playerData.achievements[8] = true;
-            gameManager.saveSystem.SavePlayerData(gameManager.playerData);
+            ApplyAchievements(8);
         }
 
         // THUNDER�spoon? : use the knight�s special power.
@@ -91,8 +85,7 @@ public class AchievementSystem : MonoBehaviour
         {
             if (gameManager.GetPlayerScript().IsPowerActive())
             {
-                gameManager.playerData.achievements[0] = true;
-                gameManager.saveSystem.SavePlayerData(gameManager.playerData);
+                ApplyAchievements(0);
             }
         }
 
@@ -102,9 +95,7 @@ public class AchievementSystem : MonoBehaviour
         {
             if (gameManager.GetPlayerScript().dashedThroughWall > 0)
             {
-                gameManager.playerData.achievements[1] = true;
-                gameManager.saveSystem.SavePlayerData(gameManager.playerData);
-                ShowPopUp(1);
+                ApplyAchievements(1);
             }
         }
 
@@ -116,8 +107,7 @@ public class AchievementSystem : MonoBehaviour
 
             if (achievementTimer <= 180 && gameManager.GetDistance() >= 750)
             {
-                gameManager.playerData.achievements[4] = true;
-                gameManager.saveSystem.SavePlayerData(gameManager.playerData);
+                ApplyAchievements(4);
             }
         }
 
@@ -125,11 +115,16 @@ public class AchievementSystem : MonoBehaviour
 
         if (gameManager.GetPlayerScript().coinAboveHoleAchievement && gameManager.playerData.achievements[2] == false)
         {
-            gameManager.playerData.achievements[2] = true;
-            gameManager.saveSystem.SavePlayerData(gameManager.playerData);
+            ApplyAchievements(2);
         }
     }
 
+    public void ApplyAchievements(int index)
+    {
+            gameManager.playerData.achievements[index] = true;
+            gameManager.saveSystem.SavePlayerData(gameManager.playerData);
+            ShowPopUp(index);
+    }
     public void LoadAchievements()
     {
         //Debug.Log(gameManager.playerData.achievements.Length + "sou grandao");
@@ -154,4 +149,5 @@ public class AchievementSystem : MonoBehaviour
         popUpScript.achievementModule = achievementModules[achievementNumber].gameObject;
         popUpScript.checkedSprite = stateSprites[1];
     }
+
 }
