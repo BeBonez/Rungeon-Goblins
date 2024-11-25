@@ -1433,16 +1433,28 @@ PrefabInstance:
       value: coin
       objectReference: {fileID: 0}
     - target: {fileID: 4779040998230239401, guid: a87454e40cf6dc7478c02d0cc856cc69, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779040998230239401, guid: a87454e40cf6dc7478c02d0cc856cc69, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779040998230239401, guid: a87454e40cf6dc7478c02d0cc856cc69, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779040998230239401, guid: a87454e40cf6dc7478c02d0cc856cc69, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2336426
+      value: -9.33
       objectReference: {fileID: 0}
     - target: {fileID: 4779040998230239401, guid: a87454e40cf6dc7478c02d0cc856cc69, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5811768
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 4779040998230239401, guid: a87454e40cf6dc7478c02d0cc856cc69, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.7703247
+      value: 9.51
       objectReference: {fileID: 0}
     - target: {fileID: 4779040998230239401, guid: a87454e40cf6dc7478c02d0cc856cc69, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5653,6 +5665,8 @@ MonoBehaviour:
   stateSprites:
   - {fileID: 1092539889}
   - {fileID: 11603126}
+  popUpPrefab: {fileID: 0}
+  canvas: {fileID: 0}
   gameManager: {fileID: 1714935766}
   achievementTimer: 0
 --- !u!114 &1714935759

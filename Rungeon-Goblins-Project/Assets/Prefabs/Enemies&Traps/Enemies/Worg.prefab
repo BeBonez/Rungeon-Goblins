@@ -117,8 +117,8 @@ GameObject:
   - component: {fileID: 7570370196484729712}
   - component: {fileID: 1675631200397796480}
   - component: {fileID: 8720545228677827413}
-  - component: {fileID: 324906909052471464}
   - component: {fileID: 1637535152297446250}
+  - component: {fileID: 7197065796080635449}
   m_Layer: 0
   m_Name: Worg
   m_TagString: GoblinAttack
@@ -198,8 +198,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &324906909052471464
-CapsuleCollider:
+--- !u!114 &1637535152297446250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5182345146964452892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b338fdd8c269d64ba5bedc455ca0cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 35
+--- !u!65 &7197065796080635449
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -216,24 +229,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1.6306479
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.7637056, z: 0}
---- !u!114 &1637535152297446250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5182345146964452892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b338fdd8c269d64ba5bedc455ca0cc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 35
+  serializedVersion: 3
+  m_Size: {x: 0.6562843, y: 1.414308, z: 1.2867987}
+  m_Center: {x: 0, y: 0.7071533, z: 0.19406433}
 --- !u!1 &7052199009440880885
 GameObject:
   m_ObjectHideFlags: 0
