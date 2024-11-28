@@ -25,10 +25,14 @@ public class UIManager : MonoBehaviour
         {
             AudioManager.Instance.PlayBGLoop(0);
         }
-        else if (id == 1 || id == 2)
+        else if (id == 1)
         {
             int randomMusic = Random.Range(1, 4);
             AudioManager.Instance.PlayBGLoop(randomMusic);
+        }
+        else if (id == 2)
+        {
+            AudioManager.Instance.PlayBGLoop(5);
         }
     }
 

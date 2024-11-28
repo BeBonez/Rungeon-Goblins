@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: CharacterSelection_pt-BR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt-BR
+  m_SharedData: {fileID: 11400000, guid: 898a981d68c3fa54797100e633c86e24, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 17122111488
+    m_Localized: Escolha de Personagem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 189445091328
+    m_Localized: escolha seu heroi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 292121653248
+    m_Localized: Paulo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 338334494720
+    m_Localized: Gabriel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2465148612608
+    m_Localized: 'O desajeitado Gabriel da dois passos para frente e tres para tras.
+
+      Entao
+      decidiu das um passo de cada vez ate se tornar um poderoso mago.
+
+      Mas
+      parece que ele nao sabe magia e tambem nao sabe que seu chapeu nao eh de mago.
+
+      Ainda
+      assim seu amigo: Vassinho a Vassoura, fica feliz em o ajudar!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2486510202880
+    m_Localized: 'Para proteger o reino, um deve carregar o maior dos escudos.
+
+      Mas
+      Paulo, nao tao ambicioso, decidiu comecar com um pequeno broquel.
+
+      Ele
+      pode ser fraco, mas segue em frente ate cumprir seu destino.
+
+      Mas por
+      que ele usa uma colher? Ele ama cozinhar. Nao larga ela de jeito nenhum.'
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

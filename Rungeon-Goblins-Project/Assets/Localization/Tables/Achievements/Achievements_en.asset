@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Achievements_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: e9c7f603bda36f547934d968a318bb2a, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 3956433399808
+    m_Localized: Achievements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4026021097472
+    m_Localized: Thunder Spoon?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4083713748992
+    m_Localized: Use knight's special power
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4110683123712
+    m_Localized: Side to side
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4121605091328
+    m_Localized: Move towards the wall as mage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4130819977216
+    m_Localized: I tought it was impossible!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4170326126592
+    m_Localized: Collect a coin above a hole and survive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4185152991232
+    m_Localized: Is there an exit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4195110268928
+    m_Localized: Finish all areas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4202970394624
+    m_Localized: Fast I gotta go!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4232976445440
+    m_Localized: Finish all the areas in less than three minutes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4241969033216
+    m_Localized: There is no exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4249913044992
+    m_Localized: Finish all the areas twice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4256305164288
+    m_Localized: Knight expertise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4267017416704
+    m_Localized: Reach 3000m as the knight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4273199820800
+    m_Localized: Mage expertise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4283744301056
+    m_Localized: Reach 3000m as the mage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4290052534272
+    m_Localized: I will not give up
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4315826532352
+    m_Localized: Spend 250 or more coins on a revive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4322973626368
+    m_Localized: Thanks for playing!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4351301955584
+    m_Localized: Reach 7500m
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

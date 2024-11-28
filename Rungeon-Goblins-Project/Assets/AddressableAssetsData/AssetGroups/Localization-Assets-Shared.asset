@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 7b947c98a97b1ee4389db53ba57fb7b9
+  m_SerializeEntries:
+  - m_GUID: 324fa193a0631c742b38d12678ba036b
+    m_Address: Assets/Localization/Tables/GameOver/GameOver Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3409679a68fa80540b3364711d2e1128
+    m_Address: Assets/Localization/Tables/Settings Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 898a981d68c3fa54797100e633c86e24
+    m_Address: Assets/Localization/Tables/CharacterSelection/CharacterSelection Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8a996ed3331277243a2c399593be2161
+    m_Address: Assets/Localization/Tables/Table1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2d7e06424cc1134ca93c53d2d5b7078
+    m_Address: Assets/Localization/Tables/TutorialMenu/TutorialMenu Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb80ab241151d884591c99bbb3ee0166
+    m_Address: Assets/Localization/Tables/TutorialTexts/TutorialTexts Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9c7f603bda36f547934d968a318bb2a
+    m_Address: Assets/Localization/Tables/Achievements/Achievements Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 5c8fb534add2c1a438da1ce41d7e62d0, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 5ad8e34895df4934f912ff515f645eb7, type: 2}
+    - {fileID: 11400000, guid: a8f3ec898208a374b94a7bb226dbf045, type: 2}

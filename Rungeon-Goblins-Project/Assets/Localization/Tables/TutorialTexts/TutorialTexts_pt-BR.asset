@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TutorialTexts_pt-BR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt-BR
+  m_SharedData: {fileID: 11400000, guid: bb80ab241151d884591c99bbb3ee0166, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 13447901184
+    m_Localized: Arraste para a direita para se mover para a direita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5363513339904
+    m_Localized: Arraste para a esquerda para se mover para a esquerda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5401849278464
+    m_Localized: Arraste para a cima para se mover para frente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5475140546560
+    m_Localized: Mate goblins para ganhar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5576047112192
+    m_Localized: ' cargas de avanco'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9036775731200
+    m_Localized: Mate goblins para
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9137250283520
+    m_Localized: recuperar tempo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9220326862848
+    m_Localized: "Voce matou goblins o suficiente para carregar seu \n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9302455529472
+    m_Localized: 'Poder especial
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9337482162176
+    m_Localized: Arraste para baixo para usa-lo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9496735690752
+    m_Localized: Tutorial completo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17351408791552
+    m_Localized: Voce pode ler sobre a historia dos personagens em
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18396100866048
+    m_Localized: Retornar
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

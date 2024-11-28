@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Portuguese (Brazil) (pt-BR)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Portuguese (Brazil) (pt-BR)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d17552e599117534ea8ef064a7f5ae84
+  m_SerializeEntries:
+  - m_GUID: 00b995196d4dc0243ba972b9baefedb5
+    m_Address: GameOver_pt-BR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt-BR
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f599910381a3204a9579f5ec9c37fb4
+    m_Address: TutorialMenu_pt-BR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt-BR
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 480a5c8deb51669468d31726e03bbea6
+    m_Address: Main Menu_pt-BR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt-BR
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ab27459f5a05f3489144b913e2fc651
+    m_Address: CharacterSelection_pt-BR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt-BR
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87fcb3582af69654ab9ec1999b15e27f
+    m_Address: TutorialTexts_pt-BR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt-BR
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ac60671b5b528d4d8c59e2ccd17129a
+    m_Address: Settings_pt-BR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt-BR
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c227adc1ea4899b48b929e276994ee0d
+    m_Address: Achievements_pt-BR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt-BR
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 5c8fb534add2c1a438da1ce41d7e62d0, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ca19c380e9274e54db35eda2d08746b6, type: 2}
+    - {fileID: 11400000, guid: 84d09da53b77f4c4891c204724cc88bd, type: 2}

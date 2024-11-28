@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Settings_pt-BR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt-BR
+  m_SharedData: {fileID: 11400000, guid: 3409679a68fa80540b3364711d2e1128, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 289638625280
+    m_Localized: Efs. Sonoros
+    m_Metadata:
+      m_Items: []
+  - m_Id: 311306399744
+    m_Localized: Musicas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 327819374592
+    m_Localized: Linguagem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 344181354496
+    m_Localized: Ajustes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4443383705600
+    m_Localized: Selecione sua linguagem
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39889908183040
+    m_Localized: 'Portugues
+
+      Brasil'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40007642296320
+    m_Localized: Ingles
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
