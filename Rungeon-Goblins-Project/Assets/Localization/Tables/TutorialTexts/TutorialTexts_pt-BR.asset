@@ -31,29 +31,30 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5475140546560
-    m_Localized: Mate goblins para ganhar
+    m_Localized: Mate goblins para ganhar <color=#eadb13>cargas de avanco</color>
     m_Metadata:
       m_Items: []
   - m_Id: 5576047112192
-    m_Localized: ' cargas de avanco'
+    m_Localized: ' '
     m_Metadata:
       m_Items: []
   - m_Id: 9036775731200
-    m_Localized: Mate goblins para
+    m_Localized: Mate goblins para <color=#eadb13>recuperar tempo</color>
     m_Metadata:
       m_Items: []
   - m_Id: 9137250283520
-    m_Localized: recuperar tempo
+    m_Localized: ' '
     m_Metadata:
       m_Items: []
   - m_Id: 9220326862848
-    m_Localized: "Voce matou goblins o suficiente para carregar seu \n"
+    m_Localized: 'Voce matou goblins o suficiente para carregar seu <color=#eadb13>poder
+      especial</color>
+
+'
     m_Metadata:
       m_Items: []
   - m_Id: 9302455529472
-    m_Localized: 'Poder especial
-
-'
+    m_Localized: " \n"
     m_Metadata:
       m_Items: []
   - m_Id: 9337482162176

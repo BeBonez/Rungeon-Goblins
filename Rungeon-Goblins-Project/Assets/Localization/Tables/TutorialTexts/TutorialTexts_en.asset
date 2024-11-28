@@ -31,11 +31,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 5475140546560
-    m_Localized: Kill goblins to earn
+    m_Localized: Kill goblins to earn <color=#eadb13>dash charges</color>
     m_Metadata:
       m_Items: []
   - m_Id: 5576047112192
-    m_Localized: ' dash charges'
+    m_Localized: ' '
     m_Metadata:
       m_Items: []
   - m_Id: 9496735690752
@@ -47,21 +47,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9302455529472
-    m_Localized: 'Special power
-
-'
+    m_Localized: ' '
     m_Metadata:
       m_Items: []
   - m_Id: 9220326862848
-    m_Localized: "You killed enough goblins to charge your \n"
+    m_Localized: "You killed enough goblins to charge your <color=#eadb13>special
+      power</color> \n"
     m_Metadata:
       m_Items: []
   - m_Id: 9137250283520
-    m_Localized: recover time
+    m_Localized: ' '
     m_Metadata:
       m_Items: []
   - m_Id: 9036775731200
-    m_Localized: Kill goblins to
+    m_Localized: Kill goblins to <color=#eadb13>recover time</color>
     m_Metadata:
       m_Items: []
   - m_Id: 17351408791552
