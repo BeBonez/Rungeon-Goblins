@@ -94,6 +94,7 @@
     <Compile Include="Assets\Scripts\Tile.cs" />
     <Compile Include="Assets\Scripts\Enemies&amp;Traps\Worg.cs" />
     <Compile Include="Assets\Scripts\Enemies&amp;Traps\Attack.cs" />
+    <Compile Include="Assets\Scripts\Managers\CheatManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Managers\TileGenerator200.cs" />
     <Compile Include="Assets\Scripts\Achievement\AchievementModule.cs" />

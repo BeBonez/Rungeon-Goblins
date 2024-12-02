@@ -29,7 +29,7 @@ public class PaulScript : PlayerMovement
 
         uiShield = GameObject.Find("ShieldImage").GetComponent<Image>();
 
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
 
         timer = GameObject.Find("GameManager").GetComponent<Timer>();
 
@@ -150,6 +150,9 @@ public class PaulScript : PlayerMovement
 
     private IEnumerator RaiseShield()
     {
+
+        trail.SetActive(true);
+
         killed = true;
 
         isPowerActive = true;
@@ -170,6 +173,8 @@ public class PaulScript : PlayerMovement
 
     public override void DeactivatePower()
     {
+        trail.SetActive(false);
+
         ResetPowerFill();
 
         kills = 0;
@@ -183,6 +188,9 @@ public class PaulScript : PlayerMovement
 
     protected override void Dash(Vector3 direction)
     {
+        Vector3 particleSpawn = new Vector3(transform.position.x, transform.position.y + 5, transform.position.z);
+        GameObject dashParticle = Instantiate(dashFx, particleSpawn, Quaternion.identity);
+        Destroy(dashParticle, 3f);
 
         if (hasReached == false)
         {

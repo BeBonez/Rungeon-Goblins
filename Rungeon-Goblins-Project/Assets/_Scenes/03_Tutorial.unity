@@ -4240,6 +4240,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1001214640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1001214642}
+  - component: {fileID: 1001214641}
+  m_Layer: 0
+  m_Name: LocalizationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1001214641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001214640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d2ce802354dd34a934614bd4648198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1001214642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001214640}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 312.25635, y: 657.1443, z: 2.753413}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1019119180
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,6 +4649,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1712594137823485247, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1001214641}
+    - target: {fileID: 1712594137823485247, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 3966243658415400871}
+    - target: {fileID: 1712594137823485247, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLocale
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712594137823485247, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DeactivateElement
+      objectReference: {fileID: 0}
     - target: {fileID: 1762426960763293438, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
       propertyPath: m_Name
       value: Options
@@ -4628,6 +4688,30 @@ PrefabInstance:
     - target: {fileID: 4266190722552024509, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333899079684426873, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1001214641}
+    - target: {fileID: 4333899079684426873, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 3966243658415400871}
+    - target: {fileID: 4333899079684426873, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeLocale
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333899079684426873, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DeactivateElement
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435390131925141279, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3966243658415400871}
+    - target: {fileID: 5435390131925141279, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateElement
       objectReference: {fileID: 0}
     - target: {fileID: 5633897819235253142, guid: 9803f22bb83e32d4bb3c9900928c06eb, type: 3}
       propertyPath: m_Pivot.x
@@ -11158,6 +11242,7 @@ SceneRoots:
   - {fileID: 1194380069}
   - {fileID: 15452469}
   - {fileID: 2103509128171840019}
+  - {fileID: 1001214642}
   - {fileID: 2103042172}
   - {fileID: 428913351}
   - {fileID: 31892246}

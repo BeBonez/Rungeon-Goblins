@@ -27,7 +27,7 @@ public class GarryScript : PlayerMovement
 
         uiActualCharges = GameObject.Find("GarryActualCharges").GetComponent<TMP_Text>();
 
-        animator = gameObject.GetComponent<Animator>();
+        //animator = gameObject.GetComponent<Animator>();
 
         timer = GameObject.Find("GameManager").GetComponent<Timer>();
 
@@ -174,12 +174,13 @@ public class GarryScript : PlayerMovement
 
     private IEnumerator TeleportMagic()
     {
+        trail.SetActive(true);
 
         AudioManager.Instance.PlaySFX(6);
 
         isPowerActive = true;
 
-        posY += 3; //PH
+        posY += 7;
 
         transform.position = new Vector3(posX, posY, posZ); //PH
 
@@ -192,7 +193,7 @@ public class GarryScript : PlayerMovement
 
         DeactivatePower();
 
-        posY -= 3; //PH
+        posY -= 7; //PH
 
         CapsuleCollider collider = GetComponent<CapsuleCollider>();
 
@@ -205,7 +206,9 @@ public class GarryScript : PlayerMovement
     }
     protected override void Dash(Vector3 direction)
     {
-        
+        Vector3 particleSpawn = new Vector3(transform.position.x, transform.position.y + 5, transform.position.z);
+        GameObject dashParticle = Instantiate(dashFx, particleSpawn, Quaternion.identity);
+        Destroy(dashParticle, 3f);
 
         if (hasReached == false)
         {
@@ -244,6 +247,7 @@ public class GarryScript : PlayerMovement
 
     public override void DeactivatePower()
     {
+        trail.SetActive(false);
         AudioManager.Instance.StopSFX(6);
         ResetPowerFill();
         isPowerActive = false;

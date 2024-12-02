@@ -169,7 +169,7 @@ public class GameManager : MonoBehaviour
 
         UpdateData();
 
-        Vector3 newPos = new Vector3((float)Math.Floor(deathPosition.x), 0, (float)Math.Floor(deathPosition.z - 10));
+        Vector3 newPos = new Vector3((float)Math.Floor(deathPosition.x), 0, (float)Math.Floor(deathPosition.z - 20));
 
         playerScript.SetNextPosition(newPos);
 
@@ -179,11 +179,11 @@ public class GameManager : MonoBehaviour
 
         playerScript.AddCharge(playerScript.GetMaxCharges(), "Cheat");
 
-        AddDistance(-1);
+        AddDistance(-2);
 
         playerScript.SetSpeed(playerScript.GetOriginalSpeed());
 
-        player.GetComponent<Animator>().Play("Idle");
+        playerScript.GetAnimator().Play("Idle");
 
         timer.AddTime(timer.GetMaxTime());
         UnPause();

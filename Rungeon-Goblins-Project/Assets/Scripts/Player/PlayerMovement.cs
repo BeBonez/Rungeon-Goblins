@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public abstract class PlayerMovement : MonoBehaviour
 {
     public bool coinAboveHoleAchievement;
-
     protected float originalSpeed;
     protected float posX, posY, posZ;
     protected string charName;
@@ -18,7 +17,7 @@ public abstract class PlayerMovement : MonoBehaviour
     [SerializeField] protected int hitSound;
     protected IEnumerator dash;
     protected bool canMove = true;
-    protected Animator animator;
+    [SerializeField] protected Animator animator;
     protected Timer timer;
 
     [Header("GeneralPower")]
@@ -28,9 +27,15 @@ public abstract class PlayerMovement : MonoBehaviour
     protected float actualTime;
     protected bool isPowerActive = false;
     protected int originalKillMeta, actualKills;
+    [SerializeField] protected GameObject trail;
     [NonSerialized] public int kills;
     [NonSerialized] public bool killed;
     protected PowerBar powerBar;
+
+    [Header("Cheats")]
+    protected bool imortal;
+    protected bool infinityTime;
+    protected bool infinityPower;
 
     [Header("FrontDash")]
     [SerializeField] protected int maxCharges;
@@ -42,6 +47,7 @@ public abstract class PlayerMovement : MonoBehaviour
     public int dashedThroughWall = 0;
     protected Vector3 lastPosition;
     [SerializeField] protected Vector3 nextposition;
+    [SerializeField] protected GameObject dashFx;
     protected bool hasReached;
     protected bool canceled = false;
     public abstract void Move(Vector2 direction);
@@ -73,7 +79,45 @@ public abstract class PlayerMovement : MonoBehaviour
         AudioManager.Instance.PlaySFX(hitSound);
     }
 
-    #region GetSets
+#region cheats
+    public void ToggleImortality()
+    {
+        imortal = !imortal;
+    }
+
+    public void ToggleInfPower()
+    {
+        infinityPower = !infinityPower;
+
+        if (infinityPower)
+        {
+            killMeta = 0;
+            powerBar.maximum = killMeta;
+        }
+        else 
+        {
+            killMeta = originalKillMeta;
+            powerBar.maximum = killMeta;
+        }
+    }
+
+    public void ToggleInfTime()
+    {
+        infinityTime = !infinityTime;
+        timer.SetInfTime(infinityTime);
+    }
+
+    public bool GetImortallity()
+    {
+        return imortal;
+    }
+
+    public bool GetInfTime()
+    {
+        return infinityTime;
+    }
+#endregion
+#region GetSets
     public bool IsPowerActive()
     {
         return isPowerActive;

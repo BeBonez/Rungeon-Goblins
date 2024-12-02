@@ -27,6 +27,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ca049178b196954c9ace02f0f8e2840
+    m_Address: Assets/Localization/Tables/Cheats/Cheats Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 898a981d68c3fa54797100e633c86e24
     m_Address: Assets/Localization/Tables/CharacterSelection/CharacterSelection Shared
       Data.asset

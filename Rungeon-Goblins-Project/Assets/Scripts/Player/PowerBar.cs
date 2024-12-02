@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PowerBar : MonoBehaviour
 {
-    [SerializeField] int maximum;
+    [SerializeField] public int maximum;
     [SerializeField] int current;
     [SerializeField] Image mask;
     [SerializeField] GameObject outline;

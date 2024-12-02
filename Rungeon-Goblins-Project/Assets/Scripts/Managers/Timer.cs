@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private Slider timeHUD;
     [SerializeField] private Animator animator;
+    private bool infTime;
     private bool canReduce = true;
     private Transform holePosition;
     private GameObject uiComponents;
@@ -29,15 +30,18 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (timer > 0)
+        if (infTime == false)
         {
-
-            if (canReduce)
+            if (timer > 0)
             {
-                timer -= Time.deltaTime;
+
+                if (canReduce)
+                {
+                    timer -= Time.deltaTime;
+                }
+                
+                timeHUD.value = timer / maxTimer;
             }
-            
-            timeHUD.value = timer / maxTimer;
         }
 
         if (timer > LeastMaxTimer)
@@ -132,7 +136,7 @@ public class Timer : MonoBehaviour
 
         uiComponents.SetActive(false);
 
-        Animator playerAnim = gameManager.GetPlayer().GetComponent<Animator>();
+        Animator playerAnim = gameManager.GetPlayerScript().GetAnimator();
 
         gameManager.GetPlayerScript().SwitchCanMove(false);
 
@@ -150,7 +154,7 @@ public class Timer : MonoBehaviour
         {
             gameManager.SetDeathPos(holePosition.position);
             playerAnim.Play("Falling");
-            waitSeconds = 1f;
+            waitSeconds = 3.5f;
         }
 
         yield return new WaitForSecondsRealtime(waitSeconds);
@@ -176,5 +180,10 @@ public class Timer : MonoBehaviour
     public void SetDead(bool condition)
     {
         isDead = condition;
+    }
+
+    public void SetInfTime(bool condition)
+    {
+        infTime = condition;
     }
 }

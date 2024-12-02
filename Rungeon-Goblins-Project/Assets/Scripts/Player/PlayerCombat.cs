@@ -8,6 +8,7 @@ public class PlayerCombat : MonoBehaviour
     private Timer timer;
     private Animator timeAnimator;
     [SerializeField] private PlayerMovement playerBase;
+    [SerializeField] GameObject explosionFX;
     Animator cameraAnimator;
 
     private void Start()
@@ -25,30 +26,36 @@ public class PlayerCombat : MonoBehaviour
             switch (other.tag)
             {
                 case "Goblin":
-                    if (playerBase.IsPowerActive() == true && playerBase.GetName() == "Garry")
-                    {
-
-                    }
+                    if (playerBase.IsPowerActive() == true && playerBase.GetName() == "Garry") { }
                     else
                     {
                         playerBase.GetAnimator().Play("Attack");
                     }
+
                     EnemyDefeat(other);
                     timer.AddTime(4.5f);
                     break;
                 case "Trap":
-                    if (playerBase.IsPowerActive() == false)
+                    if (playerBase.GetImortallity() == false)
                     {
-                        TookDamage(2.5f);
+                        if (playerBase.IsPowerActive() == false)
+                        {
+                            TookDamage(2.5f);
+                        }
                     }
+
                     break;
                 case "Hole":
-                    if (playerBase.IsPowerActive() == false)
+                    if (playerBase.GetImortallity() == false)
                     {
-                        timer.DeadByHole(other.gameObject);
-                        timer.AddTime(-timer.GetMaxTime());
-                        //playerBase.DashOFF(false);
+                        if (playerBase.IsPowerActive() == false)
+                        {
+                            timer.DeadByHole(other.gameObject);
+                            timer.AddTime(-timer.GetMaxTime());
+                            //playerBase.DashOFF(false);
+                        }
                     }
+
                     break;
                 case "Hourglass":
                     timeAnimator.SetTrigger("AddTime");
@@ -57,10 +64,14 @@ public class PlayerCombat : MonoBehaviour
                     timer.AddTime(timer.GetMaxTime());
                     break;
                 case "GoblinAttack":
-                    if (playerBase.IsPowerActive() == false)
+                    if (playerBase.GetImortallity() == false)
                     {
-                        TookDamage(3.5f);
+                        if (playerBase.IsPowerActive() == false)
+                        {
+                            TookDamage(3.5f);
+                        }
                     }
+
                     break;
                 case "Coin":
                     if (playerBase.coinAboveHoleAchievement == false)
@@ -85,11 +96,17 @@ public class PlayerCombat : MonoBehaviour
         timeAnimator.SetTrigger("TookDamage");
         //cameraAnimator.SetTrigger("Default");
         cameraAnimator.SetTrigger("TookDamage");
-        timer.AddTime(-value);
+        if (playerBase.GetInfTime() == false)
+        {
+            timer.AddTime(-value);
+        }
     }
 
     private void EnemyDefeat(Collider other)
     {
+        Vector3 fxPos = new Vector3(other.transform.position.x, other.transform.position.y + 5, other.transform.position.z);
+        GameObject explosion = Instantiate(explosionFX, fxPos, Quaternion.identity);
+        Destroy(explosion, 4f);
         Destroy(other.gameObject);
 
         cameraAnimator.SetTrigger("EnemyDefeat");

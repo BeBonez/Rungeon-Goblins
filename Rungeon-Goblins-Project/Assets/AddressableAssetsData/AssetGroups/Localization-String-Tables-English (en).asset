@@ -59,6 +59,13 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cdd14678be77c9d4e933611c154caf97
+    m_Address: Cheats_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e114d4034ebaaa7418a31b2b1aa0b540
     m_Address: Main Menu_en
     m_ReadOnly: 1
