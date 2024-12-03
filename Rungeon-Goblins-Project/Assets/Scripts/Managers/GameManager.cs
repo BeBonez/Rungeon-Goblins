@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     [Header("UI components")]
     [SerializeField] GameObject losePanel;
+    [SerializeField] GameObject scorePanel;
     [SerializeField] GameObject revivePanel;
     [SerializeField] Image reviveBackground;
     [SerializeField] TMP_Text reviveCostText;
@@ -96,7 +97,8 @@ public class GameManager : MonoBehaviour
         UpdateData();
         AudioManager.Instance.PlayBGLoop(4);
         Pause();
-        losePanel.SetActive(true);
+        scorePanel.SetActive(true);
+        //losePanel.SetActive(true);
     }
 
     public IEnumerator ReviveQuickTime()
@@ -149,12 +151,12 @@ public class GameManager : MonoBehaviour
         {
             distanceHUD[i].text = distance.ToString() + "m";
         }
-        int bestDistance = PlayerPrefs.GetInt("PersonalBest");
+        // int bestDistance = PlayerPrefs.GetInt("PersonalBest");
 
-        if (distance > bestDistance)
-        {
-            PlayerPrefs.SetInt("PersonalBest", distance);
-        }
+        // if (distance > bestDistance)
+        // {
+        //     PlayerPrefs.SetInt("PersonalBest", distance);
+        // }
 
         PlayerPrefs.SetInt("Money", coins);
     }

@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerryYellow.CodeAssist.Edit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{1A76B9DC-F251-C02E-7F87-E4000C1C4108}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Danqzq.LeaderboardCreator", "Danqzq.LeaderboardCreator.csproj", "{43D01C36-4305-EC76-2BC0-81E389A49109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaderboardCreatorEditor", "LeaderboardCreatorEditor.csproj", "{B5D01B17-6E8F-310E-D2A4-4943D1D37FF1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{1A76B9DC-F251-C02E-7F87-E4000C1C4108}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A76B9DC-F251-C02E-7F87-E4000C1C4108}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A76B9DC-F251-C02E-7F87-E4000C1C4108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D01C36-4305-EC76-2BC0-81E389A49109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D01C36-4305-EC76-2BC0-81E389A49109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D01C36-4305-EC76-2BC0-81E389A49109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D01C36-4305-EC76-2BC0-81E389A49109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D01B17-6E8F-310E-D2A4-4943D1D37FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D01B17-6E8F-310E-D2A4-4943D1D37FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D01B17-6E8F-310E-D2A4-4943D1D37FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D01B17-6E8F-310E-D2A4-4943D1D37FF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

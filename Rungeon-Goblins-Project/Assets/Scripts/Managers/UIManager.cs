@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            personalBest.text = PlayerPrefs.GetInt("PersonalBest", 0) + "m";
+            //personalBest.text = PlayerPrefs.GetInt("PersonalBest", 0) + "m";
             coins.text = "$" + PlayerPrefs.GetInt("Money", 0);
         }
     }

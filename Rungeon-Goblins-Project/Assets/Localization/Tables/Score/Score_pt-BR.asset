@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Score_pt-BR
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pt-BR
+  m_SharedData: {fileID: 11400000, guid: a25492c87543e454daafd776ae982bf8, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 11908591616
+    m_Localized: Pontuacao
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86135189504
+    m_Localized: Enviar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 242251378688
+    m_Localized: Digite seu nome
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

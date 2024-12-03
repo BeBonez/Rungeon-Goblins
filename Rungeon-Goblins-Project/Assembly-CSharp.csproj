@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\Managers\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\HoleMaking.cs" />
     <Compile Include="Assets\Scripts\Achievement\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\Managers\LeaderboardManager.cs" />
     <Compile Include="Assets\Scripts\Unused\Cooldown.cs" />
     <Compile Include="Assets\Scripts\Achievement\AchievementSystem.cs" />
     <Compile Include="Assets\Scripts\Tile.cs" />
@@ -1013,6 +1014,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Danqzq.LeaderboardCreator.csproj" />
+    <ProjectReference Include="LeaderboardCreatorEditor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>
