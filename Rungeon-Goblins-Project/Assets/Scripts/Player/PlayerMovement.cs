@@ -60,12 +60,33 @@ public abstract class PlayerMovement : MonoBehaviour
 
     protected abstract void Dash(Vector3 direction);
 
+    protected Vector3 FixPosition(Vector3 pos)
+    {
+        transform.position = new Vector3((float)Math.Floor(transform.position.x), (float)Math.Floor(transform.position.y), (float)Math.Floor(transform.position.z));
+
+        Vector3 newPos = new Vector3((float)Math.Floor(pos.x), 0, (float)Math.Floor(pos.z - 20));
+
+        string x = newPos.x.ToString(), z = newPos.z.ToString();
+
+        if (x[x.Length - 1] != '0')
+        {
+            x = x.Substring(0, x.Length - 1) + '0';
+        }
+
+        if (z[z.Length - 1] != '5')
+        {
+            z = z.Substring(0, z.Length - 1) + '5';
+        }
+
+        newPos = new Vector3(float.Parse(x), newPos.y, float.Parse(z));
+
+        return newPos;
+    }
     protected void MoveToDestiny()
     {
         if (Vector3.Distance(transform.position, nextposition) < 0.001f)
         {
             hasReached = true;
-            transform.position = new Vector3((float)Math.Floor(transform.position.x), (float)Math.Floor(transform.position.y), (float)Math.Floor(transform.position.z));
         }
         else
         {
@@ -79,7 +100,7 @@ public abstract class PlayerMovement : MonoBehaviour
         AudioManager.Instance.PlaySFX(hitSound);
     }
 
-#region cheats
+    #region cheats
     public void ToggleImortality()
     {
         imortal = !imortal;
@@ -94,7 +115,7 @@ public abstract class PlayerMovement : MonoBehaviour
             killMeta = 0;
             powerBar.maximum = killMeta;
         }
-        else 
+        else
         {
             killMeta = originalKillMeta;
             powerBar.maximum = killMeta;
@@ -116,8 +137,8 @@ public abstract class PlayerMovement : MonoBehaviour
     {
         return infinityTime;
     }
-#endregion
-#region GetSets
+    #endregion
+    #region GetSets
     public bool IsPowerActive()
     {
         return isPowerActive;

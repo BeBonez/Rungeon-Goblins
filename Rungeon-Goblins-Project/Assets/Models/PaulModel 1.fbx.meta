@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0dfc13531b4286f47baff3dff42cf9c0
+guid: dbab5d6cd6c6af34abf7d9ab1d774b8d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: PaulTextureMaterial
-    second: {fileID: 2100000, guid: 927b6abede0d20d49bcfc08037961b7e, type: 2}
+      name: cavaleiro
+    second: {fileID: 2100000, guid: faebf271134b65345ab7cbd7c6e4ddec, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -28,7 +28,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 1
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -38,11 +38,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Garry|Attack_Cycle
-      takeName: PaulRig|Attack_Cycle
-      internalID: 9217609599110702362
+      name: attackLeftCav(AVAL)
+      takeName: attackLeftCav(AVAL)
+      internalID: -8402010849592488387
       firstFrame: 0
-      lastFrame: 15
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -67,69 +67,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Garry|Death_Cycle
-      takeName: PaulRig|Death_Cycle
-      internalID: -677134412086620483
+      name: IdleCav(AVAL)
+      takeName: IdleCav(AVAL)
+      internalID: 1856381607693169785
       firstFrame: 0
-      lastFrame: 50
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Garry|Fall_Cycle
-      takeName: PaulRig|Fall_Cycle
-      internalID: 3532110723073814459
-      firstFrame: 0
-      lastFrame: 110
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Garry|Idle_Cycle
-      takeName: PaulRig|Idle_Cycle
-      internalID: 3616317272614049499
-      firstFrame: 0
-      lastFrame: 30
+      lastFrame: 33
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -154,11 +96,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Garry|Move_Cycle
-      takeName: PaulRig|Move_Cycle
-      internalID: -7548064205649043682
-      firstFrame: 0
-      lastFrame: 15
+      name: jumpLeftCav(AVAL)
+      takeName: jumpLeftCav(AVAL)
+      internalID: -2881932331328011807
+      firstFrame: 5.1
+      lastFrame: 25
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -183,11 +125,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: PaulRig|Fly_Cycle
-      takeName: PaulRig|Fly_Cycle
-      internalID: -8212331332559847370
-      firstFrame: 0
-      lastFrame: 30
+      name: jumpRightCav
+      takeName: jumpRightCav
+      internalID: 4879106748836342362
+      firstFrame: 5.3
+      lastFrame: 25
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

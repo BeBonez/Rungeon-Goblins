@@ -232,6 +232,8 @@ public class GarryScript : PlayerMovement
 
         nextposition = new Vector3((float)Math.Floor(nextposition.x), (float)Math.Floor(nextposition.y), (float)Math.Floor(nextposition.z));
 
+        nextposition = FixPosition(nextposition);
+        
         if (isPowerActive == false)
         {
             AudioManager.Instance.PlaySFX(9);

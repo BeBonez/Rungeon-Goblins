@@ -29,6 +29,7 @@ public class PlayerCombat : MonoBehaviour
                     if (playerBase.IsPowerActive() == true && playerBase.GetName() == "Garry") { }
                     else
                     {
+                        playerBase.GetAnimator().Rebind();
                         playerBase.GetAnimator().Play("Attack");
                     }
 

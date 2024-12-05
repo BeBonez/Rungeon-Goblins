@@ -23,7 +23,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 88530137088
-    m_Localized: Do you want to replay the tutorial?
+    m_Localized: Maybe it's your first time here or not, but do you want to play
+      de tutorial? :)
     m_Metadata:
       m_Items: []
   references:

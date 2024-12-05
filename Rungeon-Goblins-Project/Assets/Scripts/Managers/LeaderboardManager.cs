@@ -15,6 +15,7 @@ namespace LeaderboardCreatorDemo
         private void Start()
         {
             //LeaderboardCreator.LoggingEnabled = true;
+            //UploadLocal();
             LoadEntries();
         }
 
@@ -30,16 +31,24 @@ namespace LeaderboardCreatorDemo
             });
         }
         
+        private void UploadLocal()
+        {
+            LeaderboardCreator.UploadNewEntry(Leaderboards.RnGRank.PublicKey, PlayerPrefs.GetString("LocalName", ""), PlayerPrefs.GetInt("PersonalBest", 0), isSuccessful =>
+            {
+            });
+        }
         public void UploadEntry()
         {
-            Leaderboards.RnGRank.UploadNewEntry(_usernameInputField.text, gameManager.GetDistance(), isSuccessful =>
+            string name = _usernameInputField.text;
+            name = name.ToUpper();
+
+            PlayerPrefs.SetString("LocalName", name);
+            PlayerPrefs.SetInt("PersonalBest", gameManager.GetDistance());
+
+            LeaderboardCreator.UploadNewEntry(Leaderboards.RnGRank.PublicKey, name, gameManager.GetDistance(), ((msg) =>
             {
-                if (_usernameInputField.text != "" && _usernameInputField.text != " " && _usernameInputField.text != "   ")
-                {
-                    if (isSuccessful && _usernameInputField.text != "")
-                    LoadEntries();
-                }
-            });
+                LoadEntries();
+            }));
         }
     }
 }

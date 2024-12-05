@@ -97,7 +97,12 @@ public class GameManager : MonoBehaviour
         UpdateData();
         AudioManager.Instance.PlayBGLoop(4);
         Pause();
-        scorePanel.SetActive(true);
+
+        if (losePanel.activeSelf == false)
+        {
+            scorePanel.SetActive(true);
+        }
+        
         //losePanel.SetActive(true);
     }
 
@@ -116,7 +121,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSecondsRealtime(1);
         }
 
-        if (hasRevived == false)
+        if (hasRevived == false && scorePanel.activeSelf == false)
         {
             GameOver();
         }
@@ -172,6 +177,20 @@ public class GameManager : MonoBehaviour
         UpdateData();
 
         Vector3 newPos = new Vector3((float)Math.Floor(deathPosition.x), 0, (float)Math.Floor(deathPosition.z - 20));
+
+        string x = newPos.x.ToString(), z = newPos.z.ToString();
+
+        if (x[x.Length - 1] != '0')
+        {
+            x = x.Substring(0, x.Length - 1) + '0';
+        }
+
+        if (z[z.Length - 1] != '5')
+        {
+            z = z.Substring(0, z.Length - 1) + '5';
+        }
+
+        newPos = new Vector3(float.Parse(x), newPos.y, float.Parse(z));
 
         playerScript.SetNextPosition(newPos);
 

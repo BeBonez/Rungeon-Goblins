@@ -13439,7 +13439,7 @@ MonoBehaviour:
   selectedChar: {fileID: 0}
   player: {fileID: 0}
   characters:
-  - {fileID: 7320049108850689644, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
+  - {fileID: 8241678029926338070, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
   - {fileID: 7876429574166700115, guid: 658bcd1c78212994ead6c2f855e416ad, type: 3}
   spawnPoint: {x: 0, y: 0, z: -5}
   uiCharactersPanel:

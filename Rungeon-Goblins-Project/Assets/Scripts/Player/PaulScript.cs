@@ -14,6 +14,7 @@ public class PaulScript : PlayerMovement
 
     [Header("UI Components")]
     protected Image uiShield;
+    private bool dashAnimSwap;
 
     private void Start()
     {
@@ -22,6 +23,8 @@ public class PaulScript : PlayerMovement
         originalSpeed = speed;
 
         nextposition = transform.position;
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         uiMaxCharges = GameObject.Find("PaulMaxCharges").GetComponent<TMP_Text>();
 
@@ -101,6 +104,20 @@ public class PaulScript : PlayerMovement
 
                         actualCharges--;
                         gameManager.AddDistance(1);
+
+                        animator.Rebind();
+
+                        if (dashAnimSwap)
+                        {
+                            animator.Play("JumpLeft");
+                            dashAnimSwap = false;
+                        }
+                        else 
+                        {
+                            animator.Play("JumpRight");
+                            dashAnimSwap = true;
+                        }
+                        
                     }
 
                 }
@@ -125,6 +142,9 @@ public class PaulScript : PlayerMovement
                     {
                         Dash(new Vector3(moveDistance, 0, moveDistance));
                         gameManager.AddDistance(1);
+
+                        animator.Rebind();
+                        animator.Play("JumpRight");
                     }
 
                 }
@@ -135,6 +155,9 @@ public class PaulScript : PlayerMovement
                     {
                         Dash(new Vector3(-moveDistance, 0, moveDistance));
                         gameManager.AddDistance(1);
+
+                        animator.Rebind();
+                        animator.Play("JumpLeft");
                     }
                 }
             }
@@ -214,13 +237,15 @@ public class PaulScript : PlayerMovement
 
         nextposition = new Vector3((float)Math.Floor(nextposition.x), (float)Math.Floor(nextposition.y), (float)Math.Floor(nextposition.z));
 
+        nextposition = FixPosition(nextposition);
+        
         AudioManager.Instance.PlaySFX(9);
 
-        if (isPowerActive == false)
-        {
-            animator.Rebind();
-            animator.Play("Jump");
-        }
+        // if (isPowerActive == false)
+        // {
+        //     animator.Rebind();
+        //     animator.Play("Jump");
+        // }
 
     }
 
@@ -230,9 +255,9 @@ public class PaulScript : PlayerMovement
 
         animator.Rebind();
 
-        animator.Play("Jump");
+        animator.Play("Attack");
 
-        //Debug.Log("Kill:" + kills);
+        Debug.Log("Kill:" + kills);
 
         nextposition = nextGoblin.transform.position;
 
