@@ -52,6 +52,13 @@ MonoBehaviour:
     - Locale-pt-BR
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63001afb83945534c8f1f29dc86bf113
+    m_Address: Credits_pt-BR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pt-BR
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 87fcb3582af69654ab9ec1999b15e27f
     m_Address: TutorialTexts_pt-BR
     m_ReadOnly: 1

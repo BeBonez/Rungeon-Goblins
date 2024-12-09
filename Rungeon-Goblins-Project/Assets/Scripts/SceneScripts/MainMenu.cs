@@ -13,12 +13,6 @@ public class MainMenu : MonoBehaviour
         {
             languagePanel.SetActive(true);
         }
-        else
-        {
-            int language = PlayerPrefs.GetInt("language", 0);
-
-            localizationManager.ChangeLocale(language);
-        }
 
         if (PlayerPrefs.GetInt("didTutorial", 0) == 0)
         {

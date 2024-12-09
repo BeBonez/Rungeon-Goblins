@@ -36,11 +36,15 @@ public class GameManager : MonoBehaviour
     private Timer timer;
     private bool hasRevived = false;
     private Vector3 deathPosition;
+    [SerializeField] LocalizationManager localizationManager;
 
     #endregion
 
     private void Awake()
     {
+        int language = PlayerPrefs.GetInt("language", 0);
+        localizationManager.ChangeLocale(language);
+
         if (SceneManager.GetActiveScene().buildIndex != 2)
         {
             if (loadSystem.LoadPlayerData() == null)
@@ -92,6 +96,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        PlayerPrefs.SetInt("Money", coins);
         revivePanel.SetActive(false);
         StopAllCoroutines();
         UpdateData();
@@ -129,7 +134,14 @@ public class GameManager : MonoBehaviour
 
     public void AddCoin(int amount)
     {
-        coins += amount;
+        if (coins + amount >= 9999)
+        {
+            coins = 9999;
+        }
+        else 
+        {
+            coins += amount;
+        }
         UpdateData();
     }
 
@@ -162,8 +174,6 @@ public class GameManager : MonoBehaviour
         // {
         //     PlayerPrefs.SetInt("PersonalBest", distance);
         // }
-
-        PlayerPrefs.SetInt("Money", coins);
     }
 
     public void Revive()

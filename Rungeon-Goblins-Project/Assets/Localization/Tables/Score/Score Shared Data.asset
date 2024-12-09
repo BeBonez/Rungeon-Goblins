@@ -27,6 +27,10 @@ MonoBehaviour:
     m_Key: scoreTitle
     m_Metadata:
       m_Items: []
+  - m_Id: 2171105658712064
+    m_Key: scoreMessage
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -27,7 +27,7 @@ namespace LeaderboardCreatorDemo
                     t.text = "___ - 0";
                 var length = Mathf.Min(_entryTextObjects.Length, entries.Length);
                 for (int i = 0; i < length; i++)
-                    _entryTextObjects[i].text = $"{entries[i].Username} - {entries[i].Score}";
+                    _entryTextObjects[i].text = $"{entries[i].Rank}.{entries[i].Username} - {entries[i].Score}";
             });
         }
         

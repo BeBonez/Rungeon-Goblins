@@ -20,6 +20,8 @@ public class GarryScript : PlayerMovement
         originalSpeed = speed;
 
         nextposition = transform.position;
+        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
         uiPower = GameObject.Find("MagicImage").GetComponent<Image>();
 
@@ -206,9 +208,9 @@ public class GarryScript : PlayerMovement
     }
     protected override void Dash(Vector3 direction)
     {
-        Vector3 particleSpawn = new Vector3(transform.position.x, transform.position.y + 5, transform.position.z);
+        Vector3 particleSpawn = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
         GameObject dashParticle = Instantiate(dashFx, particleSpawn, Quaternion.identity);
-        Destroy(dashParticle, 3f);
+        Destroy(dashParticle, 0.9f);
 
         if (hasReached == false)
         {
@@ -230,9 +232,9 @@ public class GarryScript : PlayerMovement
 
         }
 
-        nextposition = new Vector3((float)Math.Floor(nextposition.x), (float)Math.Floor(nextposition.y), (float)Math.Floor(nextposition.z));
+        //nextposition = new Vector3((float)Math.Floor(nextposition.x), (float)Math.Floor(nextposition.y), (float)Math.Floor(nextposition.z));
 
-        nextposition = FixPosition(nextposition);
+        //nextposition = FixPosition(nextposition);
         
         if (isPowerActive == false)
         {

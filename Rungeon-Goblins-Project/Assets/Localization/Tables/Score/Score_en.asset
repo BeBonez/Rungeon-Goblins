@@ -30,6 +30,11 @@ MonoBehaviour:
     m_Localized: Enter your name
     m_Metadata:
       m_Items: []
+  - m_Id: 2171105658712064
+    m_Localized: There is a possibility of not saving the score in case of instability
+      or lack of connection
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

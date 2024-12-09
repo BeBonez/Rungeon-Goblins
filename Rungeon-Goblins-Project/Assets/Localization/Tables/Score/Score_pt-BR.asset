@@ -30,6 +30,11 @@ MonoBehaviour:
     m_Localized: Digite seu nome
     m_Metadata:
       m_Items: []
+  - m_Id: 2171105658712064
+    m_Localized: Existe a possibilidade de nao salvar a pontuacao caso haja estabilidade
+      ou falta de conexao
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

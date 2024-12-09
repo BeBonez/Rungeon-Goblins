@@ -267,6 +267,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5552545626744817393, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761599943482488044, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061100636640956690, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8241678029926338070, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
       propertyPath: m_Name
       value: Paul (1)

@@ -24,4 +24,9 @@ public class CheatManager : MonoBehaviour
     {
         gameManager.GetPlayerScript().ToggleInfPower();
     }
+
+    public void Money()
+    {
+        gameManager.AddCoin(9999);
+    }
 }

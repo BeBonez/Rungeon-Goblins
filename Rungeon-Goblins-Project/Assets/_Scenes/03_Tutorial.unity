@@ -10761,6 +10761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   losePanel: {fileID: 1502936855}
+  scorePanel: {fileID: 0}
   revivePanel: {fileID: 1994742162}
   reviveBackground: {fileID: 2135842769}
   reviveCostText: {fileID: 2097274180}
@@ -10770,6 +10771,7 @@ MonoBehaviour:
   timeHud: {fileID: 0}
   playerData:
     achievements: 00000000000000000000
+    currentPlayerName: 
   saveSystem: {fileID: 0}
   loadSystem: {fileID: 0}
   achievementSystem: {fileID: 0}
@@ -10779,6 +10781,7 @@ MonoBehaviour:
   quickReviveTime: 5
   distance: 0
   reviveCost: 50
+  localizationManager: {fileID: 1001214641}
 --- !u!1 &893500204011317982
 GameObject:
   m_ObjectHideFlags: 0
@@ -10889,7 +10892,7 @@ MonoBehaviour:
   selectedChar: {fileID: 0}
   player: {fileID: 0}
   characters:
-  - {fileID: 7320049108850689644, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
+  - {fileID: 8241678029926338070, guid: f5a8a12f70b7b894da057044a1ed8bd5, type: 3}
   - {fileID: 7876429574166700115, guid: 658bcd1c78212994ead6c2f855e416ad, type: 3}
   spawnPoint: {x: 0, y: 0, z: -5}
   uiCharactersPanel:

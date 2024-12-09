@@ -62,23 +62,21 @@ public abstract class PlayerMovement : MonoBehaviour
 
     protected Vector3 FixPosition(Vector3 pos)
     {
-        transform.position = new Vector3((float)Math.Floor(transform.position.x), (float)Math.Floor(transform.position.y), (float)Math.Floor(transform.position.z));
-
         Vector3 newPos = new Vector3((float)Math.Floor(pos.x), 0, (float)Math.Floor(pos.z - 20));
 
-        string x = newPos.x.ToString(), z = newPos.z.ToString();
-
-        if (x[x.Length - 1] != '0')
+        float xValue = newPos.x;
+        if (Math.Abs(xValue % 10) != 0)
         {
-            x = x.Substring(0, x.Length - 1) + '0';
+            xValue = (float)Math.Floor(xValue / 10) * 10;
         }
 
-        if (z[z.Length - 1] != '5')
+        float zValue = newPos.z;
+        if (Math.Abs(zValue % 10) != 5)
         {
-            z = z.Substring(0, z.Length - 1) + '5';
+            zValue = (float)Math.Floor(zValue / 10) * 10 + (zValue >= 0 ? 5 : -5);
         }
 
-        newPos = new Vector3(float.Parse(x), newPos.y, float.Parse(z));
+        newPos = new Vector3(xValue, newPos.y, zValue);
 
         return newPos;
     }
@@ -90,6 +88,7 @@ public abstract class PlayerMovement : MonoBehaviour
         }
         else
         {
+            nextposition = new Vector3((float)Math.Floor(nextposition.x), (float)Math.Floor(nextposition.y), (float)Math.Floor(nextposition.z));
             transform.position = Vector3.MoveTowards(transform.position, nextposition, speed * Time.deltaTime);
             hasReached = false;
         }
