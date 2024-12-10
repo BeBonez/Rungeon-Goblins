@@ -5605,6 +5605,26 @@ PrefabInstance:
       value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 4057263820595760160, guid: 5269f213d0b808846abac3aa9cae126a, type: 3}
+      propertyPath: m_Transition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057263820595760160, guid: 5269f213d0b808846abac3aa9cae126a, type: 3}
+      propertyPath: m_Colors.m_PressedColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057263820595760160, guid: 5269f213d0b808846abac3aa9cae126a, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 0.7607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057263820595760160, guid: 5269f213d0b808846abac3aa9cae126a, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 0.7607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057263820595760160, guid: 5269f213d0b808846abac3aa9cae126a, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 0.77254903
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057263820595760160, guid: 5269f213d0b808846abac3aa9cae126a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 1760361167086590724}
